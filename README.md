@@ -1,4 +1,4 @@
-# TuVecinoTeAyuda Repositorio de Frontend (HTML5, Javascript & Bootstrap4)
+# TuVecinoTeAyuda Repositorio de Frontend (App Engine Ready)
 
 # TuVecinoTeAyuda
 
@@ -26,10 +26,13 @@ APPS: https://github.com/tu-vecino-te-ayuda
 
 ## Construido con 🛠️
 
-_Menciona las herramientas que utilizaste para crear tu proyecto_
+_Puede consultar el fichero app.yaml para hacer el despliegue en Google App Engine Std. o directamente subir la carpeta www por ftp_
 
-* [LARAVEL](https://laravel.com/) - El framework web usado
-* [NPM](https://www.npmjs.com/) - Manejador de dependencias
+* [HTML5]- Web base
+* [BOOTSTRAP4](https://getbootstrap.com/) - Librería de estilos y funcionalidades
+* [JQQUERY](https://jquery.com/) - Librería de estilos y funcionalidades
+* [GOOGLE APP ENGINE](https://cloud.google.com/appengine) - Despliegue de la plataforma
+
 
 ## Autores ✒️
 
