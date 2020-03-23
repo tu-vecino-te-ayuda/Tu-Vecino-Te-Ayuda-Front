@@ -28,7 +28,7 @@ APPS: https://github.com/tu-vecino-te-ayuda
 
 _Puede consultar el fichero app.yaml para hacer el despliegue en Google App Engine Std. o directamente subir la carpeta www por ftp_
 
-* [HTML5]- Web base
+* [HTML5](https://developer.mozilla.org/es/docs/HTML/HTML5) - Web base
 * [BOOTSTRAP4](https://getbootstrap.com/) - Librería de estilos y funcionalidades
 * [JQQUERY](https://jquery.com/) - Librería de estilos y funcionalidades
 * [GOOGLE APP ENGINE](https://cloud.google.com/appengine) - Despliegue de la plataforma
