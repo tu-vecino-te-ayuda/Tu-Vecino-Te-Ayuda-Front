@@ -1,0 +1,14 @@
+Header set Content-Security-Policy "default-src 'self'; script-src 'self';"
+Header Set X-Content-Type-Options: nosniff
+Header always append X-Frame-Options SAMEORIGIN
+Header set X-XSS-Protection "1; mode=block"
+Header set X-Content-Security-Policy "allow 'self';"
+Header set Strict-Transport-Security "max-age=10886400; includeSubDomains; preload"
+ServerSignature Off
+FileETag none
+<IfModule mod_headers.c>
+	Header unset ETag
+</IfModule>
+SetEnv TZ Europe/Madrid
+
+	

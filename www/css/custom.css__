@@ -1,0 +1,154 @@
+/***********************************/
+/*           CUSTOM CSS            */
+/***********************************/
+/*TODO: Index -> Únete*/
+
+/* NAVIGATION 
+.navbar a{
+    text-shadow: 4px 4px 14px #000000
+}*/
+
+
+/* INDEX */
+.hero_btn-continer a{
+    background: #FFF4AC;
+}
+
+/*.hero_detail-box h1, .hero_detail-box p, .hero_section a{
+    text-shadow: 4px 4px 14px #000000
+}*/
+
+.voluntarios a{
+color: white;
+background: #FFF4AC;
+}
+
+#voluntarios button{
+    background: #fdd31d;
+}
+
+.ayuda a{
+color: white;
+background: #FFF4AC;
+}
+
+.asociaciones a{
+background: #FFF4AC;
+}
+
+
+/* PROTOCOLOS */
+
+.common_style p{
+text-align: left;
+}
+
+/* compras section */
+.compras_section a {
+background-color: #D72214;
+color: #fefeff;
+}
+/* end compras section */
+
+
+/* riesgo section */
+.riesgo_section a {
+background-color: #EF8201;
+color: #fefeff;
+}
+/* end riesgo section */
+
+
+/* informacion section */
+.informacion_section a {
+background-color: #01B399;
+color: #fefeff;
+}
+/* end informacion section */
+
+
+/* emocional section section */
+.emocional_section a {
+background-color: #273482;
+color: #fefeff;
+}
+/* end emocional section */
+
+
+
+
+
+
+/***********************************/
+/*          RESPONSIVE             */
+/***********************************/
+
+
+@media(max-width:768px ){
+    /* PROTOCOLOS */
+
+    /* compras section */
+
+    .client_section .row{
+        padding: 25px 0;
+    }
+    
+    .compras_section img, .compras_section a  {
+    text-align: center;
+    width: 50%;
+    display:block;
+    margin:auto;
+    }
+    /* end compras section */
+
+
+    /* riesgo section */
+    .riesgo_section img, .riesgo_section a {
+    text-align: center;
+    width: 50%;
+    display:block;
+    margin:auto;
+    }
+    /* end riesgo section */
+
+
+    /* informacion section */
+    .informacion_section img, .informacion_section a {
+    text-align: center;
+    width: 50%;
+    display:block;
+    margin:auto;
+    }
+    /* end informacion section */
+
+
+    /* emocional section section */
+    .emocional_section img,  .emocional_section a {
+    text-align: center;
+    width: 50%;
+    display:block;
+    margin:auto;  
+    }
+    /* end emocional section */
+
+    .smart{
+    display:none;
+    padding: 0px;
+    }
+
+    .common_style p{
+    margin: 15px 0 25px 0;
+    }
+    .common_style img{
+    width: 80%;
+    }
+
+    .client_img-box{
+        display:none;
+        padding-top: 0px;
+    }
+
+    .client_detail-box iframe{
+        width: 100%;
+    }
+}
