@@ -283,8 +283,8 @@ function generateTableUnassigned(data){
             '<h6>'+icon+'<span class="badge badge-light" title="Voluntarios Asignados">'+entry.assigned_user_count+'</span></h6>'+
             '</td>'+
             '<th scope="row">'+entry.created_at+'</th>'+
-            '<td style="max-width: 300px;">'+help_request_types[entry.help_request_type.id]+'<br>'+
-            '<div style="overflow:auto"><small>Comentario: '+entry.message+'</small></div></td>'+
+            '<td style="width: 300px;">'+help_request_types[entry.help_request_type.id]+'<br>'+
+            '<div><textarea disabled>Comentario: '+entry.message+'</textarea></td>'+
             '<td>'+obtainState(entry.user.state)+'</td>'+
             '<td>'+obtainCity(entry.user.city)+'</td>'+
             '<td>'+entry.user.zip_code+'</td>'+
@@ -335,8 +335,8 @@ function generateTableOwn(data){
 
         table_temp = table_temp + '<tr>'+
             '<th scope="row"><small>'+entry.created_at+'<br>'+accepted_at+'</small></th>'+
-            '<td  style="max-width: 300px;">'+help_request_types[entry.help_request_type.id]+'<br>'+
-            '<div style="overflow:auto"><small>Comentario: '+entry.message+'</small></div></td>'+
+            '<td  style="width: 300px;">'+help_request_types[entry.help_request_type.id]+'<br>'+
+            '<div><textarea disabled>Comentario: '+entry.message+'</textarea></td>'+
             '<td>'+entry.user.address+' <br>'+
             obtainCity(entry.user.city)+', '+obtainState(entry.user.state)+' ('+entry.user.zip_code+')</td>'+
             '<td>'+entry.user.name+' <br> '+ name +'</td>'+
@@ -408,6 +408,7 @@ function loadUserData(){
 
     switch(user_type_id){
         case 1:
+            $("#btn-showPhone").removeClass("d-none");
             $("#nearby_areas_id").hide();
             $("#btn-createHelp").removeClass("d-none");
             $("#sect-own-results").removeClass("d-none");
