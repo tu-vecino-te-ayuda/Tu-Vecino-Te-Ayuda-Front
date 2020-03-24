@@ -712,3 +712,13 @@ a:focus {
 .errors{
   font-size: 9pt;
 }
+
+
+.common_style textarea{
+  border: 0px;
+  width: 100%;
+  padding: 5px 5px 5px 0px;
+  background: none;
+  resize: none;
+  overflow-y: auto;
+}
