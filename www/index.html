@@ -15,7 +15,7 @@
   <title>Tu Vecin@ Te Ayuda</title>
 
 
-  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="icon" type="image/png" href="images//brand/favicon.png">
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 
@@ -25,10 +25,10 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
   <!-- custom css -->
   <link rel="stylesheet" type="text/css" href="css/custom.css" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
 
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
@@ -60,7 +60,7 @@
         <nav class="navbar navbar-expand-lg custom_nav-container ">
           <a class="navbar-brand" href="index.html">
             <span>
-              <img src="images/logo.png" title="Tu Vecin@ Te Ayuda">
+              <img src="images//brand/logo.png" title="Tu Vecin@ Te Ayuda">
             </span>
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -103,7 +103,7 @@
     </header>
 
     <!-- hero-->
-    <section class="hero_section ">
+    <section class="hero_section pt-3 ">
       <div class="hero-container container">
         <div class="hero_detail-box">
           <h1>
@@ -120,21 +120,24 @@
             Esta es una plataforma voluntaria, colaborativa y sin ánimo de lucro promovida por la Asociación Burgalesa de Ingenieros Informáticos Abi2Burgos. ¡¡MIL GRACIAS!!
 
           </p>
-          <div class="hero_btn-continer">
-            <a href="#voluntarios" class="call_to-btn btn_white-border">
-              Quiero Ayudar
-            </a>
-          </div>
-          <br>
-          <div class="hero_btn-continer">
-            <a href="#ayuda" class="call_to-btn btn_white-border">
-              Necesito Ayuda
-            </a>
-          </div>
+          <div class="row hero-row-btn">
+            <div class="col-xl-6 col-md-6 col-sm-6 col-6 hero_btn-continer  hero_btn-continer ">
+              <!-- col-xl-4 1offset-lg-1 col-lg-4 col-md-6-->
+              <a href="#ayuda" class="call_to-btn hero_btn_left btn_white-border">
+                Necesito Ayuda
+              </a>
+            </div>
+            <div class="col-xl-6 col-md-6 col-sm-6 col-6 hero_btn-continer  hero_btn-continer ">
+              <!-- offset-xl-2 col-xl-4 offset-lg-2 col-lg-4 col-md-6 -->
+              <a href="#voluntarios" class="call_to-btn hero_btn_right btn_white-border">
+                Quiero Ayudar
+              </a>
+            </div>
         </div>
-        <div class="hero_img-container">
+        </div>
+        <div class="hero_img-container pl-3">
           <div>
-            <img src="images/hero.png" alt="" class="img-fluid">
+            <img src="images//brand/hero.png" alt="" class="img-fluid">
           </div>
         </div>
       </div>
@@ -152,7 +155,7 @@
         <div class="row">
           <div class="col-md-4">
             <div class="about_img-container">
-              <img src="images/about.png" alt="">
+              <img src="images/index/riesgo.png" alt="">
             </div>
           </div>
           <div class="col-md-8">
@@ -265,7 +268,7 @@
                 <br>
                 Puedes ayudar tanto a que personas en riesgo no tengan que exponerse, como echando una mano a quien no pueda atender a sus mayores o niños. 
               </p>
-              <div class="">
+              <div class="left">
                 <a href="#form-voluntario" class="call_to-btn btn_white-border"  data-toggle="collapse" role="button" aria-expanded="false" aria-controls="form-voluntario">
                   ¡Quiero ayudar!
                 </a>
@@ -346,7 +349,7 @@
           </div>
           <div class="col-md-4">
             <div class="admission_img-container">
-              <img src="images/admission.png" alt="">
+              <img src="images/index/voluntarios.png" alt="">
             </div>
           </div>
         </div>
@@ -360,7 +363,7 @@
         <div class="row">
           <div class="col-md-4">
             <div class="why_img-container">
-              <img src="images/why.png" alt="">
+              <img src="images/index/asociacion.png" alt="">
             </div>
           </div>
           <div class="col-md-8">
@@ -466,9 +469,6 @@
 
   <!-- client section -->
   <section class="client_section layout_padding">
-    <h2 class="">
-      Consejos & Síntomas
-    </h2>
     <div class="container">
         <!-- carrousel -->
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -480,18 +480,18 @@
           <div class="carousel-inner">
             <div class="carousel-item active">
               <div class="row">
-                <div class="col-4 ">
+                <div class="col-4 carousel-img">
                   <div class="client_img-box">
-                    <img src="images/client.png" alt="">
+                    <img src="images/slide/medical.png" alt="">
                   </div>
                 </div>
-                <div class="col-md-8  pb-5">
+                <div class="col-xd-12 col-md-8 carousel-txt pb-4">
                   <div class="client_detail-box">
                     <h5>
                       Consejos
                     </h5>
                     <p>
-                      1.  Lávate las manos antes y después de cada contacto con agua y jabón o con gel desinfectante. El gel desinfectante no sustituye al lavado de manos.<br>
+                      1.  Lávate las manos con agua y jabón.<br>
 
                       2.  Cúbrete la boca y la nariz con el interior del codo al toser o estornudar.<br>
                       
@@ -499,15 +499,15 @@
                       
                       4.  Evita tocarte los ojos, nariz o boca.<br>
 
-                      5.  Si comienzas con síntomas, aunque sean leves, no acudas a ver a personas inmunodeprimidas o ancianos.<br>
+                      5.  Si comienzas con síntomas, alejate de personas inmunodeprimidas o ancianos.<br>
 
-                      6.  Deja la compra realizada en la puerta de la casa de cada persona y habla con ellos a más de 2 metros de distancia preferiblemente.<br>
-                      
-                      7.  Procura ducharte todos los días al llegar a casa y lava las prendas de vestir a 60º todos los días.<br>
+                      6.  Ducharte al llegar a casa si sales al exterior y lava la ropa a 60º.<br>
 
-                      8.  No des la mano ni mantengas contacto físico con nadie.<br>
+                      7.  No mantengas contacto físico con nadie.<br>
 
-                      9.  Si te encuentras a alguien por la calle, salúdale a más de 2 metros de distancia. <br>
+                      8.  Si te encuentras a alguien comprando, manten la distancia de 2 metros.<br>
+
+                      9.  Al hacer la compra usa mascarilla.<br>
 
                     </p>
                   </div>
@@ -516,12 +516,12 @@
             </div>
             <div class="carousel-item">
               <div class="row">
-                <div class="col-4 ">
+                <div class="col-4 carousel-img">
                   <div class="client_img-box">
-                    <img src="images/client.png" alt="">
+                    <img src="images/slide/sick.png" alt="">
                   </div>
                 </div>
-                <div class="col-md-8 pb-5">
+                <div class="col-md-8  col-xs-6 carousel-txt">
                   <div class="client_detail-box">
                     <h5>
                       Sintomas
@@ -542,17 +542,17 @@
             </div>
             <div class="carousel-item">
               <div class="row">
-                <div class="col-4 ">
+                <div class="col-4 carousel-img">
                   <div class="client_img-box">
-                    <img src="images/client.png" alt="">
+                    <img src="images/slide/news.png" alt="">
                   </div>
                 </div>
-                <div class="col-md-8 pb-5">
+                <div class="col-8 carousel-txt">
                   <div class="client_detail-box">
                     <h5>
                       Como evitar contagios
                     </h5>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/qtCGaaDszxg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="250px" src="https://www.youtube.com/embed/qtCGaaDszxg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   </div>
                 </div>
               </div>
@@ -677,13 +677,13 @@
             
             <div class="social-box">
               <a href="https://www.facebook.com/Tu-Vecino-Te-Ayuda-104432751201293/" target="_blank">
-                <img src="images/fb.png" alt="">
+                <img src="images//social/fb.png" alt="">
               </a> 
               <a href="https://twitter.com/TuVecinoTeAyuda" target="_blank">
-                <img src="images/twitter.png" alt="">
+                <img src="images//social/twitter.png" alt="">
               </a>
               <a href="https://www.instagram.com/tuvecinoteayuda/" target="_blank">
-                <img src="images/instagram.png" alt="">
+                <img src="images//social/instagram.png" alt="">
               </a>
             </div>
           </div>
