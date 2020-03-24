@@ -408,6 +408,7 @@ function loadUserData(){
 
     switch(user_type_id){
         case 1:
+            $("#btn-showPhone").removeClass("d-none");
             $("#nearby_areas_id").hide();
             $("#btn-createHelp").removeClass("d-none");
             $("#sect-own-results").removeClass("d-none");
