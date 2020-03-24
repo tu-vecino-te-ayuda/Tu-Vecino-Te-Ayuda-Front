@@ -1,4 +1,51 @@
-@media (max-width: 1120px) {}
+@media (max-width: 3000px)  {
+    .hero-row-btn{
+        padding: 2% 30% 0 30%;
+    }
+}
+
+@media (max-width: 1500px) {
+    .top_container{
+        padding-bottom:100px;
+    }
+
+    .hero-container{
+        padding: 30px 0 150px 0;
+    }
+
+    .hero-row-btn{
+        padding: 2% 10% 0 10%;
+    }
+
+    .hero-container{
+        padding-top: 00px;  
+      }
+}
+
+
+@media (max-width: 1200px) {
+   
+    #enlaces {
+        padding-top: 110px;
+       }
+
+    .protocol-img img{
+        padding-top: 100px;
+    }
+
+}
+
+
+@media (max-width: 1120px) {
+    .top_container{
+        padding-bottom:80px;
+    }
+    .protocol-img img{
+        padding-top: 80px;
+    }
+
+}
+
 
 @media (max-width: 992px) {
 
@@ -7,29 +54,80 @@
         flex-direction: column;
     }
 
+    .hero-container {
+     
+            padding-top: 80px;
+    }
+
     .hero_detail-box {
         width: 100%;
         margin-bottom: 45px;
     }
 
     .hero_img-container {
-        width: 100%;
+        padding-top: 15%;
+        width: 80%;
     }
 
     .hero-container.container {
-        padding-top: 45px;
+        padding: 40px 0 0 0;
     }
 
     .custom_nav-container.navbar-expand-lg .navbar-nav .nav-link {
         color: #fff;
     }
+    
+    .client_section {
+        padding: 10px 0 20px 0;
+    }
+
+    #compras h3, #informacion h3{
+        text-align: center;
+    }
+
+
 
 
 }
 
+@media (max-width: 991px) {
+    .protocol-img img, .admission_img-container img {
+        margin: 10px 0 0 0px;
+        width: 50%;
+        padding-top: 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-@media (max-width: 768px) {
+    #compras, #enlaces, #riesgo, #emocional, #informacion{
+        padding: 100px 0 20px 0;
+    }
 
+    .about_img-container img, .admission_img-container img, .admission_img-container img, .why_img-container img{
+        width: 0%;
+    }
+
+    .about_detail-box a{
+        margin:auto;
+        text-align:center;
+    }
+
+
+    
+}
+
+
+@media (max-width: 767px) {
+
+    /** mode smart*/
+    .hide{
+        display:none;
+        padding: 0px;
+        }
+
+
+    /** index */
 
     .hero_detail-box {
         text-align: center;
@@ -53,8 +151,119 @@
     }
 
     .common_style img {
-        width: 100%;
+        width: 40%;
         margin: 20px auto;
+    }
+
+    .client_img-box{
+        visibility: hidden;
+    }
+
+    .carousel-img{
+        visibility: collapse;
+    }
+
+    .carousel-txt{
+        width: 100%;
+    }
+
+    /** protocolos */
+
+    .protocol-container{
+        width: 100%;
+    }
+    
+    .protocol_detail-box {
+        width: 100%;
+    }
+
+    .protocol_detail-box h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+
+    .admission_img-container img{
+        width: 60%;
+    }
+
+
+    /* buy section */
+    .client_section .row{
+        padding: 25px 0;
+    }
+
+    .enlaces_section{
+        margin: auto;
+        text-align: center;
+    }
+    
+    .protocol-container a{
+        width: 100%;
+    }
+
+    .compras_section img, .compras_section a  {
+    text-align: center;
+    width: 100%;
+    display:block;
+    margin:auto;
+    }
+
+    
+    /* risk section */
+    .riesgo_section img, .riesgo_section a {
+    text-align: center;
+    width: 100%;
+    display:block;
+    margin:auto;
+    }
+    
+
+    /* info section */
+    .informacion_section img, .informacion_section a {
+    text-align: center;
+    width: 100%;
+    display:block;
+    margin:auto;
+    }
+    /* end informacion section */
+
+
+    /* emotional section section */
+    .emocional_section img,  .emocional_section a {
+    text-align: center;
+    width: 100%;
+    display:block;
+    margin:auto;  
+    }
+    
+
+    .common_style p{
+    margin: 15px 0 25px 0;
+    }
+
+    .client_img-box{
+        display:none;
+        padding-top: 0px;
+    }
+
+    .client_detail-box iframe{
+        width: 150%;
+    }
+
+}
+
+@media (max-width: 625px) {
+    .call_to-btn{
+        padding: 10px 35px ;
+    }
+
+    .hero_btn_left {
+        margin-left: 40px;
+    }
+
+    .hero_btn_right {
+        margin-right: 40px;
     }
 
 }
@@ -89,7 +298,6 @@
         animation: afteranimate 1s;
         animation-delay: .1s;
     }
-
 
     @keyframes beforeanimate {
         0% {
@@ -137,18 +345,43 @@
     }
 }
 
+@media (max-width: 504px) {
 
 
-@media (max-width: 480px) {}
+    .hero_btn_left {
+        margin-left: 20px;
+    }
+
+    .hero_btn_right {
+        margin-right: 20px;
+    }
+
+    .hero_img-container{
+        padding-top: 15%;
+    }
+
+
+}
+
+
+
+@media (max-width: 480px) {
+
+}
 
 @media (max-width: 400px) {}
 
-@media (max-width: 360px) {}
+@media (max-width: 360px) {
+    .hero_img-container{
+        padding-top: 25%;
+    }
+}
 
 @media (min-width: 1200px) {
     .container {
         max-width: 1170px;
     }
+    
 
 }
 

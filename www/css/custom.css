@@ -1,22 +1,61 @@
 /***********************************/
 /*           CUSTOM CSS            */
 /***********************************/
-/*TODO: Index -> Únete*/
 
-/* NAVIGATION 
-.navbar a{
-    text-shadow: 4px 4px 14px #000000
-}*/
+/* fix theme: box in hero*/
+.top_container::after {
+    visibility: hidden;
+}
+
+.txt-center{
+    text-align: center;
+}
 
 
-/* INDEX */
+
+/** index */
+.hero-container{
+    padding: 80px 0 300px 0;
+}
+
+.hero_section p{
+    font-size: 1.1em;
+    /*text-shadow: 4px 4px 14px #000000*/
+}
+
+.hero-row-btn{
+    padding-top: 40px;
+    position: absolute; 
+    width:100%;
+    left:0;
+    text-align: center;
+    margin: auto;
+}
+
+.hero_btn_left{
+    margin-left: 80px;
+}
+
+.hero_btn_right{
+    margin-right: 30%;
+}
+
 .hero_btn-continer a{
     background: #FFF4AC;
 }
 
-/*.hero_detail-box h1, .hero_detail-box p, .hero_section a{
-    text-shadow: 4px 4px 14px #000000
-}*/
+.left{
+    text-align: left;
+}
+
+.hero_btn-container{
+    display: flex;
+    justify-content: center;
+  }
+
+.hero_img-container{
+    margin: auto;
+}
 
 .voluntarios a{
 color: white;
@@ -36,62 +75,87 @@ background: #FFF4AC;
 background: #FFF4AC;
 }
 
+.contact_section {
+    background-color: #E9C113;
+    color: white;
+}
 
-/* PROTOCOLOS */
+
+/** protocolos */
 
 .common_style p{
 text-align: left;
 }
 
-/* enlaces section section */
+.protocol_section a{
+    font-size: 1.1em;
+    width: 400px;
+    /*text-shadow: 4px 4px 14px #000000*/
+}
+
+.protocol-container {
+    display: flex;
+    padding-top: 50px;
+    padding-bottom: 0px;
+  }
+
+.protocol_detail-box {
+    width: 40%;
+}
+
+.protocol_detail-box h1 {
+    font-size: 50px;
+    color: #fefeff;
+    font-weight: 600;
+    width: 100%;
+}
+
+.protocol_detail-box p {
+margin-top: 20px;
+margin-bottom: 35px;
+}
+
+.protocol-img img{
+    padding-top: 50px;
+}
+
 .enlaces_section a {
     background: #007DFF;
     color: white;
 }
-/* end enlaces section */
 
-/* compras section */
+.admission_detail-box{text-align:center;}
+
 .compras_section a {
 background-color: #232F3E;
 color: #fefeff;
 }
-/* end compras section */
 
-
-/* riesgo section */
 .riesgo_section a {
 background-color: #EF8201;
 color: #fefeff;
 }
-/* end riesgo section */
 
-
-/* informacion section */
 .informacion_section a {
 background-color: #01B399;
 color: #fefeff;
 }
-/* end informacion section */
 
-
-/* emocional section section */
 .emocional_section a {
 background-color: rgb(112, 125, 180);
 color: #fefeff;
 }
-/* end emocional section */
-
 
     
-.thanks .row{
-    margin-right: 0px;
-    margin-left: 0px;
-}
-
+/** thanks */
 .hero_img-container {
     width: 60%;
 }
 
+.thanks .row{
+    margin-right: 0px;
+    margin-left: 0px;
+}
 
 .thanks-container {
     display: flex;
@@ -103,78 +167,6 @@ color: #fefeff;
     padding: 20px;
 }
 
-
-
-/***********************************/
-/*          RESPONSIVE             */
-/***********************************/
-
-
-@media(max-width:768px ){
-    /* PROTOCOLOS */
-
-    /* compras section */
-
-    .client_section .row{
-        padding: 25px 0;
-    }
-    
-    .compras_section img, .compras_section a  {
-    text-align: center;
-    width: 50%;
-    display:block;
-    margin:auto;
-    }
-    /* end compras section */
-
-
-    /* riesgo section */
-    .riesgo_section img, .riesgo_section a {
-    text-align: center;
-    width: 50%;
-    display:block;
-    margin:auto;
-    }
-    /* end riesgo section */
-
-
-    /* informacion section */
-    .informacion_section img, .informacion_section a {
-    text-align: center;
-    width: 50%;
-    display:block;
-    margin:auto;
-    }
-    /* end informacion section */
-
-
-    /* emocional section section */
-    .emocional_section img,  .emocional_section a {
-    text-align: center;
-    width: 50%;
-    display:block;
-    margin:auto;  
-    }
-    /* end emocional section */
-
-    .smart{
-    display:none;
-    padding: 0px;
-    }
-
-    .common_style p{
-    margin: 15px 0 25px 0;
-    }
-    .common_style img{
-    width: 80%;
-    }
-
-    .client_img-box{
-        display:none;
-        padding-top: 0px;
-    }
-
-    .client_detail-box iframe{
-        width: 100%;
-    }
+.client_detail-box p{
+    font-size: 0.9em ;
 }
