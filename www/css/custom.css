@@ -7,6 +7,14 @@
     visibility: hidden;
 }
 
+.navbar {
+    background: #e4c234de;
+}
+
+.fixed-top{
+    padding: 10px 10% 10px 10%  !important;
+}
+
 .txt-center{
     text-align: center;
 }
@@ -105,6 +113,7 @@ text-align: left;
 }
 
 .protocol_detail-box h1 {
+    padding-top: 30px;
     font-size: 50px;
     color: #fefeff;
     font-weight: 600;
