@@ -7,6 +7,12 @@
     visibility: hidden;
 }
 
+/* fix padding about*/
+.info_section .about {
+    margin: 0;
+}
+
+
 .navbar {
     background: #e4c234de;
 }
