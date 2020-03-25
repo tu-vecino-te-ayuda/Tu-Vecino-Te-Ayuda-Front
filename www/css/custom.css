@@ -34,7 +34,6 @@
 
 .hero_section p{
     font-size: 1.1em;
-    /*text-shadow: 4px 4px 14px #000000*/
 }
 
 .hero-row-btn{
@@ -70,7 +69,6 @@
 .hero_img-container{
     margin: auto;
 }
-
 
 .contact_form-container{
     color: #6c757d;
@@ -164,6 +162,15 @@ color: #fefeff;
 
     
 /** thanks */
+
+.thanks_section {
+    padding-bottom: 150px;
+}
+
+.thanks_section h1{
+    padding-top: 130px;
+}
+
 .hero_img-container {
     width: 60%;
 }
@@ -175,14 +182,34 @@ color: #fefeff;
 
 .thanks-container {
     display: flex;
-    padding-top: 90px;
-    padding-bottom: 125px;
 }
 
 .creators {
     padding: 20px;
 }
 
+.creators{
+    text-align: center;
+}
+.creators img {
+    padding:10%;
+}
+.abi-logo{
+    width: 30% !important;
+}
+
 .client_detail-box p{
     font-size: 0.9em ;
+}
+
+.white-color a{
+    color: white;
+    text-decoration: none;
+}
+
+
+/** login */
+
+.login_section{
+    padding-top: 100px;
 }
