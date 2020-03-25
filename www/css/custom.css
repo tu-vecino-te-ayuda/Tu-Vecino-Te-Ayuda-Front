@@ -57,6 +57,11 @@
     margin: auto;
 }
 
+
+.contact_form-container{
+    color: #6c757d;
+}
+
 .voluntarios a{
 color: white;
 background: #FFF4AC;
@@ -74,6 +79,8 @@ background: #FFF4AC;
 .asociaciones a{
 background: #FFF4AC;
 }
+
+
 
 /** protocolos */
 
