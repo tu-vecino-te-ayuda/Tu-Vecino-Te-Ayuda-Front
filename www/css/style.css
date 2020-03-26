@@ -645,8 +645,6 @@ a:focus {
   position: relative;
 }
 
-
-
 .top_container_dash::before {
   content: "";
   position: absolute;

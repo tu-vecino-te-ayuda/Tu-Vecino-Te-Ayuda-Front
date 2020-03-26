@@ -12,6 +12,14 @@
     margin: 0;
 }
 
+.left{
+    text-align: left;
+}
+
+
+
+
+/** Navbar */
 
 .navbar {
     background: #e4c234de;
@@ -24,10 +32,12 @@
 .txt-center{
     text-align: center;
 }
+/** end Navbar */
 
 
 
-/** index */
+/** Index */
+
 .hero-container{
     padding: 80px 0 300px 0;
 }
@@ -55,10 +65,6 @@
 
 .hero_btn-continer a{
     background: #FFF4AC;
-}
-
-.left{
-    text-align: left;
 }
 
 .hero_btn-container{
@@ -91,10 +97,11 @@ background: #FFF4AC;
 .asociaciones a{
 background: #FFF4AC;
 }
+/** end Index */
 
 
 
-/** protocolos */
+/** Protocolos */
 
 .common_style p{
 text-align: left;
@@ -159,9 +166,11 @@ color: #fefeff;
 background-color: rgb(112, 125, 180);
 color: #fefeff;
 }
+/** end Protocolos */
+
 
     
-/** thanks */
+/** Thanks */
 
 .thanks_section {
     padding-bottom: 150px;
@@ -206,18 +215,32 @@ color: #fefeff;
     color: white;
     text-decoration: none;
 }
+/** end Thanks */
 
 
-/** login */
+
+
+/** Login */
 
 .login_section{
     padding-top: 100px;
 }
+/** end Login */
 
 
-/** dashboard */
+/** Dashboard */
 
 .hero_section{
     padding-top: 80px;
 }
+/** end Dashboard */
 
+
+
+/** About footer */
+
+.about img{
+    width: 65% !important;
+    padding: 3% 0 8% 0;
+}
+/** end About footer */

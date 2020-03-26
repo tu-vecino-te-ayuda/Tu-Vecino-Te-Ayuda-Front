@@ -1,3 +1,7 @@
+/***********************************/
+/*          RESPONISVE CSS         */
+/***********************************/
+
 @media (max-width: 3000px)  {
     .hero-row-btn{
         padding: 2% 30% 0 30%;
@@ -22,7 +26,6 @@
       }
 }
 
-
 @media (max-width: 1200px) {
    
     #enlaces {
@@ -35,7 +38,6 @@
 
 }
 
-
 @media (max-width: 1120px) {
     .top_container{
         padding-bottom:80px;
@@ -45,7 +47,6 @@
     }
 
 }
-
 
 @media (max-width: 992px) {
 
@@ -88,6 +89,7 @@
 }
 
 @media (max-width: 991px) {
+
     .protocol-img img, .admission_img-container img {
         margin: 10px 0 0 0px;
         width: 50%;
@@ -100,6 +102,16 @@
     #compras, #enlaces, #riesgo, #emocional, #informacion{
         padding: 100px 0 20px 0;
     }
+    
+    .about {
+        text-align: center;
+    }
+
+
+    .about img{
+        width: 65% !important;
+        padding: 0 0 5% 0;
+    }
 
     .about_img-container img, .admission_img-container img, .admission_img-container img, .why_img-container img{
         width: 0%;
@@ -109,11 +121,7 @@
         margin:auto;
         text-align:center;
     }
-
-
-    
 }
-
 
 @media (max-width: 767px) {
 
@@ -121,7 +129,7 @@
     .hide{
         display:none;
         padding: 0px;
-        }
+    }
 
 
     /** index */
@@ -271,16 +279,31 @@
 }
 
 @media (max-width: 625px) {
+
+    .hide{
+        display:none;
+        padding: 0px;
+    }
+
     .call_to-btn{
-        padding: 10px 35px ;
+        padding: 15px 30px 
+    }
+
+    .hero-row-btn a{
+        margin: 0 0 10% 0 ;
+        width: 100%;
     }
 
     .hero_btn_left {
-        margin-left: 40px;
+        margin-left: 0px;
     }
 
     .hero_btn_right {
-        margin-right: 40px;
+        margin-right: 0px;
+    }
+
+    .hero_img-container{
+        margin-top: 10%;
     }
 
 }
@@ -364,7 +387,6 @@
 
 @media (max-width: 504px) {
 
-
     .hero_btn_left {
         margin-left: 20px;
     }
@@ -377,18 +399,13 @@
         visibility: collapse;
     }
 
-
-
-
 }
 
+@media (max-width: 480px) {}
 
-
-@media (max-width: 480px) {
-
-}
 
 @media (max-width: 400px) {}
+
 
 @media (max-width: 360px) {
     .hero_img-container{
@@ -400,9 +417,6 @@
     .container {
         max-width: 1170px;
     }
-    
-
 }
 
 @media(max-width:768px ){}
-
