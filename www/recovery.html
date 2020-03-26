@@ -81,37 +81,37 @@
       <section class="login_section ">
         <div class="hero-container container">
           <div class="hero_detail-box">
-            <div class="alert alert-success d-none" role="alert" id="emailOk">
-              Su cuenta de usuario <b>se ha confirmado correctamente</b>, ya puede acceder a la plataforma.
+            <div class="alert alert-success d-none" role="alert" id="recoverOk">
+              <b>Contraseña cambiada correctamente</b>, <a href="login.html">haga click aquí</a> para acceder a la plataforma.
             </div>
-            <div class="alert alert-danger d-none" role="alert" id="emailErr">
-              <b>Error en el proceso de verificación</b> de su cuenta, vuelva a intentarlo.
+            <div class="alert alert-danger d-none" role="alert" id="recoverErr">
+              <b>Error en el proceso decambio de contraseña</b>, intentelo de nuevo.
             </div>
             <h2>
-              Accede al Panel Privado
+              Recuperar contraseña
             </h2>
             <p>
-              Desde aquí podrás gestionar tus solicitudes de ayuda, tus voluntariados o tu entidad.
+              Ingrese su nueva contraseña para proceder a cambiarla.
             </p>
             <div class="card card-body contact_section mb-2">
-              <form id="form-login">
+              <form id="form-recovery">
                 <div class="errors"></div>
                 <div class="contact_form-container">
-                  <div>
-                    <input name="user" type="text" placeholder="Teléfono o email" required>
+                  <input type="hidden" name="email" id="email" value="">
+                  <input type="hidden" name="token" id="token" value="">
+                  <div> 
+                    <input name="password" type="password" placeholder="Nueva Contraseña" minlength="8" required>
                   </div>
                   <div>
-                    <input name="password" type="password" placeholder="Contraseña" required>
+                    <input name="password_confirmation" type="password" placeholder="Confirmar Contraseña" minlength="8" required>
                   </div>
-
                   <br>
                   <button type="submit" class="call_to-btn btn_white-border">
-                      Acceder
+                      Cambiar contraseña
                   </button>
                 </div>
               </form>
             </div>
-            <a href="recover.html"><smal>Recuperar contraseña</smal></a>
           </div>
           <div class="hero_img-container">
             <div>
@@ -316,6 +316,7 @@
     <!-- Scripts -->
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/recovery.js"></script>
     <script type="text/javascript" src="js/data.js"></script>
     <script type="text/javascript" src="js/default.js?20200321"></script>
     
