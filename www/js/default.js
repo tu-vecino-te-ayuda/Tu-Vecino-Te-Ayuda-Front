@@ -1,5 +1,7 @@
 var tempPassword = '';
 $( document ).ready(function() {
+    let urlParams = new URLSearchParams(window.location.search)
+
     sessionStorage.removeItem('userData');
     compruebaAceptaCookies();
     let ayudaprov = $('.ayuda-provincia');
@@ -65,6 +67,14 @@ $( document ).ready(function() {
     var randomSlide = Math.floor(Math.random() * $('#carouselThanks .carousel-indicators li').length);
     $('#carouselThanks').carousel(randomSlide);
     $('#carouselThanks').carousel('next');
+
+    if(urlParams.has('verified')){
+        if(urlParams.get('verified')=='true'){
+            $("#emailOk").removeClass("d-none");
+        }else{
+            $("#emailErr").removeClass("d-none");
+        }
+    }
 });
 
 function checkValues(key, value){
