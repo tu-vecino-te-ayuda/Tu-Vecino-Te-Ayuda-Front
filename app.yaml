@@ -7,6 +7,11 @@ handlers:
   static_files: www/index.html
   upload: www/index.html
 
+- url: /(.*\.(gif|png|jpg))$
+  static_files: static/\1
+  expiration: "7d"
+  upload: static/.*\.(gif|png|jpg)$
+
 - url: /(.*)
   static_files: www/\1
   upload: www/(.*)
