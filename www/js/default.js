@@ -231,7 +231,7 @@ function recovery(data, event){
     event.target.innerHTML = loader;
     $.ajax({
         type: "POST",
-        url : server+'api/public/auth/password/email',
+        url : server+'api/public/auth/password/reset',
         data : data,
         dataType: "json"
     }).then(function(data) {
