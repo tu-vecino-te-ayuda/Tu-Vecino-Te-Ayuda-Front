@@ -46,7 +46,9 @@ var actual_help_id = null;
 var token = null;
 var user_type_id = null;
 var associations = [];
+var server = "https://api.tuvecinoteayuda.org";
 var loader = "<div class='lds-ellipsis'><div></div><div></div><div></div><div></div></div>";
+
 
 function createHelp(data, event){
     // event.target.innerHTML = loader;
