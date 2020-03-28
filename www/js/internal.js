@@ -37,6 +37,19 @@ $( document ).ready(function() {
     var randomSlide = Math.floor(Math.random() * $('#carouselThanks .carousel-indicators li').length);
     $('#carouselThanks').carousel(randomSlide);
     $('#carouselThanks').carousel('next');
+
+    $('#file-image').onchange = function () {
+        var file = input.files[0],
+          reader = new FileReader();
+      
+        reader.onloadend = function () {
+          // Since it contains the Data URI, we should remove the prefix and keep only Base64 string
+          var b64 = reader.result.replace(/^data:.+;base64,/, '');
+          console.log(b64); //-> "R0lGODdhAQABAPAAAP8AAAAAACwAAAAAAQABAAACAkQBADs="
+        };
+      
+        reader.readAsDataURL(file);
+      };
 });
 
 
@@ -504,3 +517,4 @@ function updateUserSession(userdata){
     data.user = userdata;
     sessionStorage.setItem('userData', JSON.stringify(data));
 };
+

@@ -572,6 +572,46 @@
       </div>
     </div>
 
+    <div class="modal fade" id="verify" tabindex="-1" role="dialog" aria-labelledby="verify" aria-hidden="true">
+      <div class="modal-dialog  modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Verificación de identidad</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body contact_section">
+            
+            <form id="form-edit">
+              <div class="contact_form-container ml-2">
+                <div>
+                  Para poder <b>garantizar la seguridad de los solicitantes de ayuda</b>, 
+                  debemos verificar tu identidad antes de ponerte en contacto con ellos.<br>
+                  Necesitaremos <b>solo esta primera vez</b>, el número y una foto de tu DNI o Carnet de Conducir.
+                </div>
+                <div>
+                  <input id="dni" name="dni" type="text" placeholder="Número de DNI o Carnet" required>
+                </div>
+                <div>
+                  <input type="file" id="file-image" name="file-image" accept="image/png, image/jpeg, image/jpg" placeholder="Seleccione una foto de su DNI o Carnet" required>
+                  <input type="hidden" id="image" name="image">
+                </div>
+                <div class="mt-1 ml-2 mr-2 text-sm-left check">
+                  <label><input type="checkbox" name="check" value="1" required> Acepto que la plataforma atomáticamente <b>verifíque mi 
+                  identidad</b>.</label>
+                </div>
+              </div>
+            </form>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-success" id="verify-data">Verificar</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
