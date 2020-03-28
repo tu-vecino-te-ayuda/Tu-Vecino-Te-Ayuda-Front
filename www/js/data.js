@@ -1,4 +1,5 @@
 //var server = "https://api."+window.location.host+"/";
+var server = "https://api.tuvecinoteayuda.org/";
 var provincias = [
     {
     id: "01",

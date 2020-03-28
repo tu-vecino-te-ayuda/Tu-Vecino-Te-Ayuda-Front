@@ -172,7 +172,7 @@ function checkValues(key, value){
 
 /** Services */
 
-var server = "https://api.tuvecinoteayuda.org";
+var server = "https://api.tuvecinoteayuda.org/";
 var loader = "<div class='lds-ellipsis'><div></div><div></div><div></div><div></div></div>";
 
 function postData(data, event){
