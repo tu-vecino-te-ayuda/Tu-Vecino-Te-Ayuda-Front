@@ -543,7 +543,7 @@
           </div>
           <div class="modal-body contact_section">
             
-            <form id="form-edit">
+            <form id="form-enroll">
               <div class="contact_form-container ml-2">
                 <div class="mt-1 ml-2 mr-2 text-sm-left check d-none">
                   Actualmente no estás enlazado con ninguna Asociación.
@@ -584,12 +584,16 @@
           </div>
           <div class="modal-body contact_section">
             
-            <form id="form-edit">
+            <form id="form-verify">
               <div class="contact_form-container ml-2">
                 <div>
                   Para poder <b>garantizar la seguridad de los solicitantes de ayuda</b>, 
                   debemos verificar tu identidad antes de ponerte en contacto con ellos.<br>
-                  Necesitaremos <b>solo esta primera vez</b>, el número y una foto de tu DNI o Carnet de Conducir.
+                  Necesitaremos <b>solo esta primera vez</b> tu nombre tal y como aparece tu carnet de identidad,
+                  el número de DNI y una foto de tu DNI o Carnet de Conducir.
+                </div>
+                <div>
+                  <input id="name" name="name" type="text" placeholder="Nombre y apellidos (igual que en el DNI)" required>
                 </div>
                 <div>
                   <input id="dni" name="dni" type="text" placeholder="Número de DNI o Carnet" required>

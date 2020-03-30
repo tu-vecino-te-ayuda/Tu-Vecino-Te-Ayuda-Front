@@ -34,22 +34,35 @@ $( document ).ready(function() {
         saveData(data);
         event.preventDefault();  
     });  
+
+    $("#verify-data").click(function( event ) {  
+        var data = {};
+        
+        $.each(document.forms['form-verify'].elements, function(i, field) {
+            if(field.name!='file-image'){
+                data[field.name] = field.value;
+            }
+        });
+        verifyData(data);
+        event.preventDefault();  
+    });   
+
+
     var randomSlide = Math.floor(Math.random() * $('#carouselThanks .carousel-indicators li').length);
     $('#carouselThanks').carousel(randomSlide);
     $('#carouselThanks').carousel('next');
 
-    $('#file-image').onchange = function () {
-        var file = input.files[0],
+    $('#file-image').change(function(e){
+        var file = e.target.files[0],
           reader = new FileReader();
       
         reader.onloadend = function () {
           // Since it contains the Data URI, we should remove the prefix and keep only Base64 string
           var b64 = reader.result.replace(/^data:.+;base64,/, '');
-          console.log(b64); //-> "R0lGODdhAQABAPAAAP8AAAAAACwAAAAAAQABAAACAkQBADs="
+          $('#image').val(b64);
         };
-      
         reader.readAsDataURL(file);
-      };
+      });
 });
 
 
@@ -159,6 +172,25 @@ function saveData(data, event){
         $('#editData').modal('hide');
         updateUserSession(data.user);
         setTimeout(location.reload(), 1500);
+    }).fail(function(data) {
+        console.log("Error: ");
+        console.log(data);
+    });
+};
+
+function verifyData(data, event){   
+    $.ajax({
+        type: "POST",
+        url : server+'api/user/verify',
+        data : data,
+        dataType: "json",
+        headers: {'Authorization': 'Bearer '+token},
+    }).then(function(data) {
+        console.log("Ok: ");
+        console.log(data);
+        // $('#editData').modal('hide');
+        // updateUserSession(data.user);
+        // setTimeout(location.reload(), 1500);
     }).fail(function(data) {
         console.log("Error: ");
         console.log(data);
@@ -419,6 +451,10 @@ function loadUserData(){
         $("#asoc-name").append('(<b>'+data.user.corporate_name+'</b>)');
     }
 
+    if(data.user.email=='javioreto@gmail.com'){
+        $('#verify').modal('show');
+    }
+
     switch(user_type_id){
         case 1:
             $("#btn-showPhone").removeClass("d-none");
@@ -440,6 +476,7 @@ function loadUserData(){
             $("#sect-results").removeClass("d-none");
             $("#sect-own-results").removeClass("d-none");
             $(".detach-help").css("display", "block");
+            $('#nearby_areas_id option[value="'+data.user.nearby_areas_id.id+'"]').attr("selected", "selected");
             break;
         case 3:
             getAsocUsers();
@@ -450,6 +487,7 @@ function loadUserData(){
             $(".delete-help").css("display", "block");
             $("#helpNow .modal-body").html('<p>Como Asociación no puede hacerse cargo directamente de una solicitud, pero puede <b>gestionar a sus voluntarios</b> para que atiendan estas peticiones.</p>');
             $("#helpNow .btn-success").hide();
+            $('#nearby_areas_id option[value="'+data.user.nearby_areas_id.id+'"]').attr("selected", "selected");
             break;
     }
     
@@ -458,7 +496,6 @@ function loadUserData(){
     let ayudaprov = $('.ayuda-provincia');
     let ayudaciudad = $('.ayuda-ciudad');
 
-    $('#nearby_areas_id option[value="'+data.user.nearby_areas_id.id+'"]').attr("selected", "selected");
 
     $.each(provincias, function (key, entry) {
         if(data.user.state == entry.id){
