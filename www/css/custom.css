@@ -17,6 +17,10 @@
 }
 
 
+.call_to-btn {
+    padding: 10px 45px;
+}
+
 
 
 /** Navbar */
@@ -244,3 +248,30 @@ color: #fefeff;
     padding: 3% 0 8% 0;
 }
 /** end About footer */
+
+
+/** DNI VERIFY */
+.wrap {
+    width: 10%;
+    height: 188px;
+    position: absolute;
+    top: -10px;
+    left: -40px;
+}
+
+  .ribbon {
+    width: 225px;
+    height: 45px;
+    line-height: 43px;
+    position: absolute;
+    top: 45px;
+    right: -60px;
+    z-index: 100;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(-45deg);
+    border: 1px dashed;
+    box-shadow: 0 0 0 3px #51e898, 0px 21px 5px -18px rgba(0,0,0,0.6);
+    background: #51e898;
+    text-align: center;
+}
+/** End DNI VERIFY */
