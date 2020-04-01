@@ -29,6 +29,10 @@
     background: #e4c234de;
 }
 
+.contrast{
+    filter: contrast(1.550100668295252);
+}
+
 .fixed-top{
     padding: 10px 10% 10px 10%  !important;
 }
@@ -41,6 +45,18 @@
 
 
 /** Index */
+
+.hero_detail-box {
+    width: 60%;
+}
+
+.hero-title {
+    filter: contrast(1.550100668295252);
+}
+
+.hero-text{
+    filter: contrast(1.550100668295252);
+}
 
 .hero-container{
     padding: 80px 0 300px 0;
