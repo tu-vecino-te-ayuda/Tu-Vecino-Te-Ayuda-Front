@@ -1,9 +1,5 @@
 var tempPassword = '';
 $( document ).ready(function() {
-    let urlParams = new URLSearchParams(window.location.search)
-
-    sessionStorage.removeItem('userData');
-    compruebaAceptaCookies();
     let ayudaprov = $('.ayuda-provincia');
     let ayudaciudad = $('.ayuda-ciudad');
 
@@ -55,37 +51,12 @@ $( document ).ready(function() {
                 case 'form-ent':
                     postData(data, event);
                     break;
-                case 'form-login':
-                    login(data, event);
-                    break;
-                case 'form-recover':
-                    recover(data, event);
-                    break;
-                case 'form-recovery':
-                    recovery(data, event);
-                    break;
             }
         }else{
             event.target.firstElementChild.innerHTML = errors;
         }
           
-    });  
-    var randomSlide = Math.floor(Math.random() * $('#carouselThanks .carousel-indicators li').length);
-    $('#carouselThanks').carousel(randomSlide);
-    $('#carouselThanks').carousel('next');
-
-    if(urlParams.has('verified')){
-        if(urlParams.get('verified')=='true'){
-            $("#emailOk").removeClass("d-none");
-        }else{
-            $("#emailErr").removeClass("d-none");
-        }
-    }
-
-    if(urlParams.has('email') && urlParams.has('token')){
-        $("#email").val(urlParams.get('email'));
-        $("#token").val(urlParams.get('token'));
-    }
+    });
 });
 
 function checkValues(key, value){
@@ -171,9 +142,6 @@ function checkValues(key, value){
 
 
 /** Services */
-
-var loader = "<div class='lds-ellipsis'><div></div><div></div><div></div><div></div></div>";
-
 function postData(data, event){
     event.target.innerHTML = loader;
     $.ajax({
@@ -193,71 +161,3 @@ function postData(data, event){
         event.target.innerHTML = "Error en la inscripción, <a href='index.html'>intentelo de nuevo</a>.<br>"+errors;
     });
 };
-
-
-function login(data, event){
-    event.target.innerHTML = loader;
-    $.ajax({
-        type: "POST",
-        url : server+'api/public/auth/login',
-        data : data,
-        dataType: "json"
-    }).then(function(data) {
-        sessionStorage.setItem('userData', JSON.stringify(data));
-        window.location.href="./dashboard.html";
-    }).fail(function(data) {
-        event.target.innerHTML = "<span class='text-secondary'>Error en la autenticación, <a href='login.html'>inténtelo de nuevo</a>.</span>";
-    });
-};
-
-
-function recover(data, event){
-    event.target.innerHTML = loader;
-    $.ajax({
-        type: "POST",
-        url : server+'api/public/auth/password/email',
-        data : data,
-        dataType: "json"
-    }).then(function(data) {
-        $("#recoverOk").removeClass("d-none");
-    }).fail(function(data) {
-        $("#recoverErr").removeClass("d-none");
-    });
-};
-
-
-function recovery(data, event){
-    event.target.innerHTML = loader;
-    $.ajax({
-        type: "POST",
-        url : server+'api/public/auth/password/reset',
-        data : data,
-        dataType: "json"
-    }).then(function(data) {
-        $("#recoverOk").removeClass("d-none");
-    }).fail(function(data) {
-        $("#recoverErr").removeClass("d-none");
-    });
-};
-    
-/** Funciones */
-
-function compruebaAceptaCookies() {
-    if(localStorage.aceptaCookies == 'true'){
-      cajacookies.style.display = 'none';
-    }
-  }
-
-function aceptarCookies() {
-    localStorage.aceptaCookies = 'true';
-    cajacookies.style.display = 'none';
-  }
-
-
-  
-/*! Lazy Load 2.0.0-rc.2 - MIT license - Copyright 2007-2019 Mika Tuupola */
-!function(t,e){"object"==typeof exports?module.exports=e(t):"function"==typeof define&&define.amd?define([],e):t.LazyLoad=e(t)}("undefined"!=typeof global?global:this.window||this.global,function(t){"use strict";function e(t,e){this.settings=s(r,e||{}),this.images=t||document.querySelectorAll(this.settings.selector),this.observer=null,this.init()}"function"==typeof define&&define.amd&&(t=window);const r={src:"data-src",srcset:"data-srcset",selector:".lazyload",root:null,rootMargin:"0px",threshold:0},s=function(){let t={},e=!1,r=0,o=arguments.length;"[object Boolean]"===Object.prototype.toString.call(arguments[0])&&(e=arguments[0],r++);for(;r<o;r++)!function(r){for(let o in r)Object.prototype.hasOwnProperty.call(r,o)&&(e&&"[object Object]"===Object.prototype.toString.call(r[o])?t[o]=s(!0,t[o],r[o]):t[o]=r[o])}(arguments[r]);return t};if(e.prototype={init:function(){if(!t.IntersectionObserver)return void this.loadImages();let e=this,r={root:this.settings.root,rootMargin:this.settings.rootMargin,threshold:[this.settings.threshold]};this.observer=new IntersectionObserver(function(t){Array.prototype.forEach.call(t,function(t){if(t.isIntersecting){e.observer.unobserve(t.target);let r=t.target.getAttribute(e.settings.src),s=t.target.getAttribute(e.settings.srcset);"img"===t.target.tagName.toLowerCase()?(r&&(t.target.src=r),s&&(t.target.srcset=s)):t.target.style.backgroundImage="url("+r+")"}})},r),Array.prototype.forEach.call(this.images,function(t){e.observer.observe(t)})},loadAndDestroy:function(){this.settings&&(this.loadImages(),this.destroy())},loadImages:function(){if(!this.settings)return;let t=this;Array.prototype.forEach.call(this.images,function(e){let r=e.getAttribute(t.settings.src),s=e.getAttribute(t.settings.srcset);"img"===e.tagName.toLowerCase()?(r&&(e.src=r),s&&(e.srcset=s)):e.style.backgroundImage="url('"+r+"')"})},destroy:function(){this.settings&&(this.observer.disconnect(),this.settings=null)}},t.lazyload=function(t,r){return new e(t,r)},t.jQuery){const r=t.jQuery;r.fn.lazyload=function(t){return t=t||{},t.attribute=t.attribute||"data-src",new e(r.makeArray(this),t),this}}return e});
-
-$(function(){
-    lazyload();
-});

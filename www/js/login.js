@@ -1,5 +1,16 @@
 $( document ).ready(function() {
-    let urlParams = new URLSearchParams(window.location.search)
+    let urlParams = new URLSearchParams(window.location.search);
+    
+    if(urlParams.has('verified')){
+        if(urlParams.get('verified')=='true'){
+            $("#emailOk").removeClass("d-none");
+        }else{
+            $("#emailErr").removeClass("d-none");
+        }
+    } else if(urlParams.has('email') && urlParams.has('token')){
+        $("#email").val(urlParams.get('email'));
+        $("#token").val(urlParams.get('token'));
+    }
 
     $("form").submit(function( event ) { 
         // grecaptcha.execute();
@@ -28,24 +39,7 @@ $( document ).ready(function() {
         }else{
             event.target.firstElementChild.innerHTML = errors;
         }
-          
-    });  
-    var randomSlide = Math.floor(Math.random() * $('#carouselThanks .carousel-indicators li').length);
-    $('#carouselThanks').carousel(randomSlide);
-    $('#carouselThanks').carousel('next');
-
-    if(urlParams.has('verified')){
-        if(urlParams.get('verified')=='true'){
-            $("#emailOk").removeClass("d-none");
-        }else{
-            $("#emailErr").removeClass("d-none");
-        }
-    }
-
-    if(urlParams.has('email') && urlParams.has('token')){
-        $("#email").val(urlParams.get('email'));
-        $("#token").val(urlParams.get('token'));
-    }
+    });
 });
 
 function login(data, event){
