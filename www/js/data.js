@@ -1,4 +1,3 @@
-var server = "https://api."+window.location.host+"/";
 var provincias = [
     {
     id: "01",
