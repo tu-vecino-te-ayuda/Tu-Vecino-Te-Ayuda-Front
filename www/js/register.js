@@ -151,13 +151,13 @@ function postData(data, event){
         dataType: "json"
     }).then(function(data) {
         console.log(data);
-        event.target.innerHTML = "Inscripción realizada con éxito, ya puedes acceder a la <a href='login.html'>zona privada</a>.";
+        event.target.innerHTML = "Inscripción realizada con éxito, ya puedes acceder a la <a href='./'>zona privada</a>.";
     }).fail(function(data) {
         var errors = '';
         console.log(data);
         $.each(data.responseJSON.errors, function(i, field) {
             errors = errors + '<b>' + i + '</b>: ' + field + '<br>';
         });
-        event.target.innerHTML = "Error en la inscripción, <a href='index.html'>intentelo de nuevo</a>.<br>"+errors;
+        event.target.innerHTML = "Error en la inscripción, <a href='./'>intentelo de nuevo</a>.<br>"+errors;
     });
 };

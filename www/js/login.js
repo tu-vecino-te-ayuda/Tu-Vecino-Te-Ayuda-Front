@@ -51,9 +51,9 @@ function login(data, event){
         dataType: "json"
     }).then(function(data) {
         sessionStorage.setItem('userData', JSON.stringify(data));
-        window.location.href="./dashboard.html";
+        window.location.href="./dashboard";
     }).fail(function(data) {
-        event.target.innerHTML = "<span class='text-secondary'>Error en la autenticación, <a href='login.html'>inténtelo de nuevo</a>.</span>";
+        event.target.innerHTML = "<span class='text-secondary'>Error en la autenticación, <a href='./'>inténtelo de nuevo</a>.</span>";
     });
 };
 

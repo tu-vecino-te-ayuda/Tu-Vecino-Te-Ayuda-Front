@@ -435,7 +435,7 @@ function generateTableMyUsers(data){
 function loadUserData(){
     var data = $.parseJSON(sessionStorage.getItem('userData'));
     if (data === null) {
-        window.location.href="./index.html";
+        window.location.href="./";
       }
     token = data.token;
     user_type_id = data.user.user_type_id.id;
