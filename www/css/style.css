@@ -41,7 +41,6 @@ a:focus {
 }
 
 
-
 /* Background */
 .top_container{
     background-image: url(../images/background/Mancha_Home_Azul_TuVecinoTeAyuda.svg);
@@ -236,6 +235,12 @@ nav.navbar.navbar-expand-lg {
     margin-top: 17%;
 }
 
+.help-img,
+.volunteer-img,
+.association-img{
+    margin-top: 3%;
+}
+
 
 .help img, 
 .volunteer img, 
@@ -297,8 +302,12 @@ nav.navbar.navbar-expand-lg {
 
 
 /* Slide */
+.slide{
+    margin-top: 5%;
+}
+
 .slide-img{
-    padding:10%;
+    padding: 10%;
 }
 
 .slide h3{
