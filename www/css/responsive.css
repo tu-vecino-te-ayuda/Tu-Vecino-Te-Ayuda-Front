@@ -1,491 +1,108 @@
-/***********************************/
-/*          RESPONISVE CSS         */
-/***********************************/
+@media (max-width: 1900px)  {
 
-@media (max-width: 3000px)  {
-    .hero-row-btn{
-        padding: 2% 30% 0 30%;
+    /* Navigation */
+    .nav-item{
+        padding: 0 1% ;
     }
+
 }
 
-@media (max-width: 1500px) {
-    .top_container{
-        padding-bottom:100px;
+
+@media (max-width: 1800px)  {
+
+    /* Navigation */
+    .custom-nav-container {
+        padding: 2% 5%;
     }
 
-    .hero-container{
-        padding: 30px 0 240px 0;
-    }
-
-    .hero-row-btn{
-        padding: 2% 10% 0 10%;
-    }
-
-    .hero-container{
-        padding-top: 80px;  
-      }
 }
 
-@media (max-width: 1400px) {
-    .wrap{
-        width: 11%; 
-    }
-}
 
-@media (max-width: 1200px) {
+@media (max-width: 1440px)  {
    
-    #enlaces {
-        padding-top: 110px;
-       }
-
-    .protocol-img img{
-        padding-top: 100px;
+    /* Navigation */
+    .custom-nav-container {
+        padding: 2% 5%;
     }
 
-    .wrap{
-        width: 12%; 
-    }
-
-
-
-}
-
-@media (max-width: 1120px) {
-    .top_container{
-        padding-bottom:80px;
-    }
-    .protocol-img img{
-        padding-top: 80px;
-    }
-
-    .wrap{
-        width: 14%; 
+    .nav-item {
+        width: 150px;
     }
 
 }
 
-@media (max-width: 992px) {
 
-
-    .hero-container {
-        flex-direction: column;
-    }
-
-    .hero-container {
-     
-            padding-top: 80px;
-    }
-
-    .hero_detail-box {
-        width: 100%;
-        margin-bottom: 45px;
-    }
-
-    .hero_img-container {
-        padding-top: 15%;
-        width: 80%;
-    }
-
-    .hero-container.container {
-        padding: 40px 0 0 0;
-    }
-
-    .custom_nav-container.navbar-expand-lg .navbar-nav .nav-link {
-        color: #fff;
-    }
+@media (max-width: 1024px)  {
     
-    .client_section {
-        padding: 10px 0 20px 0;
+    /* Navigation */
+    .custom-nav-container {
+        padding: 1% 5%;
     }
 
-    #compras h3, #informacion h3{
-        text-align: center;
-    }
-
-    .wrap{
-        width: 15%; 
+    /* Hero */
+    .hero-img{
+        padding-top: 45%;
     }
 
 }
 
-@media (max-width: 991px) {
 
-    .protocol-img img, .admission_img-container img {
-        margin: 10px 0 0 0px;
-        width: 50%;
-        padding-top: 20px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    #compras, #enlaces, #riesgo, #emocional, #informacion{
-        padding: 100px 0 20px 0;
-    }
-    
-    .about {
-        text-align: center;
-    }
-
-
-    .about img{
-        width: 65% !important;
-        padding: 0 0 5% 0;
-    }
-
-    .about_img-container img, .admission_img-container img, .admission_img-container img, .why_img-container img{
-        width: 0%;
-    }
-
-    .about_detail-box a{
-        margin:auto;
-        text-align:center;
-    }
-
-    .wrap{
-        width: 16%; 
-    }
-}
-
-@media (max-width: 815px) {
-    .wrap{
-        width: 18%; 
-    }
-}
-
-
-@media (max-width: 767px) {
-
-    /** mode smart*/
-    .hide{
-        display:none;
-        padding: 0px;
-    }
-
-
-    /** index */
-
-    .hero_detail-box {
-        text-align: center;
-    }
-
-    .hero_detail-box h1 {
-        width: 100%;
-    }
-
-    .top_container::after {
+@media (max-width: 768px)  {
+    .sm-none{
         display: none;
     }
 
-    .top_container::before {
-        background-size: cover;
-    }
-
-    .info_section .col-md-3 {
-        padding: 20px 25px;
+    
+    /* Hero */
+    .hero-title{
         text-align: center;
     }
 
-    .common_style img {
-        width: 40%;
-        margin: 20px auto;
+    .hero-text{
+        text-align: center;
     }
 
-    .client_img-box{
-        visibility: hidden;
-    }
-
-    .carousel-img{
-        visibility: collapse;
-    }
-
-    .carousel-txt{
-        width: 100%;
-    }
-
-    /** protocolos */
-
-    .protocol-container{
-        width: 100%;
+    .hero-title-white{ 
+        font-size: 1em;
+        padding-left: 0px;
     }
     
-    .protocol_detail-box {
-        width: 100%;
+    .hero-title-orange{
+        font-size: 1.7em;
+        padding-left: 0px;
     }
 
-    .protocol_detail-box h1 {
-        width: 100%;
-        text-align: center;
+    .hero-title-org{
+        font-size: 1em;
+        padding-left: 0px;
     }
-
-
-    .admission_img-container img{
-        width: 40%;
-    }
-
-
-    /* buy section */
-    .client_section .row{
-        padding: 25px 0;
-    }
-
-    .enlaces_section{
+    .hero-img{
         margin: auto;
+        width: 35%;
+        padding: 0;
+    }
+
+    .hero-btn-help, 
+    .hero-btn-volunteer{
         text-align: center;
+        padding: 3% 0;
+        margin: 3% 3%;
     }
-    
-    .protocol-container a{
-        width: 100%;
-    }
-
-    .compras_section img, .compras_section a  {
-    text-align: center;
-    width: 100%;
-    display:block;
-    margin:auto;
-    }
-
-    
-    /* risk section */
-    .riesgo_section img, .riesgo_section a {
-    text-align: center;
-    width: 100%;
-    display:block;
-    margin:auto;
-    }
-    
-
-    /* info section */
-    .informacion_section img, .informacion_section a {
-    text-align: center;
-    width: 100%;
-    display:block;
-    margin:auto;
-    }
-    /* end informacion section */
+}
 
 
-    /* emotional section section */
-    .emocional_section img,  .emocional_section a {
-    text-align: center;
-    width: 100%;
-    display:block;
-    margin:auto;  
-    }
-    
-
-    .common_style p{
-    margin: 15px 0 25px 0;
-    }
-
-    .client_img-box{
-        display:none;
-        padding-top: 0px;
-    }
-
-    .client_detail-box iframe{
-        width: 150%;
-    }
-
-    /** Thanks */
-    .thanks_section h1{
+@media (max-width: 425px)  {
+    .help-container h2{
         font-size: 1.5em;
     }
-    .creators img{
-        width: 90%;
-        padding: 5% !important;
-       text-align: center;
-    }
-
-    .thanks img{
-        width: 100%;
-        padding: 0px !important;
-        margin: 0px;
-    }
-
-    .abi-logo{
-        width: 35% !important;
-    }
-
-    .wrap{
-        width: 21%; 
-    }
-
 }
 
-@media (max-width: 680px) {
-    .wrap{
-        width: 24%; 
-    }
-}
 
-@media (max-width: 625px) {
-
-    .hide{
-        display:none;
-        padding: 0px;
-    }
-
-    .call_to-btn{
-        padding: 15px 30px 
-    }
-
-    .hero-row-btn a{
-        margin: 0 0 10% 0 ;
-        width: 100%;
-    }
-
-    .hero_btn_left {
-        margin-left: 0px;
-    }
-
-    .hero_btn_right {
-        margin-right: 0px;
-    }
-
-    .hero_img-container{
-        margin-top: 10%;
-    }
-
-}
-
-@media (max-width: 576px) {
-    .hero-container {
-        padding-bottom: 100px;
-    }
-
-    .client_img-box::before,
-    .client_img-box::after {
-        content: "";
-        position: absolute;
-        width: 75px;
-        height: 20px;
-        border-radius: 20px;
-        background-color: #fdd31d;
-    }
-
-    .client_img-box::before {
-        top: 0;
-        transform: rotate(132deg);
-        left: -15px;
-        animation: beforeanimate 1s;
-        animation-delay: .1s;
-    }
-
-    .client_img-box::after {
-        bottom: 0px;
-        transform: rotate(135deg);
-        right: -15px;
-        animation: afteranimate 1s;
-        animation-delay: .1s;
-    }
-
-    @keyframes beforeanimate {
-        0% {
-            top: 43%;
-            transform: rotate(142deg);
-            left: 31%;
-
-        }
-
-        100% {
-            top: 0px;
-            transform: rotate(132deg);
-            left: -15px;
-        }
-    }
-
-    @keyframes afteranimate {
-        0% {
-            bottom: 46%;
-            transform: rotate(142deg);
-            right: 35%;
-        }
-
-        100% {
-            bottom: 0px;
-            transform: rotate(135deg);
-            right: -15px;
-        }
-    }
-
-    .contact_section {
-        padding: 0px 15px 0 15px;
-    }
-
-    .sub_page .contact_section {
-        padding: 45px 15px;
-    }
-
-    .contact_section input {
-        width: 100%;
-    }
-
-    .info_section .social-box {
-        width: auto;
-    }
-
-    .wrap{
-        width: 26%; 
-    }
-}
-
-@media (max-width: 504px) {
-    .wrap{
-        width: 28%; 
-    }
-}
-
-@media (max-width: 504px) {
-
-    .hero_btn_left {
-        margin-left: 20px;
-    }
-
-    .hero_btn_right {
-        margin-right: 20px;
-    }
-
-    .hero_img-container{
-        visibility: collapse;
-    }
+@media (max-width: 375px)  {
     
-    .wrap{
-        width: 30%; 
-    }
-
-}
-
-@media (max-width: 480px) {
-    .wrap{
-        width: 32%; 
-    }
-}
-
-@media (max-width: 425px) {
-    .wrap{
-        width: 35%; 
-    }
-}
-
-@media (max-width: 400px) {
-    .wrap{
-        width: 38%; 
-    }
 }
 
 
-@media (max-width: 360px) {
-    .hero_img-container{
-        padding-top: 25%;
-    }
-
+@media (max-width: 320px)  {
+    
 }
-
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1170px;
-    }
-}
-
-@media(max-width:768px ){}
