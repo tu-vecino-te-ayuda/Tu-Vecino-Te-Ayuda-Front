@@ -93,120 +93,24 @@
         </header>
         <!-- end Navbar  -->
 
-        <!-- Forms section -->
-        <section class="hero-section" id="ayuda">
+        <!-- user section -->
+        <section class="hero-section" id="voluntarios">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4">
-                        <div class="about_img-container hide">
-                            <img data-src="images/index/riesgo.png" alt="" class="lazyload">
-                        </div>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="about_detail-box">
-                            <h3>
-                                Necesito Ayuda
+                    <div class="col-md-12">
+                        <div class="admission_detail-box ">
+                            <h3 class="left">
+                                Registro
                             </h3>
                             <p>
-                                Si necesitas ayuda o sabes de alguien que la pueda necesitar, rellena este
-                                formulario y una persona voluntaria de confianza te ayudará a cubrir tus
-                                necesidades, tales como hacerte la compra de alimentos, fármacos, útiles de casa,
-                                cuidar a los niños o algún otro tipo de asistencia.
-                                <br>
-                                Alguien del mismo portal, barrio o ciudad te ayudará y se pondrá en contacto contigo
-                                para que le comuniques cuáles son tus necesidades y así poderte ayudar.
-                                <br>
-                                Todo se realizará siguiendo las mayores precauciones sanitarias.
+                                Inscripción realizada con éxito, ya puedes acceder a la <a href='./dashboard'>zona privada</a>.
                             </p>
-                        </div>
-                        <br>
-                        <div id="form-ayuda">
-                            <div class="card card-body contact_section">
-                                <form id="form-help">
-                                    <div class="errors"></div>
-                                    <div class="contact_form-container">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div>
-                                                    <input name="user_type_id" type="hidden" value="1">
-                                                    <input name="nearby_areas_id" type="hidden" value="99">
-                                                    <input name="activity_areas_id" type="hidden" value="99">
-                                                    <input name="name" type="text" placeholder="Nombre y Apellidos"
-                                                        required>
-                                                </div>
-                                                <div>
-                                                    <input name="email" type="email" placeholder="Email" required>
-                                                </div>
-                                                <div>
-                                                    <input name="phone" type="tel" placeholder="Teléfono" minlength="8"
-                                                        required>
-                                                </div>
-                                                <div>
-                                                    <div>
-                                                        <input name="password" type="password"
-                                                            placeholder="Contraseña (8 car. min)" minlength="8"
-                                                            required>
-                                                    </div>
-                                                    <div>
-                                                        <input name="password_confirmation" type="password"
-                                                            placeholder="Confirmar Contraseña" minlength="8" required>
-                                                    </div>
-                                                </div>
-                                                <div class="mt-1 ml-5 text-sm-left check">
-                                                    <!--<label><input type="checkbox" name="check" value="1" required> Declaro ser mayor de edad</label>-->
-                                                    <label><input type="checkbox" name="check" value="1" required>
-                                                        Acepto los términos y condiciones de la
-                                                        politica de privacidad y declaro ser mayor de edad <a
-                                                            href="#legal" data-toggle="modal">Información sobre el
-                                                            tratamiento</a>.</label>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-6">
-                                                <div>
-                                                    <select name="helpType">
-                                                        <option value="1">Soy el solicitante de ayuda</option>
-                                                        <option value="2">Lo hago en nombre de un tercero</option>
-                                                    </select>
-                                                </div>
-                                                <div>
-                                                    <select name="state" class="ayuda-provincia" required>
-                                                    </select>
-                                                </div>
-                                                <div>
-                                                    <select name="city" class="ayuda-ciudad" disabled required>
-                                                    </select>
-                                                </div>
-                                                <div>
-                                                    <input name="address" type="text"
-                                                        placeholder="Dirección (Calle, Número, etc.)" minlength="3"
-                                                        required>
-                                                </div>
-                                                <div>
-                                                    <input name="zip_code" type="text" placeholder="Código Postal"
-                                                        pattern="\d*" maxlength="5" minlength="5" required>
-                                                </div>
-                                                <br><br>
-                                                <div class="mt-1">
-                                                    <button type="submit">
-                                                        Incribirme
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                </form>
-
-
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- end help section -->
+        <!-- end user section -->
 
         <!-- TODO: REVISAR CLASES FOOTER -->
         <!-- Footer section -->
@@ -231,8 +135,8 @@
                             Sobre Nosotros
                         </h4>
                         <p>
-                            Somos un equipo de voluntarios de la <b>Asociación Burgalesa de Ingenieros
-                                Informáticos</b>, que trabajamos contrarreloj para ayudar
+                            Somos un equipo de voluntarios de la <b>Asociación Burgalesa de Ingenieros Informáticos</b>,
+                            que trabajamos contrarreloj para ayudar
                             a nuestra sociedad aportando nuestros conocimientos técnicos.
                         </p>
                     </div>
@@ -379,9 +283,6 @@
     <script type="text/javascript" src="js/jquery/jquery-3.4.1.js" defer></script>
     <script type="text/javascript" src="js/bootstrap/bootstrap.min.js" defer></script>
     <script type="text/javascript" src="js/common.js?20200405" defer></script>
-    <script type="text/javascript" src="js/data.js" defer></script>
-    <script type="text/javascript" src="js/register.js?20200406" defer></script>
-
 </body>
 
 </html>
