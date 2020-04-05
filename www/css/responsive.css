@@ -12,7 +12,7 @@
 
     /* Navigation */
     .custom-nav-container {
-        padding: 2% 5%;
+        padding: 1% 5%;
     }
 
 }
@@ -22,7 +22,7 @@
    
     /* Navigation */
     .custom-nav-container {
-        padding: 2% 5%;
+        padding: 1% 5%;
     }
 
     .nav-item {
@@ -50,6 +50,10 @@
         margin-top: 8%;
     }
 
+    .user-form-submit button {
+        padding: 15px 50px;
+    }
+
 }
 
 
@@ -59,7 +63,6 @@
     .sm-none{
         display: none;
     }
-
     
     /* Hero */
     .hero-title{
