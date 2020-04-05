@@ -1,4 +1,6 @@
 $( document ).ready(function() {
+    checkLogin();
+
     let urlParams = new URLSearchParams(window.location.search);
     
     if(urlParams.has('verified')){
@@ -53,7 +55,7 @@ function login(data, event){
         sessionStorage.setItem('userData', JSON.stringify(data));
         window.location.href="./dashboard";
     }).fail(function(data) {
-        event.target.innerHTML = "<span class='text-secondary'>Error en la autenticación, <a href='./'>inténtelo de nuevo</a>.</span>";
+        $("#form-login .errors").html("Error en la autenticación, inténtelo de nuevo.");
     });
 };
 
@@ -84,3 +86,11 @@ function recovery(data, event){
         $("#recoverErr").removeClass("d-none");
     });
 };
+
+function checkLogin()
+{
+    var data = $.parseJSON(sessionStorage.getItem('userData'));
+    if (data !== null) {
+        window.location.href="./dashboard";
+    }
+}
