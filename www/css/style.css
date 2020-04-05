@@ -1,3 +1,22 @@
+/* Background */
+.top_container{
+    background-image: url(../images/background/Mancha_Home_Azul_TuVecinoTeAyuda.svg);
+    background-size:cover;
+    height: 1015px;
+}
+
+/* Bubbles */
+.bubble-pink{
+    background: 
+    url(../images/background/Mancha_Home_Rosa_TuVecinoTeAyuda.svg) top left no-repeat;
+}
+
+.bubble-yellow{
+    background: 
+    url(../images/background/Mancha_Home_Amarilla_TuVecinoTeAyuda.svg) top right no-repeat;
+}
+
+/* Common */
 html {
     scroll-behavior: smooth;
 }
@@ -40,14 +59,6 @@ a:focus {
     float: right;
 }
 
-
-/* Background */
-.top_container{
-    background-image: url(../images/background/Mancha_Home_Azul_TuVecinoTeAyuda.svg);
-    background-size:cover;
-    height: 1015px;
-}
-
 /* Navigation */
 nav a{
     color: white;
@@ -88,7 +99,7 @@ nav.navbar.navbar-expand-lg {
 
 .nav-item{
     text-align: center;
-    text-shadow: 2px 2px 10px #000000;
+    /*text-shadow: 2px 2px 10px #000000;*/
     width: 175px;
 }
 
@@ -116,7 +127,7 @@ nav.navbar.navbar-expand-lg {
     transition: all 0.3s ease 0s;
     padding-right: 15px;
     margin-left: 20px;
-    text-shadow: 0px 0px 0px;
+    /*text-shadow: 0px 0px 0px;*/
 }
 
 .private-zone a{
@@ -142,7 +153,6 @@ nav.navbar.navbar-expand-lg {
     padding-right: 10px;
 }
 
-
 /* Hero */
 .hero-section{
     margin-bottom: -13%;
@@ -155,7 +165,7 @@ nav.navbar.navbar-expand-lg {
 
 .hero-title{
     font-weight: bold;
-    text-shadow: 2px 2px 10px #000000;
+    /*text-shadow: 2px 2px 10px #000000;*/
 }
 
 .hero-title-white{
@@ -183,14 +193,13 @@ nav.navbar.navbar-expand-lg {
     font-size: 1.1em;
     letter-spacing: 0.1em;
     padding-top: 3%;
-    text-shadow: 2px 2px 10px #000000;
+    /*text-shadow: 2px 2px 10px #000000;*/
 }
 
 .hero-img{
     padding-left: 10%;
     padding-top: 30%;
 }
-
 
 /* Fist Call Button */
 .first-call{
@@ -227,12 +236,11 @@ nav.navbar.navbar-expand-lg {
     font-weight: bold;
 }
 
-
 /* Call to Action */
 .help, 
 .volunteer, 
 .association{
-    margin-top: 17%;
+    margin-top: 10%;
 }
 
 .help-img,
@@ -241,13 +249,11 @@ nav.navbar.navbar-expand-lg {
     margin-top: 3%;
 }
 
-
 .help img, 
 .volunteer img, 
 .association img{
     border-radius: 50px;
 }
-
 
 .call-to-action h2{
     font-size: 3em;
@@ -288,18 +294,63 @@ nav.navbar.navbar-expand-lg {
     font-weight: bold;
 }
 
-
-/* Bubbles */
-.bubble-pink{
-    background: 
-    url(../images/background/Mancha_Home_Rosa_TuVecinoTeAyuda.svg) top left no-repeat;
+/* Form-Volunteers*/
+.user-form-section{
+    padding-top: 8%;
+    padding-bottom: 7%;
 }
 
-.bubble-yellow{
-    background: 
-    url(../images/background/Mancha_Home_Amarilla_TuVecinoTeAyuda.svg) top right no-repeat;
+.user-form-section .row{
+    padding-top: 4%;
 }
 
+.user-form-img img{
+    width: 100%;
+    padding-top: 15%
+}
+
+.user-form-text h1{
+    font-size: 3.5em;
+    font-weight: bold;
+    text-align: center;
+    /*background: 
+        url(../images/background/Mancha_Home_Rosa_TuVecinoTeAyuda.svg) top left no-repeat;*/
+}
+
+.user-form-text p{
+    font-size: 1.5em;
+    padding-top: 3%;
+    text-align: center;
+}
+
+.user-form-input input, 
+.user-form-input select{
+    width: 100%;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #000;
+    margin: 15px 0;
+}
+
+.user-form-check input{
+    text-align: left;
+    height: inherit;
+    width: inherit;
+}
+
+.user-form-submit{
+    padding-top: 5%;
+}
+
+.user-form-submit button{
+    text-align: center;
+    background: #fcd800;
+    border-radius: 10px;
+    padding: 15px 80px;
+    letter-spacing: 0.3em;
+    text-align: right;
+}
 
 /* Slide */
 .slide{
@@ -316,7 +367,6 @@ nav.navbar.navbar-expand-lg {
     font-weight: bold;
     color: black;
 }
-
 
 /* Footer */
 footer{
@@ -368,13 +418,13 @@ footer hr{
     padding: 0 3px;
 }
 
+/* CopyRight */
 .copyright{
     text-align: center;
     background: #fcd800;
     padding: 20px 0;
     font-weight: bold;
 }
-
 
 .copyright a{
     text-decoration: none;
@@ -384,6 +434,3 @@ footer hr{
 .copyright p{
     margin: 0px;
 }
-    
-
-

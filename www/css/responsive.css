@@ -55,6 +55,7 @@
 
 @media (max-width: 768px)  {
     
+    /* Display */
     .sm-none{
         display: none;
     }
@@ -102,16 +103,19 @@
         margin-top: 20%;
     }
 
-    .volunteer-img{
-        margin-top: 15%;
-    }
-
+    /* Call-to-Action */
     .call-btn-help a , 
     .call-btn-volunteer a, 
     .call-btn-association a {
         font-size: 1.3em;
     }
+    
+    /* Volunteer */
+    .volunteer-img{
+        margin-top: 15%;
+    }
 
+    /* Slide */
     .slide{
         margin-top: 5%;
     }
@@ -120,10 +124,17 @@
         font-size: 1.25em;
     }
 
+    /* Footer */
     .footer-about{
         text-align: center;
     }
 
+    .footer-title img {
+        margin-left: 10%;
+        width: 80%;
+    }
+
+    /* Carousel */
     .carousel-item {
         width: 80%;
     }
@@ -132,19 +143,23 @@
         margin-left: 25%;
     }
 
-    .footer-title img {
-        margin-left: 10%;
-        width: 80%;
+    /* Form-Volunteers*/
+    .user-form-img img {
+        width: 100%;
+        padding-top: 2%;
     }
+    
 }
 
 
 @media (max-width: 425px)  {
     
+    /* Display */
     .sl-none{
         display: none;
     }
 
+    /* Hero */
     .hero-section .row {
         padding-top: 20%;
     }
@@ -160,12 +175,14 @@
         margin-top: 30%;
     }
 
+    /* Call-to-Action */
     .call-btn-help, 
     .call-btn-volunteer, 
     .call-btn-association {
         padding: 15px 0px;
     }
 
+    /* Slide */
     .slide{
         margin-top: 15%;
     }
@@ -182,6 +199,7 @@
         font-size: 1.3rem;
     }
 
+    /* Carousel */
     .carousel-item{
         width: 70%;
     }
@@ -190,10 +208,24 @@
         margin-left: 35%;
         margin-bottom: 5%;
     }
+
+    /* Form-Volunteers*/
+    .user-form-text h1{
+        font-size: 2.5em;
+    }
+
+    .user-form-section .row {
+        padding-top: 7%;
+    }
+
+    .user-form-text p {
+        font-size: 1em;
+    }
 }
 
 
 @media (max-width: 375px)  {
+    /* Hero */
     .hero-title {
         font-size: 2em;
         padding-top: 3%;
@@ -202,7 +234,17 @@
 
 
 @media (max-width: 320px)  {
+    /* Hero */
     .hero-title-orange{
         font-size: 1.5em;
+    }
+
+    /* Form-Volunteers*/
+    .user-form-section .row {
+        padding-top: 15%;
+    }
+
+    .user-form-submit button {
+        padding: 15px 60px;
     }
 }

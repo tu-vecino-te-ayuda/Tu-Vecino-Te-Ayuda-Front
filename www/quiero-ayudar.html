@@ -32,16 +32,14 @@
     <link href="./css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
     <!-- Styles  -->
-    <link href="./css/style.css" rel="stylesheet" type="text/css" />
+    <link href="./css/style.css?20200404" rel="stylesheet" type="text/css" />
     <!-- Responsive  -->
-    <link href="./css/responsive.css" rel="stylesheet" type="text/css" />
+    <link href="./css/responsive.css?20200404" rel="stylesheet" type="text/css" />
 
 </head>
 
 
 <body>
-
-    <div class="top_container">
 
         <!-- Navbar  -->
         <header class="header_section">
@@ -93,120 +91,122 @@
         </header>
         <!-- end Navbar  -->
 
-        <!-- user section -->
-        <section class="hero-section" id="voluntarios">
+        <!-- Form-User section -->
+        <section class="user-form-section" id="voluntarios">
             <div class="container">
+
+                <!-- Form Text -->
                 <div class="row">
-                    <div class="col-md-8">
-                        <div class="admission_detail-box ">
-                            <h3 class="left">
-                                Voluntari@
-                            </h3>
+                    <div class="col-lg-12">
+                        <div class="user-form-text ">
+                            <h1>
+                                Quiero Ser Voluntari@
+                            </h1>
                             <p>
-                                ¿Quieres ayudar a otras personas? ¡Apúntate!
-                                <br>
-                                Puedes ayudar tanto a que personas en riesgo no tengan que exponerse, como echando una
-                                mano a quien no pueda atender a sus mayores o niños.
+                                ¿Quieres ayudar a otras personas? ¡Apúntate!<br>
+                                Puedes ayudar tanto a que personas en riesgo no tengan que exponerse,
+                                como echando una mano a quien no pueda atender a sus mayores o niños.
                             </p>
                         </div>
+                    </div>
+                </div>
+                <!-- end Form Text -->
 
-                        <br>
-
+                <!-- Form Input -->
+                <div class="row">
+                    <div class="user-form-img col-lg-5">
+                        <img data-src="./images/call-to-action/volunteer.jpg" alt="Quiero Ser Voluntaria" class="lazyload">
+                    </div>
+                    <div class="user-form-input col-lg-7">
                         <div id="form-voluntario">
                             <div class="card card-body contact_section">
                                 <form id="form-vol">
                                     <div class="errors"></div>
-                                    <div class="contact_form-container">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div>
-                                                    <input name="user_type_id" type="hidden" value="2">
-                                                    <input name="activity_areas_id" type="hidden" value="99">
-                                                    <input name="name" type="text" placeholder="Nombre y Apellidos"
-                                                        required>
-                                                </div>
-                                                <div>
-                                                    <input name="email" type="email" placeholder="Email" required>
-                                                </div>
-                                                <div>
-                                                    <input name="phone" type="tel" placeholder="Teléfono" minlength="8"
-                                                        required>
-                                                </div>
-                                                <div>
-                                                    <input name="password" type="password"
-                                                        placeholder="Contraseña (8 car. min)" minlength="8" required>
-                                                </div>
-                                                <div>
-                                                    <input name="password_confirmation" type="password"
-                                                        placeholder="Confirmar Contraseña" minlength="8" required>
-                                                </div>
-                                                <div class="mt-1 ml-5 text-sm-left check">
-                                                    <!--<label><input type="checkbox" name="check" value="1" required> Declaro ser mayor de edad</label>-->
-                                                    <label><input type="checkbox" name="check" value="1" required>
-                                                        Acepto los términos y condiciones de la
-                                                        politica de privacidad y declaro ser mayor de edad. <a
-                                                            href="#legal" data-toggle="modal">Información sobre el
-                                                            tratamiento</a>.</label>
-                                                </div>
-
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div>
+                                                <input name="user_type_id" type="hidden" value="2">
+                                                <input name="activity_areas_id" type="hidden" value="99">
+                                                <input name="name" type="text" placeholder="Nombre y Apellidos"
+                                                    required>
                                             </div>
-
-                                            <div class="col-md-6">
-                                                <div>
-                                                    <select name="nearby_areas_id" required>
-                                                        <option value="0">--Preferencias de desplazamiento--</option>
-                                                        <option value="1">Solo a mis vecinos</option>
-                                                        <option value="2">Solo en mi barrio</option>
-                                                        <option value="3">Solo en mi ciudad</option>
-                                                        <option value="4">Mi ciudad y proximidades</option>
-                                                    </select>
-                                                </div>
-                                                <div>
-                                                    <select name="state" class="ayuda-provincia" required>
-                                                    </select>
-                                                </div>
-                                                <div>
-                                                    <select name="city" class="ayuda-ciudad" disabled required>
-                                                    </select>
-                                                </div>
-                                                <div>
-                                                    <input name="address" type="text"
-                                                        placeholder="Dirección (Calle, Número, etc.)" minlength="3"
-                                                        required>
-                                                </div>
-                                                <div>
-                                                    <input name="zip_code" type="text" placeholder="Código Postal"
-                                                        pattern="\d*" maxlength="5" minlength="5" required>
-                                                </div>
-                                                <br><br>
-                                                <div class="mt-1">
-                                                    <button type="submit">
-                                                        Incribirme
-                                                    </button>
-                                                </div>
+                                            <div>
+                                                <input name="email" type="email" placeholder="Email" required>
                                             </div>
+                                            <div>
+                                                <input name="phone" type="tel" placeholder="Teléfono" minlength="8"
+                                                    required>
+                                            </div>
+                                            <div>
+                                                <input name="password" type="password"
+                                                    placeholder="Contraseña (8 car. min)" minlength="8" required>
+                                            </div>
+                                            <div>
+                                                <input name="password_confirmation" type="password"
+                                                    placeholder="Confirmar Contraseña" minlength="8" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6">
+                                            <div>
+                                                <select name="nearby_areas_id" required>
+                                                    <option value="0">--Preferencias de desplazamiento--</option>
+                                                    <option value="1">Solo a mis vecinos</option>
+                                                    <option value="2">Solo en mi barrio</option>
+                                                    <option value="3">Solo en mi ciudad</option>
+                                                    <option value="4">Mi ciudad y proximidades</option>
+                                                </select>
+                                            </div>
+                                            <div>
+                                                <select name="state" class="ayuda-provincia" required>
+                                                </select>
+                                            </div>
+                                            <div>
+                                                <select name="city" class="ayuda-ciudad" disabled required>
+                                                </select>
+                                            </div>
+                                            <div>
+                                                <input name="address" type="text"
+                                                    placeholder="Dirección (Calle, Número, etc.)" minlength="3"
+                                                    required>
+                                            </div>
+                                            <div>
+                                                <input name="zip_code" type="text" placeholder="Código Postal"
+                                                    pattern="\d*" maxlength="5" minlength="5" required>
+                                            </div>
+                                            
+                                        </div>
+
+                                        <div class="user-form-check col-lg-6">
+                                            <label><input type="checkbox" name="check" value="1" required>
+                                                Acepto los términos y condiciones de la
+                                                politica de privacidad y declaro ser mayor de edad. <a
+                                                    href="#legal" data-toggle="modal">Información sobre el
+                                                    tratamiento</a>.
+                                            </label>
+                                        </div>
+
+                                        <div class="user-form-submit btn col-lg-6">
+                                            <button type="submit">
+                                                Incribirme
+                                            </button>
                                         </div>
                                     </div>
                                 </form>
                             </div>
                         </div>
-
                     </div>
-                    <div class="col-md-4">
-                        <div class="admission_img-container hide">
-                            <img data-src="images/index/voluntarios.png" alt="" class="lazyload">
-                        </div>
-                    </div>
+              
                 </div>
+                <!-- end Form Input -->
             </div>
         </section>
         <!-- end user section -->
 
-        <!-- TODO: REVISAR CLASES FOOTER -->
         <!-- Footer section -->
         <footer>
-
-            <!-- title footer -->
+        
+            <!-- title footer -->  
             <div class="container">
                 <div class="row">
                     <div class="footer-title col-12">
@@ -220,114 +220,100 @@
             <div class="footer-about container">
                 <div class="row">
 
-                    <div class="footer-us col-lg-4 col-md-6">
-                        <h4>
-                            Sobre Nosotros
+                    <div class="footer-us col-lg-4 col-lg-6">
+                        <h4> 
+                            Sobre Nosotros                                                                             
                         </h4>
                         <p>
-                            Somos un equipo de voluntarios de la <b>Asociación Burgalesa de Ingenieros Informáticos</b>,
-                            que trabajamos contrarreloj para ayudar
-                            a nuestra sociedad aportando nuestros conocimientos técnicos.
+                            Somos un equipo de voluntarios de la <b>Asociación Burgalesa de Ingenieros Informáticos</b>, que trabajamos contrarreloj para ayudar 
+                            a nuestra sociedad aportando nuestros conocimientos técnicos. 
                         </p>
                     </div>
 
-                    <div class="footer-links col-lg-4 col-md-6">
+                    <div class="footer-links col-lg-4 col-lg-6">
                         <h4>
-                            Links de Interés
+                            Links de Interés 
                         </h4>
                         <ul>
                             <li>
-                                <a href="https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/situacionActual.htm"
-                                    target="_blank">
-                                    Situación Actual
-                                </a>
+                            <a href="https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/situacionActual.htm" target="_blank">
+                                Situación Actual
+                            </a>
                             </li>
                             <li>
-                                <a href="https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/ciudadania.htm"
-                                    target="_blank">
-                                    Información General
-                                </a>
+                            <a href="https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/ciudadania.htm" target="_blank">
+                                Información General
+                            </a>
                             </li>
                             <li>
-                                <a href="https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/telefonos.htm"
-                                    target="_blank">
-                                    Teléfonos de Interés
-                                </a>
+                            <a href="https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/telefonos.htm" target="_blank">
+                                Teléfonos de Interés
+                            </a>
                             </li>
                             <li>
-                                <a href="pdf/politica_privacidad.pdf" target="_blank">
-                                    Aviso Legal, privacidad y cookies
-                                </a>
+                            <a href="./pdf/politica_privacidad.pdf" target="_blank">
+                                Aviso Legal, privacidad y cookies
+                            </a>
                             </li>
                         </ul>
                     </div>
 
-                    <div class="footer-collaborator col-lg-4 col-md-12">
+                    <div class="footer-collaborator col-lg-4 col-lg-12">
                         <h4>
-                            Esto es posible gracias a la colaboración de grandes profesionales de...
+                            Esto es posible gracias a la colaboración de grandes profesionales de... 
                         </h4>
                         <div id="carouselThanks" class="carousel slide" data-ride="carousel">
                             <ol class="carousel-indicators" style="margin-bottom: 0rem;">
-                                <li data-target="#carouselThanks" data-slide-to="0" class="active"></li>
-                                <li data-target="#carouselThanks" data-slide-to="1"></li>
-                                <li data-target="#carouselThanks" data-slide-to="2"></li>
-                                <li data-target="#carouselThanks" data-slide-to="3"></li>
-                                <li data-target="#carouselThanks" data-slide-to="4"></li>
-                                <li data-target="#carouselThanks" data-slide-to="5"></li>
-                                <li data-target="#carouselThanks" data-slide-to="6"></li>
-                                <li data-target="#carouselThanks" data-slide-to="7"></li>
-                                <li data-target="#carouselThanks" data-slide-to="8"></li>
+                            <li data-target="#carouselThanks" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselThanks" data-slide-to="1"></li>
+                            <li data-target="#carouselThanks" data-slide-to="2"></li>
+                            <li data-target="#carouselThanks" data-slide-to="3"></li>
+                            <li data-target="#carouselThanks" data-slide-to="4"></li>
+                            <li data-target="#carouselThanks" data-slide-to="5"></li>
+                            <li data-target="#carouselThanks" data-slide-to="6"></li>
+                            <li data-target="#carouselThanks" data-slide-to="7"></li>
+                            <li data-target="#carouselThanks" data-slide-to="8"></li>
                             </ol>
                             <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img class="d-block w-75 images-thanks lazyload"
-                                        data-src="./images/partner/abi2burgos.png"
-                                        alt="Asociación Burgalesa de Ingenieros Informáticos">
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-75 images-thanks lazyload"
-                                        data-src="images/partner/bet4gamers.png" alt="Bet4Gamers">
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-75 images-thanks lazyload"
-                                        data-src="images/partner/nesiweb.png" alt="Nesiweb">
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-75 images-thanks lazyload" data-src="images/partner/zenos.png"
-                                        alt="Zenos Servicios Informáticos">
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-75 images-thanks lazyload"
-                                        data-src="images/partner/bemetrics.png" alt="BeMetrics">
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-75 images-thanks lazyload" data-src="images/partner/JUMA.png"
-                                        alt="Juma Soluciones">
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-75 images-thanks lazyload" data-src="images/partner/gdg.png"
-                                        alt="GDG Burgos">
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-75 images-thanks lazyload"
-                                        data-src="images/partner/esgueva.png" alt="Esgueva Solutions">
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-75 images-thanks lazyload"
-                                        data-src="images/partner/tequipo.png" alt="Tequipo">
-                                </div>
+                            <div class="carousel-item active">
+                                <img class="d-block w-75 images-thanks lazyload" data-src="./images/partner/abi2burgos.png" alt="Asociación Burgalesa de Ingenieros Informáticos">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-75 images-thanks lazyload" data-src="./images/partner/bet4gamers.png" alt="Bet4Gamers">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-75 images-thanks lazyload" data-src="./images/partner/nesiweb.png" alt="Nesiweb">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-75 images-thanks lazyload" data-src="./images/partner/zenos.png" alt="Zenos Servicios Informáticos">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-75 images-thanks lazyload" data-src="./images/partner/bemetrics.png" alt="BeMetrics">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-75 images-thanks lazyload" data-src="./images/partner/juma.png" alt="Juma Soluciones">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-75 images-thanks lazyload" data-src="./images/partner/gdg.png" alt="GDG Burgos">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-75 images-thanks lazyload" data-src="./images/partner/esgueva.png" alt="Esgueva Solutions">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-75 images-thanks lazyload" data-src="./images/partner/tequipo.png" alt="Tequipo">
+                            </div>
                             </div>
                             <a class="carousel-control-prev" href="#carouselThanks" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
                             </a>
                             <a class="carousel-control-next" href="#carouselThanks" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
                             </a>
                         </div>
                         <p class="text-center mt-1">
-                            <smal><a href="agradecimientos" class="text-light">Ver lista completa</a></smal>
+                            <smal><a href="./agradecimientos" class="text-light">Ver lista completa</a></smal>
                         </p>
                     </div>
 
@@ -339,15 +325,15 @@
 
             <!-- social footer -->
             <div class="social_container container">
-
+                  
                 <a href="https://www.facebook.com/Tu-Vecino-Te-Ayuda-104432751201293/" target="_blank">
-                    <img data-src="images/social/fb.png" alt="" class="lazyload">
-                </a>
+                    <img data-src="./images/social/fb.png" alt="" class="lazyload">
+                </a> 
                 <a href="https://twitter.com/TuVecinoTeAyuda" target="_blank">
-                    <img data-src="images/social/twitter.png" alt="" class="lazyload">
+                    <img data-src="./images/social/twitter.png" alt="" class="lazyload">
                 </a>
                 <a href="https://www.instagram.com/tuvecinoteayuda/" target="_blank">
-                    <img data-src="images/social/instagram.png" alt="" class="lazyload">
+                    <img data-src="./images/social/instagram.png" alt="" class="lazyload">
                 </a>
 
             </div>
@@ -357,21 +343,20 @@
         <!-- end Footer section -->
 
 
-
         <!-- Copyright -->
         <section class="copyright">
-            <p> Copyright &copy; 2020 |
-                <a href="http://abi2burgos.es">Asociación Burgalesa de Ingenieros Informáticos |</a>
-                <a href="http://abi2burgos.es">Diseño por WidO LaFlamme</a>
+            <p> Copyright &copy; 2020 | 
+            <a href="http://abi2burgos.es">Asociación Burgalesa de Ingenieros Informáticos |</a>
+            <a href="./index">Diseño por WidO LaFlamme</a>
             </p>
         </section>
 
-    </div> <!-- end top_container -->
 
 
     <!-- Scripts -->
     <script type="text/javascript" src="js/jquery/jquery-3.4.1.js" defer></script>
     <script type="text/javascript" src="js/bootstrap/bootstrap.min.js" defer></script>
+    <script type="text/javascript" src="js/data.js?20200404" defer></script>
     <script type="text/javascript" src="js/common.js?20200404" defer></script>
     <script type="text/javascript" src="js/register.js?20200404" defer></script>
 
