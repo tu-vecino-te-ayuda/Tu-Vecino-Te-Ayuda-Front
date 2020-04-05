@@ -32,35 +32,25 @@ $( document ).ready(function() {
         })          
       });
 
-    $("form").submit(function( event ) { 
+    $('#form-help, #form-vol, #form-ent').submit(function( event ) {
         // grecaptcha.execute();
         event.preventDefault(); 
         var data = {};
         var errors = '';
-        console.log(event);
         $.each(event.originalEvent.srcElement.elements, function(i, field) {
-            // console.log(field.name + "->" + field.value);
             errors = errors + checkValues(field.name, field.value);
             data[field.name] = field.value;
         });
-        console.log(errors);
         if(errors == ''){
-            switch(event.target.id){
-                case 'form-help':
-                case 'form-vol':
-                case 'form-ent':
-                    postData(data, event);
-                    break;
-            }
+            postData($(this).attr('id'), data, event);
         }else{
             event.target.firstElementChild.innerHTML = errors;
         }
-          
     });
 });
 
 /** Services */
-function postData(data, event){
+function postData(formId, data, event){
     event.target.innerHTML = loader;
     $.ajax({
         type: "POST",
@@ -70,11 +60,11 @@ function postData(data, event){
     }).then(function(data) {
         window.location.href="./registro-confirmado";
     }).fail(function(data) {
-        $('#form-ayuda .errors').html('Error en la inscripción, <a href="./">intentelo de nuevo</a>.<br>');
+        $(formId + ' .errors').html('Error en la inscripción, <a href="./">intentelo de nuevo</a>.<br>');
 
         if (data.responseJSON && data.responseJSON.errors) {
             $.each(data.responseJSON.errors, function(i, field) {
-                $('#form-ayuda .errors').append('<b>' + i + '</b>: ' + field + '<br>');
+                $(formId + ' .errors').append('<b>' + i + '</b>: ' + field + '<br>');
             });
         }
     });
