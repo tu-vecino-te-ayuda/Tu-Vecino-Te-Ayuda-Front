@@ -1,4 +1,6 @@
 $( document ).ready(function() {
+    checkLogin();
+
     let urlParams = new URLSearchParams(window.location.search);
     
     if(urlParams.has('verified')){
@@ -84,3 +86,11 @@ function recovery(data, event){
         $("#recoverErr").removeClass("d-none");
     });
 };
+
+function checkLogin()
+{
+    var data = $.parseJSON(sessionStorage.getItem('userData'));
+    if (data !== null) {
+        window.location.href="./dashboard";
+    }
+}
