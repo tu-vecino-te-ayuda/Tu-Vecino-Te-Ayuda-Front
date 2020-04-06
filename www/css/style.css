@@ -77,7 +77,7 @@ nav.navbar.navbar-expand-lg {
 }
 
 .navbar{
-    background: #94DCD2DE;
+    background: #4bd6ddDE;
 }
 
 .navbar-brand{
@@ -179,11 +179,13 @@ nav.navbar.navbar-expand-lg {
     color: #fcd800;
     font-size: 2.2em;
     padding-left: 30px;
+    filter: contrast(1.25);
 }
 
 .hero-title-org{
     color: #fcd800;
     font-size: 1.5em;
+    filter: contrast(1.25);
 }
 
 .hero-text{
@@ -197,8 +199,8 @@ nav.navbar.navbar-expand-lg {
 }
 
 .hero-img{
-    padding-left: 10%;
-    padding-top: 30%;
+    padding-left: 0%;
+    padding-top: 15%;
 }
 
 /* Fist Call Button */
@@ -300,6 +302,10 @@ nav.navbar.navbar-expand-lg {
     padding-bottom: 7%;
 }
 
+.user-form-section h2{
+    text-align: center;
+}
+
 .user-form-section .row{
     padding-top: 4%;
 }
@@ -351,6 +357,17 @@ nav.navbar.navbar-expand-lg {
     letter-spacing: 0.3em;
     text-align: right;
 }
+
+.errorModal h3{
+    text-align: center;
+    color: brown;
+}
+
+.errorModal p{
+padding-left: 2%;
+text-align: center;
+}
+
 
 /* Slide */
 .slide{
