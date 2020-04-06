@@ -46,7 +46,7 @@
                 <!-- Logo -->
                 <a class="navbar-brand" href="./">
                     <span>
-                        <img data-src="./images/brand/Logo_Web_TuVecinoTeAyuda.svg" title="Tu Vecin@ Te Ayuda" class="lazyload" alt="Logo de Tu Vecino Te Ayuda">
+                        <img data-src="./images/brand/Logo_Favicon_Web_TuVecinoTeAyuda.svg" title="Tu Vecin@ Te Ayuda" class="lazyload" alt="Logo de Tu Vecino Te Ayuda">
                     </span>
                 </a>
 
@@ -118,35 +118,56 @@
                         <div id="form-voluntario">
                             <div class="card card-body contact_section">
                                 <form id="form-vol">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <h2>Formulario de Voluntari@</h2>
+                                        </div>   
+                                    </div>
                                     <div class="errors"></div>
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div>
-                                                <input name="user_type_id" type="hidden" value="2">
-                                                <input name="activity_areas_id" type="hidden" value="99">
-                                                <input name="name" type="text" placeholder="Nombre y Apellidos"
-                                                    required>
+                                                <input name="user_type_id" type="hidden" value="2" />
+                                                <input name="activity_areas_id" type="hidden" value="99" />
+                                                <input name="name" type="text" 
+                                                       placeholder="Nombre y Apellidos" 
+                                                       class="form-control required" 
+                                                       required />
                                             </div>
                                             <div>
-                                                <input name="email" type="email" placeholder="Email" required>
+                                                <input name="email" type="email" 
+                                                       placeholder="Email: xxxxxxx@xxxxx.es" 
+                                                       class="form-control required" 
+                                                       required />
                                             </div>
                                             <div>
-                                                <input name="phone" type="tel" placeholder="Teléfono" minlength="8"
-                                                    required>
+                                                <input name="phone" type="text" 
+                                                       placeholder="Teléfono: (8 o 9 cararceres)" 
+                                                       minlength="8" maxlength="9" 
+                                                       class="form-control required" 
+                                                       required />
                                             </div>
                                             <div>
-                                                <input name="password" type="password"
-                                                    placeholder="Contraseña (8 car. min)" minlength="8" required>
+                                                <input name="password" type="password" 
+                                                       placeholder="Contraseña (8 car. min)" 
+                                                       minlength="8" 
+                                                       class="form-control required" 
+                                                       required />
                                             </div>
                                             <div>
-                                                <input name="password_confirmation" type="password"
-                                                    placeholder="Confirmar Contraseña" minlength="8" required>
+                                                <input name="password_confirmation" type="password" 
+                                                       placeholder="Confirmar Contraseña (8 car. min)" 
+                                                       minlength="8" 
+                                                       class="form-control required" 
+                                                       required />
                                             </div>
                                         </div>
 
                                         <div class="col-lg-6">
                                             <div>
-                                                <select name="nearby_areas_id" required>
+                                                <select name="nearby_areas_id" 
+                                                        class="form-control required" 
+                                                        required >
                                                     <option value="0">--Preferencias de desplazamiento--</option>
                                                     <option value="1">Solo a mis vecinos</option>
                                                     <option value="2">Solo en mi barrio</option>
@@ -155,30 +176,40 @@
                                                 </select>
                                             </div>
                                             <div>
-                                                <select name="state" class="ayuda-provincia" required>
+                                                <select name="state" 
+                                                        class="ayuda-provincia form-control required" 
+                                                        required >
                                                 </select>
                                             </div>
                                             <div>
-                                                <select name="city" class="ayuda-ciudad" disabled required>
+                                                <select name="city" 
+                                                        class="ayuda-ciudad form-control required" 
+                                                        disabled 
+                                                        required >
                                                 </select>
                                             </div>
                                             <div>
-                                                <input name="address" type="text"
-                                                    placeholder="Dirección (Calle, Número, etc.)" minlength="3"
-                                                    required>
+                                                <input name="address" type="text" 
+                                                       placeholder="Dirección (Calle y Número)" 
+                                                       minlength="5" 
+                                                       class="form-control required" 
+                                                       required >
                                             </div>
                                             <div>
-                                                <input name="zip_code" type="text" placeholder="Código Postal"
-                                                    pattern="\d*" maxlength="5" minlength="5" required>
+                                                <input name="zip_code" type="text" 
+                                                       placeholder="Código Postal: (5 cararceres)" 
+                                                       pattern="\d*" 
+                                                       minlength="5" maxlength="5" 
+                                                       class="form-control required" 
+                                                       required >
                                             </div>
                                         </div>
 
                                         <div class="user-form-check col-lg-6">
-                                            <label><input type="checkbox" name="check" value="1" required>
-                                                Acepto los términos y condiciones de la
-                                                politica de privacidad y declaro ser mayor de edad. <a
-                                                    href="#legal" data-toggle="modal">Información sobre el
-                                                    tratamiento</a>.
+                                            <label>
+                                                <input type="checkbox" name="check" value="1" required>
+                                                Acepto los términos y condiciones de la politica de privacidad y declaro ser mayor de edad. 
+                                                <a href="#legal" data-toggle="modal">Información sobre el tratamiento</a>.
                                             </label>
                                         </div>
 
@@ -347,11 +378,11 @@
 
 
         <!-- Scripts -->
-        <script type="text/javascript" src="js/jquery/jquery-3.4.1.js" defer></script>
+        <script type="text/javascript" src="js/jquery/jquery-3.4.1.js" ></script>
         <script type="text/javascript" src="js/bootstrap/bootstrap.min.js" defer></script>
         <script type="text/javascript" src="js/register.js?20200406" defer></script>
         <script type="text/javascript" src="js/common.js?20200405" defer></script>
-        <script type="text/javascript" src="js/data.js?20200404" defer></script>
+        <script type="text/javascript" src="js/data.js?20200404" ></script>
 
     </body>
 

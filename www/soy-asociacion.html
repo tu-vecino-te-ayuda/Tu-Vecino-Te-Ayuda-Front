@@ -46,7 +46,7 @@
                 <!-- Logo -->
                 <a class="navbar-brand" href="./">
                     <span>
-                        <img data-src="./images/brand/Logo_Web_TuVecinoTeAyuda.svg" title="Tu Vecin@ Te Ayuda" class="lazyload" alt="Logo de Tu Vecino Te Ayuda">
+                        <img data-src="./images/brand/Logo_Favicon_Web_TuVecinoTeAyuda.svg" title="Tu Vecin@ Te Ayuda" class="lazyload" alt="Logo de Tu Vecino Te Ayuda">
                     </span>
                 </a>
 
@@ -119,73 +119,111 @@
                         <div id="form-entidad">
                             <div class="card card-body contact_section">
                                 <form id="form-ent">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <h2>Formulario de Asociación</h2>
+                                        </div>    
+                                    </div>
                                     <div class="errors"></div>
                                     <div class="row">
-                                        <div class="col-lg-6">
+                                        <div class="form-group col-lg-6">
                                             <div>
                                                 <input name="user_type_id" type="hidden" value="3">
                                                 <input name="nearby_areas_id" type="hidden" value="99">
                                                 <input name="corporate_name" type="text"
-                                                    placeholder="Nombre de la Asociación" required>
+                                                       placeholder="Nombre de la Asociación"
+                                                       class="form-control" 
+                                                       required />
                                             </div>
                                             <div>
                                                 <input name="name" type="text"
-                                                    placeholder="Nombre y Apellidos representante" required>
+                                                       placeholder="Nombre y Apellidos representante" 
+                                                       class="form-control required" 
+                                                       required />
                                             </div>
                                             <div>
-                                                <input name="email" type="email" placeholder="Email" required>
+                                                <input name="email" type="email" 
+                                                       placeholder="Email: tu@correo.es" 
+                                                       class="form-control required" 
+                                                       required />
                                             </div>
                                             <div>
-                                                <input name="phone" type="tel" placeholder="Teléfono" minlength="8"
-                                                    required>
+                                                <input name="phone" type="text" 
+                                                       placeholder="Teléfono: (8 o 9 cararceres)" 
+                                                       minlength="8" maxlength="9" 
+                                                       class="form-control required" 
+                                                       required />
                                             </div>
                                             <div>
-                                                <input name="password" type="password"
-                                                    placeholder="Contraseña (8 car. min)" minlength="8" required>
+                                                <input name="password" type="password" 
+                                                       placeholder="Contraseña (8 car. min)" 
+                                                       minlength="8" 
+                                                       class="form-control required" 
+                                                       required />
                                             </div>
                                             <div>
-                                                <input name="password_confirmation" type="password"
-                                                    placeholder="Confirmar Contraseña" minlength="8" required>
+                                                <input name="password_confirmation" type="password" 
+                                                       placeholder="Confirmar Contraseña (8 car. min)" 
+                                                       minlength="8" 
+                                                       class="form-control required" 
+                                                       required />
                                             </div>
                                         </div>
 
                                         <div class="col-lg-6">
                                             <div>
-                                                <input name="cif" type="text" placeholder="CIF o DNI" required>
+                                                <input name="cif" type="text" 
+                                                       class="form-control required"        
+                                                       placeholder="CIF o DNI" 
+                                                       minlength="8"
+                                                       maxlength="9"  
+                                                       required>
                                             </div>
                                             <div>
-                                                <select name="state" class="ayuda-provincia" required>
-                                                </select>
-                                            </div>
-                                            <div>
-                                                <select name="city" class="ayuda-ciudad" disabled required>
-                                                </select>
-                                            </div>
-                                            <div>
-                                                <input name="address" type="text"
-                                                    placeholder="Dirección (Calle, Número, etc.)" minlength="3"
-                                                    required>
-                                            </div>
-                                            <div>
-                                                <input name="zip_code" type="text" placeholder="Código Postal"
-                                                    pattern="\d*" maxlength="5" minlength="5" required>
-                                            </div>
-                                            <div>
-                                                <select name="activity_areas_id" required>
+                                                <select name="activity_areas_id" 
+                                                        class="form-control required" 
+                                                        required>
                                                     <option value="0">--Ámbito de actuación--</option>
                                                     <option value="1">Local</option>
                                                     <option value="2">Provincial</option>
                                                     <option value="3">Nacional</option>
                                                 </select>
                                             </div>
+                                            <div>
+                                                <select name="state" 
+                                                        class="ayuda-provincia form-control required" 
+                                                        required >
+                                                </select>
+                                            </div>
+                                            <div>
+                                                <select name="city" 
+                                                        class="ayuda-ciudad form-control required" 
+                                                        disabled 
+                                                        required >
+                                                </select>
+                                            </div>
+                                            <div>
+                                                <input name="address" type="text" 
+                                                       placeholder="Dirección (Calle y Número)" 
+                                                       minlength="5" 
+                                                       class="form-control required" 
+                                                       required >
+                                            </div>
+                                            <div>
+                                                <input name="zip_code" type="text" 
+                                                       placeholder="Código Postal: (5 cararceres)" 
+                                                       pattern="\d*" 
+                                                       minlength="5" maxlength="5" 
+                                                       class="form-control required" 
+                                                       required >
+                                            </div>
                                         </div>
 
                                         <div class="user-form-check col-lg-6">
-                                            <label><input type="checkbox" name="check" value="1" required>
-                                                Acepto los términos y condiciones de la
-                                                politica de privacidad y declaro ser mayor de edad. <a
-                                                    href="#legal" data-toggle="modal">Información sobre el
-                                                    tratamiento</a>.
+                                            <label>
+                                                <input type="checkbox" name="check" value="1" required>
+                                                Acepto los términos y condiciones de la politica de privacidad y declaro ser mayor de edad. 
+                                                <a href="#legal" data-toggle="modal">Información sobre el tratamiento</a>.
                                             </label>
                                         </div>
 
@@ -201,6 +239,25 @@
                     </div>
                 </div>
                 <!-- end Form Input -->
+
+                
+                <!-- Modal -->
+                <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModal" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title">Se produjo un error en el registro:</h3>
+                        </div>
+                        <div class="error-modal-body">
+                        </div>
+                        
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
             </div>
         </section>
         <!-- end association section -->
