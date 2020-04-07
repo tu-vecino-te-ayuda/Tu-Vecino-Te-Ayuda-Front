@@ -130,39 +130,51 @@
                                             <div>
                                                 <input name="user_type_id" type="hidden" value="3">
                                                 <input name="nearby_areas_id" type="hidden" value="99">
-                                                <input name="corporate_name" type="text"
+                                                <input id="corporate_name" 
+                                                       name="corporate_name" 
+                                                       type="text"
                                                        placeholder="Nombre de la Asociación"
                                                        class="form-control" 
                                                        required />
                                             </div>
                                             <div>
-                                                <input name="name" type="text"
+                                                <input id="name" 
+                                                       name="name" 
+                                                       type="text"
                                                        placeholder="Nombre y Apellidos representante" 
                                                        class="form-control" 
                                                        required />
                                             </div>
                                             <div>
-                                                <input name="email" type="email" 
+                                                <input id="email" 
+                                                       name="email" 
+                                                       type="email" 
                                                        placeholder="Email: tu@correo.es" 
                                                        class="form-control" 
                                                        required />
                                             </div>
                                             <div>
-                                                <input name="phone" type="text" 
+                                                <input id="phone" 
+                                                       name="phone" 
+                                                       type="text" 
                                                        placeholder="Teléfono: (8 o 9 cararceres)" 
                                                        minlength="8" maxlength="9" 
                                                        class="form-control" 
                                                        required />
                                             </div>
                                             <div>
-                                                <input name="password" type="password" 
+                                                <input id="password" 
+                                                       name="password" 
+                                                       type="password" 
                                                        placeholder="Contraseña (8 car. min)" 
                                                        minlength="8" 
                                                        class="form-control" 
                                                        required />
                                             </div>
                                             <div>
-                                                <input name="password_confirmation" type="password" 
+                                                <input id="password_confirmation"
+                                                       name="password_confirmation" 
+                                                       type="password" 
                                                        placeholder="Confirmar Contraseña (8 car. min)" 
                                                        minlength="8" 
                                                        class="form-control" 
@@ -172,7 +184,9 @@
 
                                         <div class="col-lg-6">
                                             <div>
-                                                <input name="cif" type="text" 
+                                                <input id="cif" 
+                                                       name="cif" 
+                                                       type="text" 
                                                        class="form-control"        
                                                        placeholder="CIF o DNI" 
                                                        minlength="8"
@@ -180,7 +194,8 @@
                                                        required>
                                             </div>
                                             <div>
-                                                <select name="activity_areas_id" 
+                                                <select id="activity_areas_id" 
+                                                        name="activity_areas_id" 
                                                         class="form-control" 
                                                         required>
                                                     <option value="">--Ámbito de actuación--</option>
@@ -190,27 +205,33 @@
                                                 </select>
                                             </div>
                                             <div>
-                                                <select name="state" 
+                                                <select id="state" 
+                                                        name="state" 
                                                         class="ayuda-provincia form-control" 
                                                         required >
                                                 </select>
                                             </div>
                                             <div>
-                                                <select name="city" 
+                                                <select id="city" 
+                                                        name="city" 
                                                         class="ayuda-ciudad form-control" 
                                                         disabled 
                                                         required >
                                                 </select>
                                             </div>
                                             <div>
-                                                <input name="address" type="text" 
+                                                <input id="address" 
+                                                       name="address" 
+                                                       type="text" 
                                                        placeholder="Dirección (Calle y Número)" 
                                                        minlength="5" 
                                                        class="form-control" 
                                                        required >
                                             </div>
                                             <div>
-                                                <input name="zip_code" type="text" 
+                                                <input id="zip_code"
+                                                       name="zip_code" 
+                                                       type="text" 
                                                        placeholder="Código Postal: (5 cararceres)" 
                                                        pattern="[0-9]{5}" 
                                                        minlength="5" 

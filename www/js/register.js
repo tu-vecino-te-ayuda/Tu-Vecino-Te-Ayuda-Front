@@ -14,8 +14,21 @@ $( document ).ready(function() {
         }
 
     });
-});
 
+    $( "input" ).blur(function() {
+        error = checkValues(this.name, this.value);
+        
+        $(".error").remove();
+         if (error != ''){
+ 
+            // Add new error
+            $("#"+this.name).after("<small class='error'><p style='text-align:center; color:red'><strong>Error en el campo " + this.name + "</strong></p></small>");
+
+            //Exit each
+            return false
+        }
+      });
+});
 
 /** Init State & City */
 function initValues(){
@@ -81,14 +94,12 @@ function getDataForm(event){
         
         error = checkValues(field.name, field.value);
         
-        // Delete old notifications
-        $('.title-form .errorsNotification').remove()
-        $('.title-form').append("<div class='errorsNotification'> <div>")
-        
+        // Delete old error
+        $(".error").remove();
+
         if (error != ''){
-            
-            // Add new notification
-            $('.title-form .errorsNotification').append("<p style='text-align:center; color:red'><strong>" + error + "</strong></p>");
+            // Add new error
+            $("#"+field.name).after("<small class='error'><p style='text-align:center; color:red'><strong>" + error + "</strong></p></small>");
 
             //Exit each
             return false
@@ -98,10 +109,10 @@ function getDataForm(event){
         data[field.name] = field.value;
     });
 
-
     // Warning CheckBox Legal
     let legal = $('#checkLegal').is(":checked");
     $('.user-form-check').css("color",legal ? "#212529" : "red");
+    $('.user-form-check').css("font-weight",legal ? "normal" : "bold");
 
     // Error First
     if (error != '' || !legal ) return null;
@@ -120,88 +131,82 @@ function checkValues(key, value){
             if(value.length<3){
                 nameregex = /^[a-zA-Z ]+$/;
                 if (!nameregex.test(value)){
-                    estado = 'Error en: Nombre y Apellidos<br>';
+                    estado = 'Conflicto en Nombre y Apellidos<br>';
                 }
             }
             break;
         case 'email':
             emailRegex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
             if(!emailRegex.test(value)){
-                estado = 'Error en: Email<br>';
+                estado = 'Conflicto en Email<br>';
             }
             break;
         case 'phone':
             if(value.length<8 || value.length>12){
-                estado = 'Error en: Teléfono<br>';
+                estado = 'Conflicto en Teléfono<br>';
             }
             break;
         case 'password':
             tempPassword = value;
             if(value.length<8){
-                estado = 'Error en: Contraseña<br>';
+                estado = 'Conflicto en Contraseña<br>';
             }
             break;
         case 'password_confirmation':
             if(value.length<8 || value != tempPassword){
-                estado = 'Error en: Las contraseñas son distintas<br>';
+                estado = 'Conflicto en Las contraseñas son distintas<br>';
             }
             break;
         case 'nearby_areas_id':
             if(value == ''){
-                estado = 'Error en: Preferencias de desplazamiento<br>';
+                estado = 'Conflicto en Preferencias de desplazamiento<br>';
             }
             break;
         case 'state':
             if(value == ''){
-                estado = 'Error en: Provincia<br>';
+                estado = 'Conflicto en Provincia<br>';
             }
             break;
         case 'city':
             if(value == ''){
-                estado = 'Error en: Ciudad<br>';
+                estado = 'Conflicto en Ciudad<br>';
             }
             break;
         case 'address':
             if(value.length<5){
-                estado = 'Error en: Dirección<br>';
+                estado = 'Conflicto en Dirección<br>';
             }
             break;
         case 'zip_code':
             if(value.length<5){
-                estado = 'Error en: Código Postal<br>';
+                estado = 'Conflicto en Código Postal<br>';
             }
             break;
         case 'cif':
             if(value.length<2){
-                estado = 'Error en: CIF<br>';
+                estado = 'Conflicto en CIF<br>';
             }
             break;
         case 'corporate_name':
             if(value.length<4){
-                estado = 'Error en: Nombre de la Asociación<br>';
+                estado = 'Conflicto en Nombre de la Asociación<br>';
             }
             break;
         case 'activity_areas_id':
             if(value == 0){
-                estado = 'Error en: Área de actividad<br>';
+                estado = 'Conflicto en Área de actividad<br>';
             }
             break;
     }
        
-
     return estado;
 }
 
 /** Error Server */
 function errorServer(data){
-    //Reset Errors
-    $('.title-form .errorsNotification').remove()
-    $('.title-form').append("<div class='errorsNotification'> <div>")
-    //Print Errors
     $.each(data, function(i, field) {
-        $('.title-form .errorsNotification').remove()
-        $('.title-form').append("<div class='errorsNotification'> <div>")
-        $('.title-form .errorsNotification').append("<p style='text-align:center; color:red'>" + field + "</p>");
+        $(".error").remove();
+        $("#"+ i).after("<small class='error'><p style='text-align:center; color:red'><strong>" + field + "</strong></p></small>");
         $('input[name='+ i +']').focus();
         $('input[name='+ i +']').val("");
         return false;
@@ -223,4 +228,3 @@ function postData(data){
         }
     });
 };
-
