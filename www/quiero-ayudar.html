@@ -117,13 +117,13 @@
                     <div class="user-form-input col-lg-7">
                         <div id="form-voluntario">
                             <div class="card card-body contact_section">
-                                <form id="form-vol">
+                                <form id="form-vol" class="needs-validation" novalidate>
                                     <div class="row">
-                                        <div class="col-lg-12">
+                                        <div class="title-form col-lg-12">
                                             <h2>Formulario de Voluntari@</h2>
+                                            <div class="errorsNotification"></div>
                                         </div>   
                                     </div>
-                                    <div class="errors"></div>
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div>
@@ -131,34 +131,34 @@
                                                 <input name="activity_areas_id" type="hidden" value="99" />
                                                 <input name="name" type="text" 
                                                        placeholder="Nombre y Apellidos" 
-                                                       class="form-control required" 
+                                                       class="form-control" 
                                                        required />
                                             </div>
                                             <div>
                                                 <input name="email" type="email" 
-                                                       placeholder="Email: xxxxxxx@xxxxx.es" 
-                                                       class="form-control required" 
+                                                       placeholder="Email: tu@correo.es" 
+                                                       class="form-control" 
                                                        required />
                                             </div>
                                             <div>
-                                                <input name="phone" type="text" 
+                                                <input name="phone" type="tel" 
                                                        placeholder="Teléfono: (8 o 9 cararceres)" 
                                                        minlength="8" maxlength="9" 
-                                                       class="form-control required" 
+                                                       class="form-control" 
                                                        required />
                                             </div>
                                             <div>
                                                 <input name="password" type="password" 
                                                        placeholder="Contraseña (8 car. min)" 
                                                        minlength="8" 
-                                                       class="form-control required" 
+                                                       class="form-control" 
                                                        required />
                                             </div>
                                             <div>
                                                 <input name="password_confirmation" type="password" 
                                                        placeholder="Confirmar Contraseña (8 car. min)" 
                                                        minlength="8" 
-                                                       class="form-control required" 
+                                                       class="form-control" 
                                                        required />
                                             </div>
                                         </div>
@@ -166,9 +166,9 @@
                                         <div class="col-lg-6">
                                             <div>
                                                 <select name="nearby_areas_id" 
-                                                        class="form-control required" 
+                                                        class="form-control" 
                                                         required >
-                                                    <option value="0">--Preferencias de desplazamiento--</option>
+                                                    <option value="">--Preferencias de desplazamiento--</option>
                                                     <option value="1">Solo a mis vecinos</option>
                                                     <option value="2">Solo en mi barrio</option>
                                                     <option value="3">Solo en mi ciudad</option>
@@ -177,13 +177,13 @@
                                             </div>
                                             <div>
                                                 <select name="state" 
-                                                        class="ayuda-provincia form-control required" 
+                                                        class="ayuda-provincia form-control" 
                                                         required >
                                                 </select>
                                             </div>
                                             <div>
                                                 <select name="city" 
-                                                        class="ayuda-ciudad form-control required" 
+                                                        class="ayuda-ciudad form-control" 
                                                         disabled 
                                                         required >
                                                 </select>
@@ -192,22 +192,23 @@
                                                 <input name="address" type="text" 
                                                        placeholder="Dirección (Calle y Número)" 
                                                        minlength="5" 
-                                                       class="form-control required" 
+                                                       class="form-control" 
                                                        required >
                                             </div>
                                             <div>
                                                 <input name="zip_code" type="text" 
                                                        placeholder="Código Postal: (5 cararceres)" 
-                                                       pattern="\d*" 
-                                                       minlength="5" maxlength="5" 
-                                                       class="form-control required" 
+                                                       pattern="[0-9]{5}" 
+                                                       minlength="5" 
+                                                       maxlength="5" 
+                                                       class="form-control" 
                                                        required >
                                             </div>
                                         </div>
 
                                         <div class="user-form-check col-lg-6">
                                             <label>
-                                                <input type="checkbox" name="check" value="1" required>
+                                                <input id="checkLegal" type="checkbox" name="check" value="" required>
                                                 Acepto los términos y condiciones de la politica de privacidad y declaro ser mayor de edad. 
                                                 <a href="#legal" data-toggle="modal">Información sobre el tratamiento</a>.
                                             </label>
