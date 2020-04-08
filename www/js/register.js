@@ -22,7 +22,7 @@ $( document ).ready(function() {
          if (error != ''){
  
             // Add new error
-            $("#"+this.name).after("<small class='error'><p style='text-align:center; color:red'><strong>Error en el campo " + this.name + "</strong></p></small>");
+            $("#"+this.name).after("<small class='error'><p style='text-align:center; color:red'><strong>Conflicto en el campo " + this.name + "</strong></p></small>");
 
             //Exit each
             return false
@@ -125,79 +125,102 @@ function getDataForm(event){
 /** Check Values */
 function checkValues(key, value){
     var estado = '';
+            
+    if (value.length === 0 && key !== 'check' && key !== '' ){
 
-    switch(key){
-        case 'name':
-            if(value.length<3){
-                nameregex = /^[a-zA-Z ]+$/;
-                if (!nameregex.test(value)){
-                    estado = 'Conflicto en Nombre y Apellidos<br>';
+        estado = 'El campo no puede estar vacío';
+
+    } else {
+        
+        switch(key){
+
+            case 'name':
+                    nameregex = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/;
+                    if (!nameregex.test(value)){
+                        estado = 'No debe contener caracteres especiales';
+                    }
+                break;
+
+            case 'email':
+                emailRegex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                if(!emailRegex.test(value)){
+                    estado = 'Conflicto en el formato de Email';
                 }
-            }
-            break;
-        case 'email':
-            emailRegex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-            if(!emailRegex.test(value)){
-                estado = 'Conflicto en Email<br>';
-            }
-            break;
-        case 'phone':
-            if(value.length<8 || value.length>12){
-                estado = 'Conflicto en Teléfono<br>';
-            }
-            break;
-        case 'password':
-            tempPassword = value;
-            if(value.length<8){
-                estado = 'Conflicto en Contraseña<br>';
-            }
-            break;
-        case 'password_confirmation':
-            if(value.length<8 || value != tempPassword){
-                estado = 'Conflicto en Las contraseñas son distintas<br>';
-            }
-            break;
-        case 'nearby_areas_id':
-            if(value == ''){
-                estado = 'Conflicto en Preferencias de desplazamiento<br>';
-            }
-            break;
-        case 'state':
-            if(value == ''){
-                estado = 'Conflicto en Provincia<br>';
-            }
-            break;
-        case 'city':
-            if(value == ''){
-                estado = 'Conflicto en Ciudad<br>';
-            }
-            break;
-        case 'address':
-            if(value.length<5){
-                estado = 'Conflicto en Dirección<br>';
-            }
-            break;
-        case 'zip_code':
-            if(value.length<5){
-                estado = 'Conflicto en Código Postal<br>';
-            }
-            break;
-        case 'cif':
-            if(value.length<2){
-                estado = 'Conflicto en CIF<br>';
-            }
-            break;
-        case 'corporate_name':
-            if(value.length<4){
-                estado = 'Conflicto en Nombre de la Asociación<br>';
-            }
-            break;
-        case 'activity_areas_id':
-            if(value == 0){
-                estado = 'Conflicto en Área de actividad<br>';
-            }
-            break;
+                break;
+
+            case 'phone':
+                if(value.length != 8 || value.length !=9){
+                    phoneRegex = /^[0-9]{8,9}$/;
+                    if (!phoneRegex.test(value)){
+                        estado = 'El teléfono debe de tener 8 o 9 digitos';
+                    }
+                }
+                break;
+
+            case 'password':
+                tempPassword = value;
+                if(value.length<8){
+                    estado = 'La contraseña debe tener 8 o 9 digitos';
+                }
+                break;
+
+            case 'password_confirmation':
+                if(value.length<8 || value != tempPassword){
+                    estado = 'Las contraseñas son distintas';
+                }
+                break;
+
+            case 'nearby_areas_id':
+                if(value == ''){
+                    estado = 'Seleccione una área de actuación';
+                }
+                break;
+
+            case 'state':
+                if(value == ''){
+                    estado = 'Seleccione una provincia';
+                }
+                break;
+
+            case 'city':
+                if(value == ''){
+                    estado = 'Seleccione una ciudad';
+                }
+                break;
+
+            case 'address':
+                if(value.length<5){
+                    estado = 'Dirección incompleta';
+                }
+                break;
+
+            case 'zip_code':
+                if(value.length<5){
+                    estado = 'El código postal debe de tener 5 digitos';
+                }
+                break;
+
+            case 'cif':
+                if(value.length != 8 || value.length != 9){
+                    estado = 'CIF Incompleto';
+                }
+                break;
+
+            case 'corporate_name':
+                if(value.length<3){
+                    estado = 'Conflicto en nombre de la asociación';
+                }
+                break;
+
+            case 'activity_areas_id':
+                if(value == ''){
+                    estado = 'Seleccione una área de actividad';
+                }
+                break;
+        }
     }
+
+    //if (estado!= '') $('input[name='+ key +']').focus();
        
     return estado;
 }
