@@ -117,105 +117,125 @@
                                             <div>
                                                 <input name="user_type_id" type="hidden" value="2" />
                                                 <input name="activity_areas_id" type="hidden" value="99" />
-                                                <input id="name"
-                                                       name="name" 
-                                                       type="text" 
-                                                       pattern=".{3,}"
-                                                       placeholder="Nombre y Apellidos" 
-                                                       class="form-control" 
-                                                       required />
+                                                <label for="name">Nombre y Apellidos
+                                                    <input id="name" 
+                                                        name="name" 
+                                                        type="text" 
+                                                        pattern="[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]{3,}"
+                                                        placeholder="Esperanza Garcia Lopez" 
+                                                        class="form-control" 
+                                                        required />
+                                                </label>
                                             </div>
                                             <div>
-                                                <input id="email" 
-                                                       name="email" 
-                                                       type="email" 
-                                                       placeholder="Email: tu@correo.es" 
-                                                       class="form-control" 
-                                                       required />
+                                                <label for="email">Correo Electroncio
+                                                    <input id="email" 
+                                                        name="email" 
+                                                        type="email" 
+                                                        placeholder="tu@correo.es" 
+                                                        class="form-control" 
+                                                        required />
+                                                </label>
                                             </div>
                                             <div>
-                                                <input id="phone"
-                                                       name="phone" 
-                                                       type="tel" 
-                                                       pattern="[0-9]{8,9}"
-                                                       placeholder="Teléfono: (8 o 9 cararceres)" 
-                                                       minlength="8" maxlength="9" 
-                                                       class="form-control" 
-                                                       required />
+                                                <label for="phone">Numero de Teléfono
+                                                    <input id="phone" 
+                                                        name="phone" 
+                                                        type="tel" 
+                                                        pattern="[0-9]{8,9}"
+                                                        placeholder="Fijo o Movil"
+                                                        minlength="8" maxlength="9" 
+                                                        class="form-control" 
+                                                        required />
+                                                </label>
                                             </div>
                                             <div>
-                                                <input id="password" 
-                                                       name="password" 
-                                                       type="password" 
-                                                       pattern=".{8,}"
-                                                       placeholder="Contraseña (8 car. min)" 
-                                                       minlength="8" 
-                                                       class="form-control" 
-                                                       required />
+                                                <label for="password">Contraseña  
+                                                    <input id="password" 
+                                                        name="password" 
+                                                        type="password" 
+                                                        pattern=".{8,}"
+                                                        placeholder="8 caracteres minimo" 
+                                                        minlength="8" 
+                                                        class="form-control" 
+                                                        required />
+                                                </label>
                                             </div>
                                             <div>
-                                                <input id="password_confirmation"
-                                                       name="password_confirmation" 
-                                                       type="password" 
-                                                       pattern=".{8,}"
-                                                       placeholder="Confirmar Contraseña (8 car. min)" 
-                                                       minlength="8" 
-                                                       class="form-control" 
-                                                       required />
+                                                <label for="password_confirmation">Confirmar Contraseña  
+                                                    <input id="password_confirmation" 
+                                                        name="password_confirmation" 
+                                                        type="password" 
+                                                        pattern=".{8,}"
+                                                        placeholder="8 caracteres minimo"
+                                                        minlength="8" 
+                                                        class="form-control" 
+                                                        required />
+                                                </label>
                                             </div>
                                         </div>
 
                                         <div class="col-lg-6">
                                             <div>
-                                                <select id="nearby_areas_id" 
-                                                        name="nearby_areas_id" 
+                                                <label for="helpType">Áreas de actuación
+                                                    <select id="nearby_areas_id" 
+                                                            name="nearby_areas_id" 
+                                                            class="form-control" 
+                                                            required >
+                                                        <option value="">--Preferencias de desplazamiento--</option>
+                                                        <option value="1">Solo a mis vecinos</option>
+                                                        <option value="2">Solo en mi barrio</option>
+                                                        <option value="3">Solo en mi ciudad</option>
+                                                        <option value="4">Mi ciudad y proximidades</option>
+                                                    </select>
+                                                </label>
+                                            </div>
+                                            <div>
+                                                <label for="state">Provincia
+                                                    <select id="state" 
+                                                            name="state" 
+                                                            class="ayuda-provincia form-control" 
+                                                            required >
+                                                    </select>
+                                                </label>
+                                            </div>
+                                            <div>
+                                                <label for="city">Población
+                                                    <select id="city" 
+                                                            name="city" 
+                                                            class="ayuda-ciudad form-control" 
+                                                            disabled 
+                                                            required >
+                                                    </select>
+                                                </label>
+                                            </div>
+                                            <div>
+                                                <label for="address">Dirección
+                                                    <input id="address" 
+                                                        name="address" 
+                                                        type="text" 
+                                                        placeholder="Dirección (Calle y Número)" 
+                                                        minlength="5" 
                                                         class="form-control" 
                                                         required >
-                                                    <option value="">--Preferencias de desplazamiento--</option>
-                                                    <option value="1">Solo a mis vecinos</option>
-                                                    <option value="2">Solo en mi barrio</option>
-                                                    <option value="3">Solo en mi ciudad</option>
-                                                    <option value="4">Mi ciudad y proximidades</option>
-                                                </select>
+                                                </label>
                                             </div>
                                             <div>
-                                                <select id="state" 
-                                                        name="state" 
-                                                        class="ayuda-provincia form-control" 
+                                                <label for="zip_code">Código Postal
+                                                    <input id="zip_code" 
+                                                        name="zip_code" 
+                                                        type="text" 
+                                                        placeholder="5 cararceres" 
+                                                        pattern="[0-9]{5}" 
+                                                        minlength="5" 
+                                                        maxlength="5" 
+                                                        class="form-control" 
                                                         required >
-                                                </select>
-                                            </div>
-                                            <div>
-                                                <select id="city" 
-                                                        name="city" 
-                                                        class="ayuda-ciudad form-control" 
-                                                        disabled 
-                                                        required >
-                                                </select>
-                                            </div>
-                                            <div>
-                                                <input id="address"
-                                                       name="address" 
-                                                       type="text" 
-                                                       placeholder="Dirección (Calle y Número)" 
-                                                       minlength="5" 
-                                                       class="form-control" 
-                                                       required >
-                                            </div>
-                                            <div>
-                                                <input id="zip_code"
-                                                       name="zip_code" 
-                                                       type="text" 
-                                                       placeholder="Código Postal: (5 cararceres)" 
-                                                       pattern="[0-9]{5}" 
-                                                       minlength="5" 
-                                                       maxlength="5" 
-                                                       class="form-control" 
-                                                       required >
+                                                </label>
                                             </div>
                                         </div>
 
-                                        <div class="user-form-check col-lg-6">
+                                        <div class="user-form-check col-lg-12">
                                             <label>
                                                 <input id="checkLegal" type="checkbox" name="check" value="" required>
                                                 Acepto los términos y condiciones de la politica de privacidad y declaro ser mayor de edad. 
@@ -223,7 +243,7 @@
                                             </label>
                                         </div>
 
-                                        <div class="user-form-submit btn col-lg-6">
+                                        <div class="user-form-submit btn col-lg-12">
                                             <button type="submit">
                                                 Incribirme
                                             </button>
@@ -399,7 +419,7 @@
         <link href="./css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
         
         <!-- Styles  -->
-        <link href="./css/style.min.css?20200405" rel="stylesheet" type="text/css"/>
+        <link href="./css/style.css?20200405" rel="stylesheet" type="text/css"/>
         <!-- Responsive  -->
         <link href="./css/responsive.min.css?20200405" rel="stylesheet" type="text/css"/>
         

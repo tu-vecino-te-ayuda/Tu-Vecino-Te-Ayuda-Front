@@ -41,7 +41,7 @@ function initValues(){
     ayudaprov.append('<option selected="true" value="" disabled>--Seleccione provincia--</option>');
     ayudaprov.prop('selectedIndex', 0);
 
-    ayudaciudad.append('<option selected="true" value="" disabled>--Seleccione Ciudad--</option>');
+    ayudaciudad.append('<option selected="true" value="" disabled>--Seleccione población--</option>');
     ayudaciudad.prop('selectedIndex', 0);
 
     $.each(provincias, function (key, entry) {
@@ -52,7 +52,7 @@ function initValues(){
         var id = $(this).val();
 
         ayudaciudad.empty();
-        ayudaciudad.append('<option selected="true" value="" disabled>--Seleccione Ciudad--</option>');
+        ayudaciudad.append('<option selected="true" value="" disabled>--Seleccione población--</option>');
         ayudaciudad.prop('selectedIndex', 0);
 
         ayudaciudad.prop("disabled", false);

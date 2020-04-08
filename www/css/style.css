@@ -221,6 +221,7 @@ nav.navbar.navbar-expand-lg {
     color:white;
     font-size: 1.6em;
     font-weight: bold;
+    filter: contrast(1.4);
 }
 
 .hero-btn-volunteer{
@@ -236,6 +237,7 @@ nav.navbar.navbar-expand-lg {
     color:white;
     font-size: 1.6em;
     font-weight: bold;
+    filter: contrast(1.49);
 }
 
 /* Call to Action */
@@ -297,6 +299,9 @@ nav.navbar.navbar-expand-lg {
 }
 
 /* Form-Volunteers*/
+.card label{
+    width: 100%;
+}
 .user-form-section{
     padding-top: 8%;
     padding-bottom: 7%;
@@ -312,7 +317,7 @@ nav.navbar.navbar-expand-lg {
 
 .user-form-img img{
     width: 100%;
-    padding-top: 15%
+    padding-top: 40%
 }
 
 .user-form-text h1{
@@ -335,14 +340,15 @@ nav.navbar.navbar-expand-lg {
     height: 30px;
     border: none;
     outline: none;
-    border-bottom: 1px solid #000;
-    margin: 15px 0;
+    border-bottom: 1.3px solid #000;
+    margin: 5px 0;
 }
 
 .user-form-check input{
-    text-align: left;
     height: inherit;
-    width: inherit;
+    width: min-content;
+    margin: 0;
+    margin-top:5%;
 }
 
 .user-form-submit{
@@ -357,17 +363,6 @@ nav.navbar.navbar-expand-lg {
     letter-spacing: 0.3em;
     text-align: right;
 }
-
-.errorModal h3{
-    text-align: center;
-    color: brown;
-}
-
-.errorModal p{
-padding-left: 2%;
-text-align: center;
-}
-
 
 /* Slide */
 .slide{

@@ -56,7 +56,6 @@
 
 }
 
-
 @media (max-width: 768px)  {
     
     /* Display */
@@ -223,6 +222,10 @@
 
     .user-form-text p {
         font-size: 1em;
+    }
+
+    .user-form-check input {
+        margin-top: 0%;
     }
 }
 
