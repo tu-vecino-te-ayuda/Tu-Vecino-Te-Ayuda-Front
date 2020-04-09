@@ -1,19 +1,27 @@
-/* Background */
-.top_container{
-    background-image: url(../images/background/Mancha_Home_Azul_TuVecinoTeAyuda.svg);
-    background-size:cover;
-    height: 1015px;
-}
+/* Cookies */
+#cajacookies {
+    box-shadow: 5px 5px 5px 5px #808080;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    left: 0;
+    bottom: 0;
+    width: 80%;
+    margin: 0px 0px 10px 10px;
+    position: fixed;
+    z-index: 1 !important;
+  }
+  
+  #cajacookies button {
+    color: black;
+  }
+  
+  #cajacookies p {
+    margin-top: 5px;
+  }
 
-/* Bubbles */
-.bubble-pink{
-    background: 
-    url(../images/background/Mancha_Home_Rosa_TuVecinoTeAyuda.svg) top left no-repeat;
-}
-
-.bubble-yellow{
-    background: 
-    url(../images/background/Mancha_Home_Amarilla_TuVecinoTeAyuda.svg) top right no-repeat;
+  .pull-right {
+    float: right;
 }
 
 /* Common */
@@ -22,9 +30,14 @@ html {
 }
 
 body {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #fefeff;
 }
+
+.regular {font-weight:400 }
+.medium {font-weight:500 }
+.semi-bold {font-weight:600 }
+.bold {font-weight:700 }
 
 a,
 a:hover,
@@ -41,6 +54,7 @@ a:focus {
 .btn:focus {
   outline: none !important;
   box-shadow: none;
+  padding: 0;
 }
 
 .text-left{
@@ -57,6 +71,30 @@ a:focus {
 
 .box-right{
     float: right;
+}
+
+/* Background */
+.top-container{
+    background-image: url(../images/background/Mancha_Home_Azul_TuVecinoTeAyuda.svg);
+    background-size:cover;
+    height: 1015px;
+}
+
+.top-login{
+    background-image: url(../images/background/Mancha_Home_Azul_TuVecinoTeAyuda.svg);
+    background-size:cover;
+    height: 900px;
+}
+
+/* Bubbles */
+.bubble-pink{
+    background: 
+    url(../images/background/Mancha_Home_Rosa_TuVecinoTeAyuda.svg) top left no-repeat;
+}
+
+.bubble-yellow{
+    background: 
+    url(../images/background/Mancha_Home_Amarilla_TuVecinoTeAyuda.svg) top right no-repeat;
 }
 
 /* Navigation */
@@ -77,7 +115,7 @@ nav.navbar.navbar-expand-lg {
 }
 
 .navbar{
-    background: #4bd6ddDE;
+    background: #4bd6ddFF;
 }
 
 .navbar-brand{
@@ -99,8 +137,8 @@ nav.navbar.navbar-expand-lg {
 
 .nav-item{
     text-align: center;
-    /*text-shadow: 2px 2px 10px #000000;*/
     width: 175px;
+    font-size: 1.2em;
 }
 
 .custom-nav-container {
@@ -125,16 +163,13 @@ nav.navbar.navbar-expand-lg {
     font-size: 1em;
     font-weight: 600;
     transition: all 0.3s ease 0s;
-    padding-right: 15px;
     margin-left: 20px;
-    /*text-shadow: 0px 0px 0px;*/
 }
 
 .private-zone a{
     color: black;
-    padding-top: 10px;
+    padding: 10px 0 10px 0;
     font-weight: bold;
-    
 }
 
 .private-zone:hover{
@@ -165,7 +200,6 @@ nav.navbar.navbar-expand-lg {
 
 .hero-title{
     font-weight: bold;
-    /*text-shadow: 2px 2px 10px #000000;*/
 }
 
 .hero-title-white{
@@ -195,7 +229,6 @@ nav.navbar.navbar-expand-lg {
     font-size: 1.1em;
     letter-spacing: 0.1em;
     padding-top: 3%;
-    /*text-shadow: 2px 2px 10px #000000;*/
 }
 
 .hero-img{
@@ -208,36 +241,56 @@ nav.navbar.navbar-expand-lg {
     padding-top: 2%;
 }
 
+.hero-btn-volunteer,
 .hero-btn-help{
-    background: #fcd800;
     border-radius: 10px;
-    padding: 15px 80px;
     letter-spacing: 0.3em;
+}
+
+.hero-btn-help{
+    background:#b2e27e;
     text-align: right;
 }
 
-.hero-btn-help a{ 
-    align-content: right;
-    color:white;
-    font-size: 1.6em;
-    font-weight: bold;
-    filter: contrast(1.4);
-}
-
 .hero-btn-volunteer{
-    background:#b2e27e;
-    border-radius: 10px;
-    padding: 15px 80px;
-    letter-spacing: 0.3em;
+    background: #fcd800;
     text-align: left;
 }
 
+.hero-btn-help a,
 .hero-btn-volunteer a{
+    padding: 15px 80px;
     align-content: right;
     color:white;
     font-size: 1.6em;
     font-weight: bold;
+}
+
+.hero-btn-help a{ 
+    filter: contrast(1.4);
+}
+
+
+.hero-btn-volunteer a{
     filter: contrast(1.49);
+}
+
+
+.call-to-btn {
+    transition: all 0.3s ease 0s;
+}
+
+.call-to-btn a {
+    display: block;
+    width: 100%;
+}
+
+
+.call-to-btn:hover {
+    -webkit-box-shadow: 0 5px 10px -5px rgba(0,0,0,.7);
+    -moz-box-shadow: 0 5px 10px -5px rgba(0,0,0,.7);
+    box-shadow: 0 5px 10px -5px rgba(0,0,0,.7);
+    transform: translateY(-7px);
 }
 
 /* Call to Action */
@@ -260,29 +313,28 @@ nav.navbar.navbar-expand-lg {
 }
 
 .call-to-action h2{
-    font-size: 3em;
-    font-weight: bold;
+    font-size: 2.75em;
+    color: #363636;
 }
 
 .call-to-action p{
     font-size: 1.1em;
-    font-weight: bold;
+    color: #363636;
 }
 
 .call-btn-help, 
 .call-btn-volunteer,
 .call-btn-association {
     border-radius: 10px;
-    padding: 15px 80px;
     letter-spacing: 0.3em;
 }
 
 .call-btn-help{
-    background: #fcd800;
+    background: #b2e27e;
 } 
 
 .call-btn-volunteer{
-    background: #b2e27e;
+    background: #fcd800;
 }
 
 .call-btn-association {
@@ -293,15 +345,17 @@ nav.navbar.navbar-expand-lg {
 .call-btn-volunteer a,
 .call-btn-association a { 
     align-content: right;
+    padding: 15px 80px;
     color:white;
     font-size: 1.6em;
     font-weight: bold;
 }
 
-/* Form-Volunteers*/
+/* Form */
 .card label{
     width: 100%;
 }
+
 .user-form-section{
     padding-top: 8%;
     padding-bottom: 7%;
@@ -329,7 +383,7 @@ nav.navbar.navbar-expand-lg {
 }
 
 .user-form-text p{
-    font-size: 1.5em;
+    font-size: 1.2em;
     padding-top: 3%;
     text-align: center;
 }
@@ -362,6 +416,68 @@ nav.navbar.navbar-expand-lg {
     padding: 15px 50px;
     letter-spacing: 0.3em;
     text-align: right;
+    font-weight: 700;
+}
+
+.form-control{
+    padding: 0;
+}
+
+/** Login */
+
+.login-form-text{
+    color: white;    
+}
+
+.login-form-text h1{
+    color: #fcd800;
+    filter: contrast(1.25);
+    font-size: 3.5em;
+    font-weight: bold;
+    margin-top: 15%;
+}
+
+.login-form-text p{
+    font-size: 1.6em;
+    padding-top: 2%;
+}
+
+.login-form-input{
+    font-size: 1.2em;
+    margin-top: 5%;
+    padding: 0 2%;
+}
+
+.login-form-input label{
+    margin-top: 5%;
+}
+
+.login-form-input input{
+    width: 100%;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-bottom: 1.3px solid #000;
+    margin-top: 1%;
+}
+
+.login-img{
+    margin-top:5%;
+}
+
+.recovery{
+    background: rgb(98, 132, 167);
+    text-align: center;
+}
+
+.recovery p{
+    color: white;
+    margin: 0;
+}
+
+.recovery a{
+    color: #fcd800;
+    text-decoration: none;
 }
 
 /* Slide */
@@ -377,7 +493,7 @@ nav.navbar.navbar-expand-lg {
     padding-top: 5%;
     text-align: center;
     font-weight: bold;
-    color: black;
+    color: #363636;
 }
 
 /* Footer */

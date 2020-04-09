@@ -26,6 +26,22 @@
 
     <body>
 
+        <!-- Captcha -->
+        <div class="g-recaptcha"
+            data-sitekey="6Ldh8-EUAAAAAHGQrCqRlPKIhEk9tKZLJRVOoeFi"
+            data-callback="onSubmit"
+            data-size="invisible">
+        </div>
+
+        <!-- Cookies -->
+        <div id="cajacookies">
+            <p>
+                <button onclick="aceptarCookies()" class="pull-right"><i class="fa fa-times"></i> Aceptar y cerrar</button>
+                Puede configurar o rechazar la utilización de cookies u obtener más información haciendo clic en la Política de cookies<br>
+                Puede leer más sobre el uso de cookies en nuestra <a href="./pdf/politica_privacidad.pdf" target="_blank">política de Cookies</a>.
+            </p>
+        </div>
+
         <!-- Navbar  -->
         <header class="header_section">
             <div class="container">
@@ -48,25 +64,24 @@
                     <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
                     <ul class="navbar-nav  ">
                     
-                        <li class="nav-item ">
-                            <a class="nav-link" href="./solicitar-ayuda"> Solicitar Ayuda </a>
-                        </li>
-
-                        <li class="nav-item ">
-                            <a class="nav-link" href="./quiero-ayudar"> Voluntari@s </a>
+                        <li class="nav-item">
+                            <a class="nav-link medium" href="./solicitar-ayuda"> Solicitar Ayuda </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="./soy-asociacion"> Asociaciones </a>
+                            <a class="nav-link medium" href="./quiero-ayudar"> Voluntari@s </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="./protocolos"> Protocolos </a>
+                            <a class="nav-link medium" href="./soy-asociacion"> Asociaciones </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link medium" href="./protocolos"> Protocolos </a>
                         </li>
 
                         <li class="nav-item private-zone">
-                            <a class="fa fa-user nav-link" href="./">Área Privada </a>
-
+                            <a class="nav-link semi-bold" href="./"><i class="fa fa-user" aria-hidden="true"></i>Área Privada</a>
                         </li>
                     </ul>
                     </div>
@@ -84,10 +99,10 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="user-form-text">
-                            <h1>
+                            <h1 class="bold">
                                 Quiero Ser Voluntari@
                             </h1>
-                            <p>
+                            <p class="regular">
                                 ¿Quieres ayudar a otras personas? ¡Apúntate!<br>
                                 Puedes ayudar tanto a que personas en riesgo no tengan que exponerse,
                                 como echando una mano a quien no pueda atender a sus mayores o niños.
@@ -108,11 +123,10 @@
                                 <form id="form-vol" class="needs-validation" novalidate>
                                     <div class="row">
                                         <div class="title-form col-lg-12">
-                                            <h2>Formulario de Voluntari@</h2>
-                                            <div class="errorsNotification"></div>
+                                            <h2 class="bold">Formulario de Voluntari@</h2>
                                         </div>   
                                     </div>
-                                    <div class="row">
+                                    <div class="row semi-bold">
                                         <div class="col-lg-6">
                                             <div>
                                                 <input name="user_type_id" type="hidden" value="2" />
@@ -128,7 +142,7 @@
                                                 </label>
                                             </div>
                                             <div>
-                                                <label for="email">Correo Electroncio
+                                                <label for="email">Correo Electronico
                                                     <input id="email" 
                                                         name="email" 
                                                         type="email" 
@@ -425,6 +439,7 @@
         
         
         <!-- Scripts -->
+        <script type="text/javascript" src="https://www.google.com/recaptcha/api.js" async ></script>
         <script type="text/javascript" src="js/jquery/jquery-3.4.1.js" ></script>
         <script type="text/javascript" src="js/bootstrap/bootstrap.min.js" defer></script>
         <script type="text/javascript" src="js/register.min.js?20200406" defer></script>
