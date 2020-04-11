@@ -1,4 +1,5 @@
 var server = "https://back.tuvecinoteayuda.org/";
+var loader = "<div class='lds-ellipsis'><div></div><div></div><div></div><div></div></div>";
 
 $( document ).ready(function() {
     // sessionStorage.removeItem('userData');

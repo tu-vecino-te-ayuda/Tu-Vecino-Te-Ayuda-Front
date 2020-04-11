@@ -30,6 +30,9 @@
     }
 }
 
+@media (max-width: 1200px){
+    .hero-title-orange{font-size: 1.8em;}
+}
 
 @media (max-width: 1024px)  {
     
@@ -185,6 +188,17 @@
         margin-top: -50%;
     }
 
+    /** Register-Confirm */
+    .register-section{
+        padding-top: 10%;
+        padding-bottom: 5%;
+    }
+
+    .register-img{
+        width: 50%;
+        margin: auto;
+    }
+
     /* Slide */
     .slide{
         margin-top: 5%;
@@ -331,6 +345,10 @@
         margin-top: -150%;
     }
 
+    /** Register-Confirm */
+    .register-section{
+        padding-top: 15%;
+    }
 }
 
 

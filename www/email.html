@@ -36,7 +36,7 @@
 
 
     <!-- Top Hero -->
-    <div class="top-container">
+    <div class="top-login">
       
       <!-- nav header -->
       <header class="header_section">
@@ -59,7 +59,7 @@
               <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
                 <ul class="navbar-nav  ">
                   <li class="nav-item active">
-                    <a class="nav-link medium" href="./"> Volver Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link medium" href="./"> Volver a la Home <span class="sr-only">(current)</span></a>
                   </li>
                 </ul>
               </div>
@@ -67,7 +67,6 @@
         </div>
       </header>
       <!-- end nav header -->
-
 
 
       <!-- Login Section -->
@@ -81,7 +80,7 @@
                 Recuperar contraseña
               </h1>
               <p class="login-text">
-                <strong>Ingrese su nueva contraseña para efectuar el cambio de credenciales.</strong>
+                <strong>Ingrese su correo electrónico para iniciar el proceso de recuperación.</strong>
               </p>
             </div>
             <!-- end Login Title -->
@@ -92,47 +91,30 @@
 
                 <!-- Ok Notify Status -->
                 <div id="sendEmailOk" class="col-lg-12 alert alert-success d-none" role="alert" >
-                  <b>Contraseña cambiada correctamente</b>, <a href="./login">haga click aquí</a> para acceder a la plataforma.
+                  <b>Solicitud realizada correctamente</b>, revise su correo electrónico.
                 </div>
                 <!-- end ok Notify Status -->
 
-                <form id="form-change-password">
+                <form id="form-send-email">
                   <div>
-                    <label for="password">Nueva Contraseña  
-                      <input id="password" 
-                          name="password" 
-                          type="password" 
-                          pattern=".{8,}"
-                          placeholder="8 caracteres minimo" 
-                          minlength="8" 
-                          value=00000000
-                          required />
-                    </label>
-                  </div>
-                  <div>
-                    <label for="password_confirmation">Confirmar Contraseña  
-                        <input id="password_confirmation" 
-                            name="password_confirmation" 
-                            type="password" 
-                            pattern=".{8,}"
-                            placeholder="8 caracteres minimo"
-                            minlength="8" 
-                            value=00000000
+                    <label for="email">Correo Electronico
+                        <input id="email" 
+                            name="email" 
+                            type="email" 
                             required />
                     </label>
                   </div>
                   <div class="user-form-submit btn col-lg-12">
                     <button type="submit" class="call_to-btn btn_white-border">
-                      Cambiar contraseña
+                      Recuperar contraseña
                     </button>
                   </div>
                 </form>
-
               </div>
 
               <!-- Error Notify Status -->
               <div id="sendEmailErr" class="col-lg-12 alert alert-danger d-none" role="alert" >
-                <b>Lo sentimos, el tiempo para cambiar su contraseña ha expirado.<br>Intentelo de nuevo solicitando un <a href="./email.html"> nuevo cambio de contreña.</a></b>
+                <b>Error en el proceso de recuperación</b>, intentelo de nuevo.
               </div>
               <!-- end Error Notify Status -->
 
@@ -149,12 +131,11 @@
             <!-- end Login Img -->
 
           </div>
-        </div>
       </section>
       <!-- end Login Section -->
 
     </div>
-    <!-- end Top hero -->
+    <!-- end Login Form -->
 
 
     <!-- Footer section -->
@@ -359,13 +340,14 @@
     <link href="./css/style.css?20200405" rel="stylesheet" type="text/css"/>
     <!-- Responsive  -->
     <link href="./css/responsive.css?20200405" rel="stylesheet" type="text/css"/>
-
-
+    
+    
     <!-- Scripts -->
     <script type="text/javascript" src="./js/jquery/jquery-3.4.1.js" defer></script>
-    <script type="text/javascript" src="./js//bootstrap/bootstrap.min.js"    defer></script>
+    <script type="text/javascript" src="./js/bootstrap/bootstrap.min.js"    defer></script>
     <script type="text/javascript" src="./js/common.js?20200404" defer></script>
-    <script type="text/javascript" src="./js/recovery.js?20200328" defer></script>
+    <script type="text/javascript" src="./js/email.js?20200404" defer></script>
+
     
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-60345043-2" ></script>

@@ -197,7 +197,6 @@ function verifyData(data, event){
     });
 };
 
-
 function enrollAsoc(id){   
     $.ajax({
         type: "POST",
@@ -436,7 +435,7 @@ function loadUserData(){
     var data = $.parseJSON(sessionStorage.getItem('userData'));
     if (data === null) {
         window.location.href="./";
-      }
+    }
     token = data.token;
     user_type_id = data.user.user_type_id.id;
     console.log(data);

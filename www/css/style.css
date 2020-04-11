@@ -465,7 +465,7 @@ nav.navbar.navbar-expand-lg {
     margin-top:5%;
 }
 
-.recovery{
+.send-email{
     background: rgb(98, 132, 167);
     text-align: center;
 }
@@ -478,6 +478,20 @@ nav.navbar.navbar-expand-lg {
 .recovery a{
     color: #fcd800;
     text-decoration: none;
+}
+
+/** Registro-confirmado */
+.register-section{
+    padding-top: 7%;
+    padding-bottom: 5%;
+}
+
+.register-title{
+    color: #fcd800;
+    filter: contrast(1.25);
+    font-size: 2.5em;
+    font-weight: bold;
+    padding-bottom: 13%;
 }
 
 /* Slide */
@@ -561,4 +575,17 @@ footer hr{
 
 .copyright p{
     margin: 0px;
+}
+
+/** Error */
+.alert-danger {
+    text-align: center; 
+    color: red;
+    font-size: 0.7em;
+}
+
+/** Dashboard */
+.results .row{
+    padding-top: 10%;
+    width: 100%;
 }
