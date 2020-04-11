@@ -4,31 +4,47 @@ $( document ).ready(function() {
     
     initValues();
 
+    // Submit
     $('#form-help, #form-vol, #form-ent').submit(function( event ) {
-    
+
         // Get data if it's validated
         var data = getDataForm(event);
-
         if ( data != null){
             postData(data);
         }
 
+    });    
+    
+    // Check field on lost focus
+    $( "input" ).blur(function() {
+        checkValues(this.name, this.value);
     });
 
-    $( "input" ).blur(function() {
-        error = checkValues(this.name, this.value);
-        
+    // OnChange input text
+    $('#form-help, #form-vol, #form-ent').on("input", function(){
         $(".error").remove();
-         if (error != ''){
- 
-            // Add new error
-            $("#"+this.name).after("<small class='error'><p style='text-align:center; color:red'><strong>Conflicto en el campo " + this.name + "</strong></p></small>");
+        checkValues(this.name, this.value);
+    });
 
-            //Exit each
-            return false
-        }
-      });
 });
+
+
+/** Info Status Fields Form */
+(function() {
+    'use strict';
+    window.addEventListener('load', function() {
+        var forms = document.getElementsByClassName('needs-validation');
+        Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    }, false);
+})();
 
 /** Init State & City */
 function initValues(){
@@ -65,86 +81,59 @@ function initValues(){
       });
 }
 
-/** Info Status Fields Form */
-(function() {
-    'use strict';
-    window.addEventListener('load', function() {
-        var forms = document.getElementsByClassName('needs-validation');
-        Array.prototype.filter.call(forms, function(form) {
-        form.addEventListener('submit', function(event) {
-            if (form.checkValidity() === false) {
-                event.preventDefault();
-                event.stopPropagation();
-            }
-            form.classList.add('was-validated');
-            }, false);
-        });
-    }, false);
-})();
-
 /** Data Form */
 function getDataForm(event){
-    // grecaptcha.execute();
-    event.preventDefault(); 
+
     var data = {};
     var error = '';
+    grecaptcha.execute();
+    event.preventDefault(); 
     
-    // Error Control
+    // Check Values
     $.each(event.originalEvent.srcElement.elements, function(i, field) {
-        
         error = checkValues(field.name, field.value);
-        
-        // Delete old error
-        $(".error").remove();
-
-        if (error != ''){
-            // Add new error
-            $("#"+field.name).after("<small class='error'><p style='text-align:center; color:red'><strong>" + error + "</strong></p></small>");
-
-            //Exit each
-            return false
-        }
-
-        //Load Data
         data[field.name] = field.value;
     });
 
-    // Warning CheckBox Legal
+    // Check Legal
     let legal = $('#checkLegal').is(":checked");
     $('.user-form-check').css("color",legal ? "#212529" : "red");
     $('.user-form-check').css("font-weight",legal ? "normal" : "bold");
 
-    // Error First
+    // If Error Or Not LegalCheck
     if (error != '' || !legal ) return null;
-    
-    // Validating All Data
+
+    // Validated Data
     return data;
     
 }
 
 /** Check Values */
 function checkValues(key, value){
-    var estado = '';
-            
+    var error = '';
+    
+    // If Select or undefined
+    if (Number.isInteger(value) || value === undefined) return '';
+
     if (value.length === 0 && key !== 'check' && key !== '' ){
 
-        estado = 'El campo no puede estar vacío';
+        error = 'El campo no puede estar vacío';
 
     } else {
         
         switch(key){
 
             case 'name':
-                    nameregex = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/;
+                    nameregex = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/;
                     if (!nameregex.test(value)){
-                        estado = 'No debe contener caracteres especiales';
+                        error = 'No debe contener caracteres especiales';
                     }
                 break;
 
             case 'email':
                 emailRegex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
                 if(!emailRegex.test(value)){
-                    estado = 'Conflicto en el formato de Email';
+                    error = 'Conflicto en el formato de Email';
                 }
                 break;
 
@@ -152,7 +141,7 @@ function checkValues(key, value){
                 if(value.length != 8 || value.length !=9){
                     phoneRegex = /^[0-9]{8,9}$/;
                     if (!phoneRegex.test(value)){
-                        estado = 'El teléfono debe de tener 8 o 9 digitos';
+                        error = 'El teléfono debe de tener 8 o 9 digitos';
                     }
                 }
                 break;
@@ -160,80 +149,69 @@ function checkValues(key, value){
             case 'password':
                 tempPassword = value;
                 if(value.length<8){
-                    estado = 'La contraseña debe tener 8 o 9 digitos';
+                    error = 'La contraseña debe tener 8 o 9 digitos';
                 }
                 break;
 
             case 'password_confirmation':
                 if(value.length<8 || value != tempPassword){
-                    estado = 'Las contraseñas son distintas';
+                    error = 'Las contraseñas son distintas';
                 }
                 break;
 
             case 'nearby_areas_id':
                 if(value == ''){
-                    estado = 'Seleccione una área de actuación';
+                    error = 'Seleccione una área de actuación';
                 }
                 break;
 
             case 'state':
                 if(value == ''){
-                    estado = 'Seleccione una provincia';
+                    error = 'Seleccione una provincia';
                 }
                 break;
 
             case 'city':
                 if(value == ''){
-                    estado = 'Seleccione una ciudad';
+                    error = 'Seleccione una ciudad';
                 }
                 break;
 
             case 'address':
                 if(value.length<5){
-                    estado = 'Dirección incompleta';
+                    error = 'Dirección incompleta';
                 }
                 break;
 
             case 'zip_code':
                 if(value.length<5){
-                    estado = 'El código postal debe de tener 5 digitos';
+                    error = 'El código postal debe de tener 5 digitos';
                 }
                 break;
 
             case 'cif':
                 if(value.length != 8 || value.length != 9){
-                    estado = 'CIF Incompleto';
+                    error = 'CIF Incompleto';
                 }
                 break;
 
             case 'corporate_name':
                 if(value.length<3){
-                    estado = 'Conflicto en nombre de la asociación';
+                    error = 'Conflicto en nombre de la asociación';
                 }
                 break;
 
             case 'activity_areas_id':
                 if(value == ''){
-                    estado = 'Seleccione una área de actividad';
+                    error = 'Seleccione una área de actividad';
                 }
                 break;
         }
     }
 
-    //if (estado!= '') $('input[name='+ key +']').focus();
+    if (error!= '') printError(key,error)
        
-    return estado;
-}
-
-/** Error Server */
-function errorServer(data){
-    $.each(data, function(i, field) {
-        $(".error").remove();
-        $("#"+ i).after("<small class='error'><p style='text-align:center; color:red'><strong>" + field + "</strong></p></small>");
-        $('input[name='+ i +']').focus();
-        $('input[name='+ i +']').val("");
-        return false;
-    });
+    return error;
 }
 
 /** Services */
@@ -251,3 +229,23 @@ function postData(data){
         }
     });
 };
+
+/** Error Server */
+function errorServer(data){
+    
+    $.each(data, function(i, field) {
+
+        printError(i,field)
+        
+        return false;
+    });
+}
+
+/** Print Errors */
+function printError(key,error){
+    $(".error").remove();
+    $("#"+ key).after(
+        "<div class='col-lg-12 alert alert-danger error' role='alert'>" +
+            "<b>" + error + "</b>"+
+        "</div>");
+}

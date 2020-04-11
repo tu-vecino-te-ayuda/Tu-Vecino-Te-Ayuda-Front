@@ -26,6 +26,16 @@
 
     <body>
 
+        <!-- Cookies -->
+        <div id="cajacookies">
+            <p>
+                <button onclick="aceptarCookies()" class="pull-right"><i class="fa fa-times"></i> Aceptar y cerrar</button>
+                Puede configurar o rechazar la utilización de cookies u obtener más información haciendo clic en la Política de cookies<br>
+                Puede leer más sobre el uso de cookies en nuestra <a href="./pdf/politica_privacidad.pdf" target="_blank">política de Cookies</a>.
+            </p>
+        </div>
+    
+
         <div class="top-container">
 
             <!-- Navbar  -->
@@ -67,8 +77,7 @@
                             </li>
 
                             <li class="nav-item private-zone">
-                                <a class="fa fa-user nav-link" href="./">Área Privada </a>
-
+                                <a class="nav-link semi-bold" href="./login"><i class="fa fa-user" aria-hidden="true"></i>Área Privada</a>
                             </li>
                         </ul>
                         </div>
@@ -79,29 +88,35 @@
             <!-- end Navbar  -->
 
             <!-- user section -->
-            <section class="hero-section" id="voluntarios">
+            <section class="register-section">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-12">
-                            <div class="admission_detail-box ">
-                                <h3 class="left">
-                                    Registro
-                                </h3>
-                                <p>
-                                    Inscripción realizada con éxito, ya puedes acceder a la <a href='./dashboard'>zona privada</a>.
-                                </p>
+                        
+                        <div class="col-lg-7">
+                            <h1 class="register-title">
+                                Registro
+                            </h1>
+                            <div class='register-text col-lg-12 alert alert-success'>
+                                <b>Inscripción realizada con éxito, ya puedes acceder a la <a href='./dashboard'>zona privada.</a></b>
                             </div>
                         </div>
+
+                        
+                        <div class="col-lg-5">
+                            <div class="register-img">
+                                <img data-src="./images/brand/Logo_White_TuVecinoTeAyuda.svg" alt="Logo de Tu Vecino Te Ayuda" class="img-fluid lazyload">
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
             </section>
             <!-- end user section -->
 
-            <!-- TODO: REVISAR CLASES FOOTER -->
             <!-- Footer section -->
             <footer>
-
-                <!-- title footer -->
+                        
+                <!-- title footer -->  
                 <div class="container">
                     <div class="row">
                         <div class="footer-title col-12">
@@ -116,113 +131,99 @@
                     <div class="row">
 
                         <div class="footer-us col-lg-4 col-md-6">
-                            <h4>
-                                Sobre Nosotros
+                            <h4> 
+                                Sobre Nosotros                                                                             
                             </h4>
                             <p>
-                                Somos un equipo de voluntarios de la <b>Asociación Burgalesa de Ingenieros Informáticos</b>,
-                                que trabajamos contrarreloj para ayudar
-                                a nuestra sociedad aportando nuestros conocimientos técnicos.
+                                Somos un equipo de voluntarios de la <b>Asociación Burgalesa de Ingenieros Informáticos</b>, que trabajamos contrarreloj para ayudar 
+                                a nuestra sociedad aportando nuestros conocimientos técnicos. 
                             </p>
                         </div>
 
                         <div class="footer-links col-lg-4 col-md-6">
                             <h4>
-                                Links de Interés
+                                Links de Interés 
                             </h4>
                             <ul>
                                 <li>
-                                    <a href="https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/situacionActual.htm"
-                                        target="_blank">
-                                        Situación Actual
-                                    </a>
+                                <a href="https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/situacionActual.htm" target="_blank" rel ="noopener">
+                                    Situación Actual
+                                </a>
                                 </li>
                                 <li>
-                                    <a href="https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/ciudadania.htm"
-                                        target="_blank">
-                                        Información General
-                                    </a>
+                                <a href="https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/ciudadania.htm" target="_blank" rel ="noopener">
+                                    Información General
+                                </a>
                                 </li>
                                 <li>
-                                    <a href="https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/telefonos.htm"
-                                        target="_blank">
-                                        Teléfonos de Interés
-                                    </a>
+                                <a href="https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/telefonos.htm" target="_blank" rel ="noopener">
+                                    Teléfonos de Interés
+                                </a>
                                 </li>
                                 <li>
-                                    <a href="pdf/politica_privacidad.pdf" target="_blank">
-                                        Aviso Legal, privacidad y cookies
-                                    </a>
+                                <a href="./pdf/politica_privacidad.pdf" target="_blank">
+                                    Aviso Legal, privacidad y cookies
+                                </a>
                                 </li>
                             </ul>
                         </div>
 
                         <div class="footer-collaborator col-lg-4 col-md-12">
                             <h4>
-                                Esto es posible gracias a la colaboración de grandes profesionales de...
+                                Esto es posible gracias a la colaboración de grandes profesionales de... 
                             </h4>
                             <div id="carouselThanks" class="carousel slide" data-ride="carousel">
                                 <ol class="carousel-indicators" style="margin-bottom: 0rem;">
-                                    <li data-target="#carouselThanks" data-slide-to="0" class="active"></li>
-                                    <li data-target="#carouselThanks" data-slide-to="1"></li>
-                                    <li data-target="#carouselThanks" data-slide-to="2"></li>
-                                    <li data-target="#carouselThanks" data-slide-to="3"></li>
-                                    <li data-target="#carouselThanks" data-slide-to="4"></li>
-                                    <li data-target="#carouselThanks" data-slide-to="5"></li>
-                                    <li data-target="#carouselThanks" data-slide-to="6"></li>
-                                    <li data-target="#carouselThanks" data-slide-to="7"></li>
-                                    <li data-target="#carouselThanks" data-slide-to="8"></li>
+                                <li data-target="#carouselThanks" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselThanks" data-slide-to="1"></li>
+                                <li data-target="#carouselThanks" data-slide-to="2"></li>
+                                <li data-target="#carouselThanks" data-slide-to="3"></li>
+                                <li data-target="#carouselThanks" data-slide-to="4"></li>
+                                <li data-target="#carouselThanks" data-slide-to="5"></li>
+                                <li data-target="#carouselThanks" data-slide-to="6"></li>
+                                <li data-target="#carouselThanks" data-slide-to="7"></li>
+                                <li data-target="#carouselThanks" data-slide-to="8"></li>
                                 </ol>
                                 <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <img class="d-block w-75 images-thanks lazyload"
-                                            data-src="./images/partner/abi2burgos.png"
-                                            alt="Asociación Burgalesa de Ingenieros Informáticos">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img class="d-block w-75 images-thanks lazyload"
-                                            data-src="images/partner/bet4gamers.png" alt="Bet4Gamers">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img class="d-block w-75 images-thanks lazyload"
-                                            data-src="images/partner/nesiweb.png" alt="Nesiweb">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img class="d-block w-75 images-thanks lazyload" data-src="images/partner/zenos.png"
-                                            alt="Zenos Servicios Informáticos">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img class="d-block w-75 images-thanks lazyload"
-                                            data-src="images/partner/bemetrics.png" alt="BeMetrics">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img class="d-block w-75 images-thanks lazyload" data-src="images/partner/juma.png"
-                                            alt="Juma Soluciones">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img class="d-block w-75 images-thanks lazyload" data-src="images/partner/gdg.png"
-                                            alt="GDG Burgos">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img class="d-block w-75 images-thanks lazyload"
-                                            data-src="images/partner/esgueva.png" alt="Esgueva Solutions">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img class="d-block w-75 images-thanks lazyload"
-                                            data-src="images/partner/tequipo.png" alt="Tequipo">
-                                    </div>
+                                <div class="carousel-item active">
+                                    <img class="d-block w-75 images-thanks lazyload" data-src="./images/partner/abi2burgos.png" alt="Asociación Burgalesa de Ingenieros Informáticos">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-75 images-thanks lazyload" data-src="./images/partner/bet4gamers.png" alt="Bet4Gamers">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-75 images-thanks lazyload" data-src="./images/partner/nesiweb.png" alt="Nesiweb">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-75 images-thanks lazyload" data-src="./images/partner/zenos.png" alt="Zenos Servicios Informáticos">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-75 images-thanks lazyload" data-src="./images/partner/bemetrics.png" alt="BeMetrics">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-75 images-thanks lazyload" data-src="./images/partner/juma.png" alt="Juma Soluciones">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-75 images-thanks lazyload" data-src="./images/partner/gdg.png" alt="GDG Burgos">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-75 images-thanks lazyload" data-src="./images/partner/esgueva.png" alt="Esgueva Solutions">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-75 images-thanks lazyload" data-src="./images/partner/tequipo.png" alt="Tequipo">
+                                </div>
                                 </div>
                                 <a class="carousel-control-prev" href="#carouselThanks" role="button" data-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="sr-only">Previous</span>
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
                                 </a>
                                 <a class="carousel-control-next" href="#carouselThanks" role="button" data-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="sr-only">Next</span>
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
                                 </a>
                             </div>
                             <p class="text-center mt-1">
-                                <smal><a href="agradecimientos" class="text-light">Ver lista completa</a></smal>
+                                <smal><a href="./agradecimientos" class="text-light">Ver lista completa</a></smal>
                             </p>
                         </div>
 
@@ -234,15 +235,15 @@
 
                 <!-- social footer -->
                 <div class="social_container container">
-
+                    
                     <a href="https://www.facebook.com/Tu-Vecino-Te-Ayuda-104432751201293/" target="_blank" rel="noopener"> 
-                        <img data-src="images/social/fb.png" alt="Tu Vecino Te Ayuda Facebook" class="lazyload">
-                    </a>
+                        <img data-src="./images/social/fb.png" alt="Tu Vecino Te Ayuda Facebook" class="lazyload">
+                    </a> 
                     <a href="https://twitter.com/TuVecinoTeAyuda" target="_blank" rel="noopener"> 
-                        <img data-src="images/social/twitter.png" alt="Tu Vecino Te Ayuda Twitter" class="lazyload">
+                        <img data-src="./images/social/twitter.png" alt="Tu Vecino Te Ayuda Twitter" class="lazyload">
                     </a>
                     <a href="https://www.instagram.com/tuvecinoteayuda/" target="_blank" rel="noopener"> 
-                        <img data-src="images/social/instagram.png" alt="Tu Vecino Te Ayuda Instagram" class="lazyload">
+                        <img data-src="./images/social/instagram.png" alt="Tu Vecino Te Ayuda Instagram" class="lazyload">
                     </a>
 
                 </div>
@@ -252,12 +253,11 @@
             <!-- end Footer section -->
 
 
-
             <!-- Copyright -->
             <section class="copyright">
-                <p> Copyright &copy; 2020 |
-                    <a href="http://abi2burgos.es">Asociación Burgalesa de Ingenieros Informáticos |</a>
-                    <a href="http://abi2burgos.es">Diseño por WidO LaFlamme</a>
+                <p> Copyright &copy; 2020 | 
+                <a href="http://abi2burgos.es">Asociación Burgalesa de Ingenieros Informáticos |</a>
+                <a href="./index">Diseño por WidO LaFlamme</a>
                 </p>
             </section>
 
@@ -273,15 +273,15 @@
         <link href="./css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
         <!-- Styles  -->
-        <link href="./css/style.min.css?20200405" rel="stylesheet" type="text/css"/>
+        <link href="./css/style.css?20200405" rel="stylesheet" type="text/css"/>
         <!-- Responsive  -->
-        <link href="./css/responsive.min.css?20200405" rel="stylesheet" type="text/css"/>
+        <link href="./css/responsive.css?20200405" rel="stylesheet" type="text/css"/>
 
 
         <!-- Scripts -->
-        <script type="text/javascript" src="js/jquery/jquery-3.4.1.js" defer></script>
-        <script type="text/javascript" src="js/bootstrap/bootstrap.min.js" defer></script>
-        <script type="text/javascript" src="js/common.min.js?20200405" defer></script>
+        <script type="text/javascript" src="./js/jquery/jquery-3.4.1.js" defer></script>
+        <script type="text/javascript" src="./js/bootstrap/bootstrap.min.js" defer></script>
+        <script type="text/javascript" src="./js/common.js?20200405" defer></script>
 
     </body>
 
