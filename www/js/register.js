@@ -124,9 +124,9 @@ function checkValues(key, value){
         switch(key){
 
             case 'name':
-                    nameregex = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/;
+                    nameregex = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/;
                     if (!nameregex.test(value)){
-                        error = 'No debe contener caracteres especiales';
+                        error = 'Formato de Nombre y Apellidos invalido';
                     }
                 break;
 
