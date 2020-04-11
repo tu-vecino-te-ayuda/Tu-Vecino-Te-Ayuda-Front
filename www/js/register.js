@@ -190,7 +190,7 @@ function checkValues(key, value){
                 break;
 
             case 'cif':
-                if(value.length != 8 || value.length != 9){
+                if(value.length != 8 && value.length != 9){
                     error = 'CIF Incompleto';
                 }
                 break;
