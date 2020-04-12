@@ -399,11 +399,11 @@ nav.navbar.navbar-expand-lg {
 }
 
 .user-form-check input{
-    height: inherit;
-    width: min-content;
-    margin: 0;
+    height: 20px;
+    width: 20px;
     margin-top:5%;
 }
+
 
 .user-form-submit{
     padding-top: 5%;
@@ -612,7 +612,7 @@ footer hr{
     font-size: 0.7em;
 }
 
-.error{
+.login-form-input .error{
     margin-left: 0 !important;
     width: 80%;
 }
