@@ -2,8 +2,7 @@ var server = "https://api.tuvecinoteayuda.org/";
 var loader = "<div class='lds-ellipsis'><div></div><div></div><div></div><div></div></div>";
 
 $( document ).ready(function() {
-    // sessionStorage.removeItem('userData');
-
+    $('.loader-container').hide();
 
     // Cookies check
     compruebaAceptaCookies();
