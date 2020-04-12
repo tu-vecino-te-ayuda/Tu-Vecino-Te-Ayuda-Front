@@ -62,10 +62,10 @@ $( document ).ready(function() {
           $('#image').val(b64);
         };
         reader.readAsDataURL(file);
-      });
+    });
 
-    $('#disconnection').click(function( event ) {  
-        localStorage.clear();
+    $('#disconnection').click(function( event ) {
+        sessionStorage.removeItem('userData');  
     })
 });
 
