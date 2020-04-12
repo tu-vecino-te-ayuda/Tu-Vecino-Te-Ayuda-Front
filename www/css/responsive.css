@@ -91,6 +91,12 @@
 
 }
 
+@media (max-width: 992px)  {
+    .user-form-img img {
+        padding-top: 3%;
+    }
+}
+
 @media (max-width: 768px)  {
     
     /* Display */

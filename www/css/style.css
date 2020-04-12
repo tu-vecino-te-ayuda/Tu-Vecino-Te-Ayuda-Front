@@ -225,7 +225,6 @@ nav.navbar.navbar-expand-lg {
 .hero-text{
     color: white;
     filter: contrast(1.84);
-    font-weight: bold;
     font-size: 1.1em;
     letter-spacing: 0.1em;
     padding-top: 3%;
@@ -396,6 +395,7 @@ nav.navbar.navbar-expand-lg {
     outline: none;
     border-bottom: 1.3px solid #000;
     margin: 5px 0;
+    padding: 0 10px 0 10px;
 }
 
 .user-form-check input{
@@ -442,7 +442,7 @@ nav.navbar.navbar-expand-lg {
     padding-top: 2%;
 }
 
-.login-form-input{
+.form-login{
     font-size: 1.2em;
     margin-top: 5%;
     padding: 0 2%;
@@ -452,13 +452,22 @@ nav.navbar.navbar-expand-lg {
     margin-top: 5%;
 }
 
+.login-form-input div{
+    margin-left:10% ;
+}
+
+.user-form-submit{
+    margin-left:0 !important;
+}
+
 .login-form-input input{
-    width: 100%;
+    width: 80%;
     height: 30px;
     border: none;
     outline: none;
     border-bottom: 1.3px solid #000;
     margin-top: 1%;
+    padding: 0 10px 0 10px;
 }
 
 .login-img{
@@ -466,8 +475,13 @@ nav.navbar.navbar-expand-lg {
 }
 
 .send-email{
+    padding: 10px 0 10px 0;
     background: rgb(98, 132, 167);
     text-align: center;
+}
+
+.send-email a{
+    color:#fcd800;
 }
 
 .recovery p{
@@ -560,6 +574,20 @@ footer hr{
     padding: 0 3px;
 }
 
+.social_container img{
+    width: 5%;
+    transition: all 0.3s ease 0s;
+}
+
+.social_container img:hover{
+    -webkit-box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.7);
+    transform: translateY(-7px);
+}
+
+
+
 /* CopyRight */
 .copyright{
     text-align: center;
@@ -588,4 +616,11 @@ footer hr{
 .results .row{
     padding-top: 10%;
     width: 100%;
+}
+
+.user-name{
+    color: #fcd800;
+    font-size: 1em;
+    filter: contrast(1.25);
+
 }

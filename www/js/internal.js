@@ -63,6 +63,10 @@ $( document ).ready(function() {
         };
         reader.readAsDataURL(file);
       });
+
+    $('#disconnection').click(function( event ) {  
+        localStorage.clear();
+    })
 });
 
 
