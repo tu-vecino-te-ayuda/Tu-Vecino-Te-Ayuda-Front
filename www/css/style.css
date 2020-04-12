@@ -612,6 +612,11 @@ footer hr{
     font-size: 0.7em;
 }
 
+.error{
+    margin-left: 0 !important;
+    width: 80%;
+}
+
 /** Dashboard */
 .results .row{
     padding-top: 10%;
@@ -619,8 +624,61 @@ footer hr{
 }
 
 .user-name{
-    color: #fcd800;
+    color: white;
     font-size: 1em;
-    filter: contrast(1.25);
-
 }
+
+
+/* OLD STYLE */
+/* Dashboard */
+
+.top_container_dash {
+    position: relative;
+  }
+  
+  .top_container_dash::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../images/background/Mancha_Home_Azul_TuVecinoTeAyuda.svg/);
+    background-size: 100% 100%;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+  
+  .hero-container_dash {
+    display: flex;
+    padding-top: 0px;
+    padding-bottom: 50px;
+  }
+  
+  .detach-help{
+    cursor: pointer;
+  }
+  
+  .detach-help:hover{
+    opacity: 0.9;
+  }
+  
+  .delete-help{
+    cursor: pointer;
+  }
+  
+  .delete-help:hover{
+    opacity: 0.9;
+  }
+  
+  .images-thanks{
+    margin-left: auto; 
+    margin-right: auto;
+  }
+
+
+/** Thanks */
+.images-thanks{
+    margin-left: auto; 
+    margin-right: auto;
+  }
+  
