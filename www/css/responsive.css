@@ -28,6 +28,14 @@
     .login-footer{
         margin-top: -10%;
     }
+
+    .top-thanks {
+        height: 900px;
+    }
+
+    .thanks-hero-img{
+        padding-top: 7%;
+    }
 }
 
 @media (max-width: 1200px){
@@ -87,6 +95,10 @@
 
     .login-footer{
         margin-top: -20%;
+    }
+
+    .thanks-hero-text{
+        text-align: center;
     }
 
 }
@@ -233,10 +245,19 @@
         margin-left: 25%;
     }
 
+    /** Thanks */
+    .top-thanks {
+        height: 775px;
+    }
+
+    .thanks-hero-img{
+        display: none;
+    }
+
     /* OLD VERSION */
 
     /** Thanks */
-    .thanks_section h1{
+    /* .thanks_section h1{
         font-size: 1.5em;
     }
     .creators img{
@@ -257,10 +278,9 @@
 
     .wrap{
         width: 21%; 
-    }
+    } */
     
 }
-
 
 @media (max-width: 425px)  {
     
@@ -381,8 +401,57 @@
     .register-section{
         padding-top: 15%;
     }
-}
 
+    /** Thanks  */
+    .top-thanks {
+        height: 700px;
+    }
+
+    .thanks-hero-title {
+        font-size: 2.5em;
+    }
+
+    .thanks-title h2,
+    .creators-title h2{
+        font-size: 2em;
+    }
+
+    .abi-logo{
+        padding: 10% 0 0 0;
+    }
+
+    .bemetrics {
+        padding: 10% 10% 0 10%;
+    }
+
+    .codaprot {
+        padding: 15% 0 0 0;
+    }
+
+    .nesiweb {
+        padding: 10% 0 0 0;
+    }
+
+    .esgueva{
+        padding: 5% 10% 0 10%;
+    }
+
+    .oxigeno{
+        padding: 0 30% 5% 30%;
+    }
+
+    .zenos{
+        padding: 5% 30% 5% 30%;
+    }
+
+    .rsb{
+        padding: 5% 30% 5% 30%;
+    }
+
+    .barreras {
+        padding: 5% 30% 5% 30%;
+    }
+}
 
 @media (max-width: 375px)  {
     /* Hero */
@@ -449,5 +518,10 @@
 
     .login-footer{
         margin-top: -240%;
+    }
+
+    /** Thanks  */
+    .thanks-hero-title{
+        font-size: 2em;
     }
 }

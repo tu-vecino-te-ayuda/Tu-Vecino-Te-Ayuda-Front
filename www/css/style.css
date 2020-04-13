@@ -1,29 +1,3 @@
-/* Cookies */
-#cajacookies {
-    box-shadow: 5px 5px 5px 5px #808080;
-    background-color: white;
-    color: black;
-    padding: 10px 20px;
-    left: 0;
-    bottom: 0;
-    width: 80%;
-    margin: 0px 0px 10px 10px;
-    position: fixed;
-    z-index: 1 !important;
-  }
-  
-  #cajacookies button {
-    color: black;
-  }
-  
-  #cajacookies p {
-    margin-top: 5px;
-  }
-
-  .pull-right {
-    float: right;
-}
-
 /* Common */
 html {
     scroll-behavior: smooth;
@@ -73,28 +47,31 @@ a:focus {
     float: right;
 }
 
-/* Background */
-.top-container{
-    background-image: url(../images/background/Mancha_Home_Azul_TuVecinoTeAyuda.svg);
-    background-size:cover;
-    height: 1015px;
-}
 
-.top-login{
-    background-image: url(../images/background/Mancha_Home_Azul_TuVecinoTeAyuda.svg);
-    background-size:cover;
-    height: 900px;
-}
+/* Cookies */
+#cajacookies {
+    box-shadow: 5px 5px 5px 5px #808080;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    left: 0;
+    bottom: 0;
+    width: 80%;
+    margin: 0px 0px 10px 10px;
+    position: fixed;
+    z-index: 1 !important;
+  }
+  
+  #cajacookies button {
+    color: black;
+  }
+  
+  #cajacookies p {
+    margin-top: 5px;
+  }
 
-/* Bubbles */
-.bubble-pink{
-    background: 
-    url(../images/background/Mancha_Home_Rosa_TuVecinoTeAyuda.svg) top left no-repeat;
-}
-
-.bubble-yellow{
-    background: 
-    url(../images/background/Mancha_Home_Amarilla_TuVecinoTeAyuda.svg) top right no-repeat;
+  .pull-right {
+    float: right;
 }
 
 /* Navigation */
@@ -189,6 +166,22 @@ nav.navbar.navbar-expand-lg {
 }
 
 /* Hero */
+.top-container{
+    background-image: url(../images/background/Mancha_Home_Azul_TuVecinoTeAyuda.svg);
+    background-size:cover;
+    height: 1015px;
+}
+
+.bubble-pink{
+    background: 
+    url(../images/background/Mancha_Home_Rosa_TuVecinoTeAyuda.svg) top left no-repeat;
+}
+
+.bubble-yellow{
+    background: 
+    url(../images/background/Mancha_Home_Amarilla_TuVecinoTeAyuda.svg) top right no-repeat;
+}
+
 .hero-section{
     margin-bottom: -13%;
     padding-bottom: 13%;
@@ -424,6 +417,11 @@ nav.navbar.navbar-expand-lg {
 }
 
 /** Login */
+.top-login{
+    background-image: url(../images/background/Mancha_Home_Azul_TuVecinoTeAyuda.svg);
+    background-size:cover;
+    height: 900px;
+}
 
 .login-form-text{
     color: white;    
@@ -632,11 +630,11 @@ footer hr{
 /* OLD STYLE */
 /* Dashboard */
 
-.top_container_dash {
+.top-container_dash {
     position: relative;
-  }
-  
-  .top_container_dash::before {
+}
+
+.top-container_dash::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -646,39 +644,99 @@ footer hr{
     background-position: right bottom;
     background-repeat: no-repeat;
     z-index: -1;
-  }
-  
-  .hero-container_dash {
+}
+
+.hero-container_dash {
     display: flex;
     padding-top: 0px;
     padding-bottom: 50px;
-  }
-  
-  .detach-help{
-    cursor: pointer;
-  }
-  
-  .detach-help:hover{
-    opacity: 0.9;
-  }
-  
-  .delete-help{
-    cursor: pointer;
-  }
-  
-  .delete-help:hover{
-    opacity: 0.9;
-  }
-  
-  .images-thanks{
-    margin-left: auto; 
-    margin-right: auto;
-  }
+}
 
+.detach-help{
+    cursor: pointer;
+}
 
-/** Thanks */
+.detach-help:hover{
+    opacity: 0.9;
+}
+
+.delete-help{
+    cursor: pointer;
+}
+
+.delete-help:hover{
+    opacity: 0.9;
+}
+
 .images-thanks{
     margin-left: auto; 
     margin-right: auto;
-  }
-  
+}
+
+
+/** Thanks */
+.top-thanks {
+    background-image: url(../images/background/Mancha_Home_Azul_TuVecinoTeAyuda.svg);
+    background-size: cover;
+    height: 1015px;
+}
+
+.thanks-hero{
+    padding-top: 10%;
+}
+
+.thanks-hero-title{
+    color: #fcd800;
+    filter: contrast(1.25);
+    font-size: 3.5em;
+    font-weight: bold;
+    margin-top: 15%;
+    text-align: center;
+}
+
+.thanks-hero-text{
+    color: white;
+    filter: contrast(1.84);
+    font-size: 1.1em;
+    letter-spacing: 0.1em;
+    padding-top: 3%;
+}
+
+.creators{
+    margin-top: -200px;
+}
+
+.creators-title h2 {
+    font-size: 3em;
+    padding-bottom: 2%;
+    color: #363636;
+}
+
+.creators img{
+    width: 95%;
+    padding-left: 5%;
+    padding-bottom: 10%;
+}
+
+.thanks-row{
+    padding-bottom: 5%;
+}
+
+.thanks-title h2{
+    font-size: 3em;
+    padding-top: 10%;
+    padding-bottom: 2%;
+    color: #363636;
+}
+
+.thanks-hero-img{
+    padding-top: 7%;
+}
+
+.abi-logo{
+    width: 20%;
+}
+
+.bemetrics{
+    padding-top: 6%;
+}
