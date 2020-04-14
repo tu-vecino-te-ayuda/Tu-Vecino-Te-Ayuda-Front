@@ -15,3 +15,8 @@ handlers:
 - url: /(.*)
   static_files: www/\1
   upload: www/(.*)
+  
+- url: /(.*\.html)
+  mime_type: text/html
+  static_files: www/\1
+  upload: www/(.*\.html)
