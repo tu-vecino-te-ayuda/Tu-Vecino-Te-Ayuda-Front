@@ -469,6 +469,9 @@
 
 
     /** Sintomas  */
+    .sintomas-title{
+        font-size: 1.5em;
+    }
 
     .sintomas-section{
         padding-top: 25%;
