@@ -254,6 +254,17 @@
         display: none;
     }
 
+
+    /** Sintomas  */
+
+    .sintomas-section{
+        padding-top: 10%;
+    }
+
+    .diarrea img{
+        padding-top: 0;
+    }
+
     /* OLD VERSION */
 
     /** Thanks */
@@ -283,7 +294,11 @@
 }
 
 @media (max-width: 425px)  {
-    
+
+    .text-right {
+        text-align: center!important;
+    }
+
     /* Display */
     .sl-none{
         display: none;
@@ -451,6 +466,22 @@
     .barreras {
         padding: 5% 30% 5% 30%;
     }
+
+
+    /** Sintomas  */
+
+    .sintomas-section{
+        padding-top: 25%;
+    }
+
+    .sintomas-section h1{
+        font-size: 2em;
+    }
+
+    .sintomas-img img { 
+        padding-left: 20%;
+        padding-right: 20%;
+    }
 }
 
 @media (max-width: 375px)  {
@@ -523,5 +554,15 @@
     /** Thanks  */
     .thanks-hero-title{
         font-size: 2em;
+    }
+
+    /** Sintomas  */
+
+    .sintomas-section{
+        padding-top: 20%;
+    }
+
+    .sintomas-section h1{
+        font-size: 1.5em;
     }
 }

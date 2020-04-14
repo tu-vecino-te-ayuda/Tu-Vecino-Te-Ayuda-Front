@@ -27,10 +27,8 @@
      
     </head>
 
-
     <body>
         <div class="loader-container"><div class="loader">Loading...</div></div>
-
 
         <!-- Captcha -->
         <div class="g-recaptcha"
@@ -48,6 +46,8 @@
             </p>
         </div>
 
+
+  
         <!-- Navbar  -->
         <header class="header-section">
             <div class="container">
@@ -85,6 +85,7 @@
                         <!--<li class="nav-item">
                             <a class="nav-link medium" href="./protocolos"> Protocolos </a>
                         </li>-->
+
                         <li class="nav-item private-zone">
                             <a class="nav-link semi-bold" href="./login"><i class="fa fa-user" aria-hidden="true"></i>Área Privada</a>
                         </li>
@@ -96,191 +97,84 @@
         </header>
         <!-- end Navbar  -->
 
-        <!-- Form-Help section -->
-        <section class="user-form-section" id="ayuda">
+
+        <!-- Sintomas Section-->
+        <section class="sintomas-section">
+            <!-- Sintomas Container -->
             <div class="container">
-
-                 <!-- Form Text -->
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="user-form-text">
-                            <h1 class="help-title bold">
-                                Necesito Ayuda
-                            </h1>
-                            <p class="regular">
-                                Si necesitas ayuda o sabes de alguien que la pueda necesitar, rellena este
-                                formulario y una persona voluntaria de confianza te ayudará a cubrir tus
-                                necesidades, tales como hacerte la compra de alimentos, fármacos, útiles de casa,
-                                cuidar a los niños o algún otro tipo de asistencia.
-                                <br>
-                                Alguien del mismo portal, barrio o ciudad te ayudará y se pondrá en contacto contigo
-                                para que le comuniques cuáles son tus necesidades y así poderte ayudar.
-                                <br>
-                                Todo se realizará siguiendo las mayores precauciones sanitarias.
-                            </p>
-                        </div>
+                
+                <!-- Sintomas Row -->
+                <div class="sintomas-title-row row">
+                    <!-- Sintomas Text-->
+                    <div class="col-lg-12">
+                        <h1 class="sintomas-title bold text-center">
+                        ¿Cómo reconozco los síntomas <br>del COVID-19?   
+                        </h1>
                     </div>
                 </div>
 
-                <!-- Form Input -->
-                <div class="row bold">
-                    <div class="user-form-img col-lg-5">
-                        <img data-src="./images/call-to-action/help.jpg" alt="Quiero Ser Voluntaria" class="lazyload">
+                <div class="sintomas-draw-row row">
+
+                    <!-- Sintomas Img -->
+                    <div class="cansancio col-lg-4 col-md-6">
+                        <div class="sintomas-img">
+                            <img data-src="./images/sintomas/Icono_Cansancio_Extremo_Síntomas_TuVecinoTeAyuda.svg" alt="Cansancio extremo" class="img-fluid lazyload">
+                        </div>
+                        <h2 class="text-center bold" >CANSANCIO EXTREMO</h2>
                     </div>
-                    <div class="user-form-input col-lg-7">
-                        <div id="form-ayuda">
-                            <div class="card card-body contact_section">
-                                <form id="form-help" class="needs-validation" novalidate>
-                                    <div class="row">
-                                        <div class="title-form col-lg-12">
-                                            <h2 class="bold">Formulario de Solicitud de Ayuda</h2>
-                                            <div class="errorsNotification"></div>
-                                        </div>   
-                                    </div>
-                                    <div class="row semi-bold">
-                                        <div class="col-lg-6">
-                                            <div>
-                                                <input name="user_type_id" type="hidden" value="1">
-                                                <input name="nearby_areas_id" type="hidden" value="99">
-                                                <input name="activity_areas_id" type="hidden" value="99">
-                                                <label for="name">Nombre y Apellidos
-                                                    <input id="name" 
-                                                        name="name" 
-                                                        type="text" 
-                                                        pattern="[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]{1,}"
-                                                        placeholder="Esperanza Garcia Lopez" 
-                                                        class="form-control" 
-                                                        required />
-                                                </label>
-                                            </div>
-                                            <div>
-                                                <label for="email">Correo Electronico
-                                                    <input id="email" 
-                                                        name="email" 
-                                                        type="email" 
-                                                        placeholder="tu@correo.es" 
-                                                        class="form-control" 
-                                                        required />
-                                                </label>
-                                            </div>
-                                            <div>
-                                                <label for="phone">Numero de Teléfono
-                                                    <input id="phone" 
-                                                        name="phone" 
-                                                        type="tel" 
-                                                        pattern="[0-9]{8,9}"
-                                                        placeholder="Fijo o Movil"
-                                                        minlength="8" maxlength="9" 
-                                                        class="form-control" 
-                                                        required />
-                                                </label>
-                                            </div>
-                                            <div>
-                                                <label for="password">Contraseña  
-                                                    <input id="password" 
-                                                        name="password" 
-                                                        type="password" 
-                                                        pattern=".{8,}"
-                                                        placeholder="8 caracteres minimo" 
-                                                        minlength="8" 
-                                                        class="form-control" 
-                                                        required />
-                                                </label>
-                                            </div>
-                                            <div>
-                                                <label for="password_confirmation">Confirmar Contraseña  
-                                                    <input id="password_confirmation" 
-                                                        name="password_confirmation" 
-                                                        type="password" 
-                                                        pattern=".{8,}"
-                                                        placeholder="8 caracteres minimo"
-                                                        minlength="8" 
-                                                        class="form-control" 
-                                                        required />
-                                                </label>
-                                            </div>
-                                        </div>
+
+                    <!-- Sintomas Img -->
+                    <div class="dolor col-lg-4 col-md-6">
+                        <div class="sintomas-img">
+                            <img data-src="./images/sintomas/Icono_Dolor_Cabeza_TuVecinoTeAyuda.svg" alt="Dolor de Cabeza" class="img-fluid lazyload">
+                        </div>
+                        <h2 class="text-center bold" >DOLOR DE CABEZA</h2>
+                    </div>
+
+                    <!-- Sintomas Img -->
+                    <div class="diarrea col-lg-4 col-md-6">
+                        <div class="sintomas-img">
+                            <img data-src="./images/sintomas/Icono_Diarrea_Síntomas_TuVecinoTeAyuda.svg" alt="Diarrea" class="img-fluid lazyload">
+                        </div>
+                        <h2 class="text-center bold" >DIARREA</h2>
+                    </div>
+
+                    <!-- Sintomas Img -->
+                    <div class="fiebre col-lg-4 col-md-6">
+                        <div class="sintomas-img">
+                            <img data-src="./images/sintomas/Icono_Fiebre_Síntomas_TuVecinoTeAyuda.svg" alt="Fiebre Alta" class="img-fluid lazyload">
+                        </div>
+                        <h2 class="text-center bold" >FIEBRE ALTA</h2>
+                    </div>
+
+                    <!-- Sintomas Img -->
+                    <div class="tos col-lg-4 col-md-6">
+                        <div class="sintomas-img">
+                            <img data-src="./images/sintomas/Icono_Tos_Seca_Síntomas_TuVecinoTeAyuda.svg" alt="Tos Seca" class="img-fluid lazyload">
+                        </div>
+                        <h2 class="text-center bold" >TOS SECA</h2>
+                    </div>
+
+                    <!-- Sintomas Img -->
+                    <div class="insuficiencia col-lg-4 col-md-6">
+                        <div class="sintomas-img">
+                            <img data-src="./images/sintomas/Icono_Insuficiencia_Respiratoria_Síntomas_TuVecinoTeAyuda.svg" alt="Insuficiencia Respiratoria" class="img-fluid lazyload">
+                        </div>
+                        <h2 class="text-center bold" >INSUFICIENCIA REPSIRATORIA</h2>
+                    </div>
                     
-                                        <div class="col-lg-6">
-                                            <div>
-                                                <label for="helpType">Tipo de Ayuda
-                                                    <select name="helpType"
-                                                            class="form-control" >
-                                                        <option value="1">Soy el solicitante de ayuda</option>
-                                                        <option value="2">Lo hago en nombre de un tercero</option>
-                                                    </select>
-                                                </label>
-                                            </div>
-                                            <div>
-                                                <label for="state">Provincia
-                                                    <select id="state" 
-                                                            name="state" 
-                                                            class="ayuda-provincia form-control" 
-                                                            required >
-                                                    </select>
-                                                </label>
-                                            </div>
-                                            <div>
-                                                <label for="city">Población
-                                                    <select id="city" 
-                                                            name="city" 
-                                                            class="ayuda-ciudad form-control" 
-                                                            disabled 
-                                                            required >
-                                                    </select>
-                                                </label>
-                                            </div>
-                                            <div>
-                                                <label for="address">Dirección
-                                                    <input id="address" 
-                                                        name="address" 
-                                                        type="text" 
-                                                        placeholder="Dirección (Calle y Número)" 
-                                                        minlength="5" 
-                                                        class="form-control" 
-                                                        required >
-                                                </label>
-                                            </div>
-                                            <div>
-                                                <label for="zip_code">Código Postal
-                                                    <input id="zip_code" 
-                                                        name="zip_code" 
-                                                        type="text" 
-                                                        placeholder="5 números" 
-                                                        pattern="[0-9]{5}" 
-                                                        minlength="5" 
-                                                        maxlength="5" 
-                                                        class="form-control" 
-                                                        required >
-                                                </label>
-                                            </div>
-                                        </div>
 
-                                        <div class="user-form-check col-lg-12">
-                                            <input id="checkLegal" type="checkbox" name="check" value="" required>
-                                            Acepto los términos y condiciones de la politica de privacidad y declaro ser mayor de edad. 
-                                            <a href="#legal" data-toggle="modal">Información sobre el tratamiento</a>.
-                                        </div>
+                </div> 
+                <!-- end Sintomas Row -->
 
-                                        <div class="user-form-submit btn col-lg-12">
-                                            <button type="submit">
-                                                Incribirme
-                                            </button>
-                                        </div>
-                                    </div>
-                                 </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end Form Input -->
             </div>
-        </section>
-        <!-- end help section -->
+            <!-- end Sintomas Container -->
+        </section> 
+        <!-- end Sintomas Section -->
 
         <!-- Footer section -->
         <footer>
-
+        
             <!-- title footer -->  
             <div class="container">
                 <div class="row">
@@ -311,20 +205,17 @@
                         </h4>
                         <ul>
                             <li>
-                            <a href="https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/situacionActual.htm" target="_blank" rel =" noopener ">
-
+                            <a href="https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/situacionActual.htm" target="_blank" rel ="noopener">
                                 Situación Actual
                             </a>
                             </li>
                             <li>
-                            <a href="https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/ciudadania.htm" target="_blank" rel =" noopener ">
-
+                            <a href="https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/ciudadania.htm" target="_blank" rel ="noopener">
                                 Información General
                             </a>
                             </li>
                             <li>
-                            <a href="https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/telefonos.htm" target="_blank" rel =" noopener ">
-
+                            <a href="https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/telefonos.htm" target="_blank" rel ="noopener">
                                 Teléfonos de Interés
                             </a>
                             </li>
@@ -420,6 +311,7 @@
         </footer>
         <!-- end Footer section -->
 
+
         <!-- Copyright -->
         <section class="copyright">
             <p> Copyright &copy; 2020 | 
@@ -427,6 +319,9 @@
             <a href="./index">Diseño por WidO LaFlamme</a>
             </p>
         </section>
+        
+
+
 
         <!-- Fonts Google -->
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Raleway:wght@400;600&display=swap" rel="stylesheet" /> 
@@ -435,21 +330,19 @@
 
         <!-- Bootstrap css -->
         <link href="./css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
-
+        
         <!-- Styles  -->
         <link href="./css/style.css?20200405" rel="stylesheet" type="text/css"/>
         <!-- Responsive  -->
         <link href="./css/responsive.css?20200405" rel="stylesheet" type="text/css"/>
-
+   
 
         <!-- Scripts -->
-        <script type="text/javascript" src="https://www.google.com/recaptcha/api.js" async ></script>
-        <script type="text/javascript" src="js/jquery/jquery-3.4.1.js" defer></script>
-        <script type="text/javascript" src="js/bootstrap/bootstrap.min.js" defer></script>
-        <script type="text/javascript" src="js/register.js?20200406" defer></script>
-        <script type="text/javascript" src="js/common.js?20200412" defer></script>
-        <script type="text/javascript" src="js/data.js?20200404" ></script>
-
+        <script src="https://www.google.com/recaptcha/api.js" async ></script>
+        <script type="text/javascript" src="./js/jquery/jquery-3.4.1.js" defer></script>
+        <script type="text/javascript" src="./js/bootstrap/bootstrap.min.js" defer></script>
+        <script type="text/javascript" src="./js/common.js?20200412" defer></script>
+            
     </body>
-
+ 
 </html>

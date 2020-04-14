@@ -344,6 +344,24 @@ nav.navbar.navbar-expand-lg {
 }
 
 /* Form */
+#ayuda .user-form-text{
+    background-image: url(../images/background/Mancha_Form_Amarilla_TuVecinoTeayuda.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#voluntarios .user-form-text{
+    background-image: url(../images/background/Mancha_Form_Naranja_TuVecinoTeayuda.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#asociaciones .user-form-text{
+    background-image: url(../images/background/Mancha_Form_Roja_TuVecinoTeayuda.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .card label{
     width: 100%;
 }
@@ -397,7 +415,6 @@ nav.navbar.navbar-expand-lg {
     margin-top:5%;
 }
 
-
 .user-form-submit{
     padding-top: 5%;
 }
@@ -412,9 +429,56 @@ nav.navbar.navbar-expand-lg {
     font-weight: 700;
 }
 
+#ayuda button{
+    background: #fcd800;
+}
+
+#voluntarios button{
+    background: #ffa200;
+}
+
+#asociaciones button{
+    background: #ED2B59;
+}
+
 .form-control{
     padding: 0;
 }
+
+/** Sintomas  */
+
+.sintomas-title-row{
+    background-image: url(../images/background/Mancha_Form_Amarilla_TuVecinoTeayuda.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.sintomas-section{
+    padding-top: 7%;
+}
+
+.sintomas-section h2 {
+    font-size: 1.2em;
+}
+
+.sintomas-img{
+    padding-left: 15%;
+    padding-right: 15%;
+    
+}
+
+.sintomas-draw-row .col-lg-4{
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.cansancio img,
+.diarrea img{
+    padding-top: 18%;
+}
+
 
 /** Login */
 .top-login{
