@@ -28,239 +28,247 @@
   </head>
 
   <body>
+    
+    <!-- Loader -->
     <div class="loader-container"><div class="loader">Loading...</div></div>
 
-      <!-- Cookies -->
-      <div id="cajacookies">
-        <p>
-            <button onclick="aceptarCookies()" class="pull-right"><i class="fa fa-times"></i> Aceptar y cerrar</button>
-            Puede configurar o rechazar la utilización de cookies u obtener más información haciendo clic en la Política de cookies<br>
-            Puede leer más sobre el uso de cookies en nuestra <a href="./pdf/politica_privacidad.pdf" target="_blank">política de Cookies</a>.
-        </p>
+    <!-- Cookies -->
+    <div id="cajacookies">
+      <p>
+          <button onclick="aceptarCookies()" class="pull-right"><i class="fa fa-times"></i> Aceptar y cerrar</button>
+          Puede configurar o rechazar la utilización de cookies u obtener más información haciendo clic en la Política de cookies<br>
+          Puede leer más sobre el uso de cookies en nuestra <a href="./pdf/politica_privacidad.pdf" target="_blank">política de Cookies</a>.
+      </p>
     </div>
 
-          
-    <div class="top-container_dash">
-      <!-- header section strats -->
-      <header class="header-section">
-        <div class="container">
-          <nav class="navbar shadow navbar-expand-lg custom_nav-container fixed-top">
-            <!-- Logo -->
-            <a class="navbar-brand" href="./">
-              <span>
-                  <img data-src="./images/brand/Logo_Favicon_Web_TuVecinoTeAyuda.svg" title="Tu Vecin@ Te Ayuda" class="lazyload" alt="Logo de Tu Vecino Te Ayuda">
-              </span>
-            </a>
-           <!-- <div class="wrap">
-              <span class="ribbon">DNI VERIFICADO</span>
-            </div> -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
+    <!-- Navigation -->
+    <header class="header-section">
+      <div class="container">
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
-                <ul class="navbar-nav">
-                  <li class="nav-item active user-name">
-                    Bienvenido, <span id="user-name"></span> <span id="asoc-name"></span>
-                  </li>
-                </ul>
-                <ul class="navbar-nav  ">
-                  <li class="nav-item active">
-                    <a id="disconnection" class="nav-link medium " href="./" title="Salir"> Desconectarme <span class="sr-only">(current)</span></a>
-                  </li>
-                </ul>
-              </div>
-          </nav>
-        </div>
-      </header>
-      <section class="hero_section">
-        <div class="hero-container_dash container"> 
+        <nav class="navbar shadow navbar-expand-lg custom_nav-container fixed-top">
+
+          <!-- Logo -->
+          <a class="navbar-brand" href="./index">
+            <span>
+                <img data-src="./images/brand/Logo_Favicon_Web_TuVecinoTeAyuda.svg" title="Tu Vecin@ Te Ayuda" class="lazyload" alt="Logo de Tu Vecino Te Ayuda">
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+
+              <ul class="navbar-nav">
+                <li class="nav-item active user-name">
+                  Bienvenido, <span id="user-name"></span> <span id="asoc-name"></span>
+                </li>
+              </ul>
+
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a id="disconnection" class="nav-link medium " href="./index" title="Salir"> Desconectarme <span class="sr-only">(current)</span></a>
+                </li>
+              </ul>
+
+            </div>
+        </nav>
+      </div>
+    </header>
+    <!-- End Navigation -->
+
+    <!-- Options Buttons -->
+    <section class="dash-options">
+      <div class="container"> 
+        
+        <!-- Option Buttons -->    
+        <div class="option-buttons row">
           <div class="col-md-4 offset-md-8">
             <div class="float-right">
-              <button type="button" class="call_to-btn btn_white-border d-none" data-toggle="modal" data-target="#createHelp" id="btn-createHelp">
+              <button type="button" class="call_to-btn d-none" data-toggle="modal" data-target="#createHelp" id="btn-createHelp">
                 Crear solicitud de Ayuda
               </button>
-              <button type="button" class="call_to-btn btn_white-border d-none" data-toggle="modal" data-target="#enrollAsoc" id="btn-enrollAsoc">
+              <button type="button" class="call_to-btn d-none" data-toggle="modal" data-target="#enrollAsoc" id="btn-enrollAsoc">
                 Pertenezco a una Asociación
               </button>
-              <button type="button" class="call_to-btn btn_white-border d-none" data-toggle="modal" data-target="#editData" id="btn-editData">
+              <button type="button" class="call_to-btn d-none" data-toggle="modal" data-target="#editData" id="btn-editData">
                 Editar mis datos
               </button>
             </div>
           </div>
         </div>
-      </section>
-    </div>
-    <!-- end header section -->
+        <!-- end Option Buttons -->    
 
-    <div class="common-style">
-      <!-- users section -->
-      <div class="container d-none" id="btn-showPhone" >
-        <button type="button" class="call_to-btn btn_white-border"  data-toggle="collapse" href="#showPhone" role="button" aria-expanded="false" aria-controls="showPhone">
-          Obtener asistencia telefónica inmediata
-        </button>
-        <div class="collapse mt-2" id="showPhone">
-          <div class="card card-body">
-            Gracias a la colaboración con la Asociación Española Conectados Sin Barreras, Nagusilan y Alares; tenemos a su disposición los siguientes números de atención telefónica. 
-            En cualquiera de ellos le atenderá automáticamente un voluntario que estará encantado de ayudarle.<br><br>
-            <b>Fundación Alares: <a href="tel:900877037" title="Llamar ahora">900 877 037</a></b> 
-            <b>Nagusilan: <a href="tel:900713771" title="Llamar ahora">900 713 771</a></b>
-            <b>Ayuntamiento de Madrid: <a href="tel:919490111" title="Llamar ahora">91 949 01 11</a></b>
+        <!-- Show Help Phone -->
+        <div class="show-help-phone row">
+          <div id="btn-showPhone" class="col-lg-12">
+              <button type="button" class="call-to-btn d-none"  data-toggle="collapse" href="#showPhone" role="button" aria-expanded="false" aria-controls="showPhone">
+                Obtener asistencia telefónica inmediata
+              </button>
+              <div class="collapse mt-2" id="showPhone">
+                <div class="card card-body alert alert-info">
+                  Gracias a la colaboración con la Asociación Española Conectados Sin Barreras, Nagusilan y Alares; tenemos a su disposición los siguientes números de atención telefónica. 
+                  En cualquiera de ellos le atenderá automáticamente un voluntario que estará encantado de ayudarle.<br><br>
+                  <b>Fundación Alares: <a href="tel:900877037" title="Llamar ahora">900 877 037</a></b> 
+                  <b>Nagusilan: <a href="tel:900713771" title="Llamar ahora">900 713 771</a></b>
+                  <b>Ayuntamiento de Madrid: <a href="tel:919490111" title="Llamar ahora">91 949 01 11</a></b>
+                </div>
+              </div>
+          </div>
+        </div>
+        <!-- end Show Phone -->
+
+      </div>
+    </section>
+    <!-- end Options Buttons -->
+
+    <!-- Users Assoc Table -->
+    <section class="users d-none" id="sect-users">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="pull-left">
+              Estas visualizando los <b>voluntarios</b> que se han enlazado con vuestra Entidad o Asociación.
+            </div>
+            <div class="table-responsive text-nowrap">
+              <table class="table mt-1 table-striped">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Teléfono</th>
+                    <th scope="col">Desplazamiento</th>
+                    <th scope="col">Provincia</th>
+                    <th scope="col">Ciudad</th>
+                    <th scope="col">Código Postal</th>
+                  </tr>
+                </thead>
+                <tbody id="tablecontent-users">
+
+                </tbody>
+              </table>   
+            </div>         
           </div>
         </div>
       </div>
+    </section>
+    <!-- end Users Table -->
 
-      <section class="users d-none" id="sect-users">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-
-              <div class="pull-left">
-                Estas visualizando los <b>voluntarios</b> que se han enlazado con vuestra Entidad o Asociación.
-              </div>
-              <div class="table-responsive text-nowrap">
-                <table class="table mt-1 table-striped">
-                  <thead class="thead-dark">
-                    <tr>
-                      <th scope="col">Nombre</th>
-                      <th scope="col">Email</th>
-                      <th scope="col">Teléfono</th>
-                      <th scope="col">Desplazamiento</th>
-                      <th scope="col">Provincia</th>
-                      <th scope="col">Ciudad</th>
-                      <th scope="col">Código Postal</th>
-                    </tr>
-                  </thead>
-                  <tbody id="tablecontent-users">
-
-                  </tbody>
-                </table>   
-              </div>         
+    <!-- Asoc Table -->
+    <section class="asoc d-none" id="sect-asoc">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="pull-left">
+              Estas visualizando los datos de contacto de las <b>Asociaciones o Entidades</b> con las que estás enlazado.
             </div>
+            <div class="table-responsive text-nowrap">
+              <table class="table mt-1 table-striped">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">Asociación o Entidad</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Teléfono</th>
+                    <th scope="col">Ámbito de actuación</th>
+                    <th scope="col">Provincia</th>
+                    <th scope="col">Ciudad</th>
+                  </tr>
+                </thead>
+                <tbody id="tablecontent-asoc-own">
+
+                </tbody>
+              </table>     
+            </div>      
           </div>
         </div>
-      </section>
+      </div>
+    </section>
+    <!-- end Asoc Table -->
 
-      <!-- end users section -->
-
-      <!-- asoc section -->
-      <section class="asoc d-none" id="sect-asoc">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="pull-left">
-                Estas visualizando los datos de contacto de las <b>Asociaciones o Entidades</b> con las que estás enlazado.
-              </div>
-              <div class="table-responsive text-nowrap">
-                <table class="table mt-1 table-striped">
-                  <thead class="thead-dark">
-                    <tr>
-                      <th scope="col">Asociación o Entidad</th>
-                      <th scope="col">Email</th>
-                      <th scope="col">Teléfono</th>
-                      <th scope="col">Ámbito de actuación</th>
-                      <th scope="col">Provincia</th>
-                      <th scope="col">Ciudad</th>
-                    </tr>
-                  </thead>
-                  <tbody id="tablecontent-asoc-own">
-
-                  </tbody>
-                </table>     
-              </div>      
-            </div>
+    <!-- Data Loader -->
+    <section class="results" id="sect-loader">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <div class='lds-ellipsis'><div></div><div></div><div></div><div></div></div>
           </div>
         </div>
-      </section>
-      <!-- end asoc section -->
+      </div>
+    </section>
+    <!-- end Data Loader -->
 
-      <section class="results" id="sect-loader">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 text-center">
-              <div class='lds-ellipsis'><div></div><div></div><div></div><div></div></div>
+    <!-- Help Own -->
+    <section class="results d-none" id="sect-own-results">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="pull-left">
+              Estas son sus solicitudes de ayuda, ya puedes ponerte en contacto con la otra persona y conoceros.
             </div>
+            <div id="downloadPdf" class="pull-right d-none">
+              <a href="pdf/cartel_vecino.pdf" target="_blank"><i class="fa fa-file-pdf-o mr-1"></i>  Descargar cartel para el portal</a>
+            </div>
+            <div class="table-responsive text-nowrap">
+              <table class="table mt-1 table-striped">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col"><small>F. solucitud<br>F. Aceptación</small></th>
+                    <th scope="col">Tipo de Ayuda</th>
+                    <th scope="col">Dirección completa</th>
+                    <th scope="col">Solicitante<br> Voluntario</th>
+                    <th scope="col">Solic. Teléfono / Email <br> Volunt. Teléfono / Email</th>
+                    <th scope="col" class="text-center">Acciones</th>
+                  </tr>
+                </thead>
+                <tbody id="tablecontent-own" class="small">
+
+                </tbody>
+              </table>    
+            </div>        
           </div>
         </div>
-      </section>
+      </div>
+    </section>
+    <!-- end Help Own -->
 
-      <!-- help own section -->
-      <section class="results d-none" id="sect-own-results">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="pull-left">
-                Estas son sus solicitudes de ayuda, ya puedes ponerte en contacto con la otra persona y conoceros.
-              </div>
-              <div id="downloadPdf" class="pull-right d-none">
-                <a href="pdf/cartel_vecino.pdf" target="_blank"><i class="fa fa-file-pdf-o mr-1"></i>  Descargar cartel para el portal</a>
-              </div>
-              <div class="table-responsive text-nowrap">
-                <table class="table mt-1 table-striped">
-                  <thead class="thead-dark">
-                    <tr>
-                      <th scope="col"><small>F. solucitud<br>F. Aceptación</small></th>
-                      <th scope="col">Tipo de Ayuda</th>
-                      <th scope="col">Dirección completa</th>
-                      <th scope="col">Solicitante<br> Voluntario</th>
-                      <th scope="col">Solic. Teléfono / Email <br> Volunt. Teléfono / Email</th>
-                      <th scope="col" class="text-center">Acciones</th>
-                    </tr>
-                  </thead>
-                  <tbody id="tablecontent-own" class="small">
-
-                  </tbody>
-                </table>    
-              </div>        
+    <!-- Help Table -->
+    <section class="results d-none" id="sect-results">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="pull-left">
+              Estas visualizando las peticiones sin asignar en base a tus preferencias <i class="fa fa-map-marker ml-2"></i> 
+              <b><span id="user-city"></span>, <span id="user-state"></span></b>
             </div>
+            <div class="pull-right">
+              <a href="#editData" data-toggle="modal" data-target="#editData"><i class="fa fa-edit mr-1"></i>  Modificar mis datos</a>
+            </div>
+            <div class="table-responsive text-nowrap">
+              <table class="table mt-1 table-striped">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col" class="text-center">Estado</th>
+                    <th scope="col">Fecha solucitud</th>
+                    <th scope="col">Tipo de Ayuda</th>
+                    <th scope="col">Provincia</th>
+                    <th scope="col">Ciudad</th>
+                    <th scope="col">Código Postal</th>
+                    <th scope="col">Asignación</th>
+                  </tr>
+                </thead>
+                <tbody id="tablecontent-unassigned">
+
+                </tbody>
+              </table>   
+            </div>         
           </div>
         </div>
-      </section>
-
-      <!-- end help own section -->
-
-      <!-- help section -->
-      <section class="results d-none" id="sect-results">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="pull-left">
-                Estas visualizando las peticiones sin asignar en base a tus preferencias <i class="fa fa-map-marker ml-2"></i> 
-                <b><span id="user-city"></span>, <span id="user-state"></span></b>
-              </div>
-              <div class="pull-right">
-                <a href="#editData" data-toggle="modal" data-target="#editData"><i class="fa fa-edit mr-1"></i>  Editar mis datos</a>
-              </div>
-              <div class="table-responsive text-nowrap">
-                <table class="table mt-1 table-striped">
-                  <thead class="thead-dark">
-                    <tr>
-                      <th scope="col" class="text-center">Estado</th>
-                      <th scope="col">Fecha solucitud</th>
-                      <th scope="col">Tipo de Ayuda</th>
-                      <th scope="col">Provincia</th>
-                      <th scope="col">Ciudad</th>
-                      <th scope="col">Código Postal</th>
-                      <th scope="col">Asignación</th>
-                    </tr>
-                  </thead>
-                  <tbody id="tablecontent-unassigned">
-
-                  </tbody>
-                </table>   
-              </div>         
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- end help section -->
-
-    </div>
-
-
+      </div>
+    </section>
+    <!-- end Help Table -->
 
     <!-- Footer section -->
     <footer>
@@ -401,16 +409,15 @@
     </footer>
     <!-- end Footer section -->
 
-
     <!-- Copyright -->
     <section class="copyright">
         <p> Copyright &copy; 2020 | 
         <a href="http://abi2burgos.es">Asociación Burgalesa de Ingenieros Informáticos |</a>
         <a href="./index">Diseño por WidO LaFlamme</a>
         </p>
-   </section>  
+    </section>  
 
-
+    <!-- Modal Create Help -->
     <div class="modal fade" id="createHelp" tabindex="-1" role="dialog" aria-labelledby="createHelp" aria-hidden="true">
       <div class="modal-dialog  modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -425,19 +432,23 @@
             <form id="form-help">
               <div class="contact_form-container">
                 <div class="ml-2">
-                  <select name="help_request_type_id" id="help_request_type_id">
-                    <option>--Seleccione Tipo de Ayuda--</option>
-                    <option value="1">Compra de comida o medicamentos</option>
-                    <option value="2">Cuidado de mayores</option>
-                    <option value="3">Acompañamiento telefónico</option>
-                    <option value="4">Cuidado de niños</option>
-                  </select>
+                  <label for="help-request">Tipo de Ayuda
+                    <select name="help_request_type_id" id="help_request_type_id" class="form-control" >
+                      <option>--Seleccione Tipo de Ayuda--</option>
+                      <option value="1">Compra de comida o medicamentos</option>
+                      <option value="2">Cuidado de mayores</option>
+                      <option value="3">Acompañamiento telefónico</option>
+                      <option value="4">Cuidado de niños</option>
+                    </select>
+                  </label>  
                 </div>
                 <div class="ml-2">
-                  <input name="message" id="message" type="text" placeholder="Comentario" class="mt-4">
+                  <label for="description">Descripción de sus neceisdades
+                    <input name="message" id="message" type="text" class="mt-4 form-control">
+                  </label>  
                 </div>
                 <div class="mt-1 ml-2 mr-2 text-sm-left check">
-                  <label><input type="checkbox" name="check" value="1" required> Acepto que la plataforma atomáticamente le facilite mi 
+                  <label><input id="checkbox" type="checkbox" name="check" value="1" required> Acepto que la plataforma atomáticamente le facilite mi 
                     <b>nombre</b> y <b>teléfono</b> de contacto, al voluntario que acepte mi petición de ayuda.</label>
                 </div>
               </div>
@@ -451,7 +462,9 @@
         </div>
       </div>
     </div>
+    <!-- end Modal Create Help -->
 
+    <!-- Modal Help Now -->
     <div class="modal fade" id="helpNow" tabindex="-1" role="dialog" aria-labelledby="helpNow" aria-hidden="true">
       <div class="modal-dialog  modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -476,7 +489,9 @@
         </div>
       </div>
     </div>
+    <!-- Modal Help Now -->
 
+    <!-- Modal First Time -->
     <div class="modal fade" id="firstTime" tabindex="-1" role="dialog" aria-labelledby="firstTime" aria-hidden="true">
       <div class="modal-dialog  modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -496,7 +511,9 @@
         </div>
       </div>
     </div>
+    <!-- Modal First Time -->
 
+    <!-- Modal Edit Data -->
     <div class="modal fade" id="editData" tabindex="-1" role="dialog" aria-labelledby="editData" aria-hidden="true">
       <div class="modal-dialog  modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -511,27 +528,37 @@
             <form id="form-edit">
               <div class="contact_form-container ml-2">
                 <div>
-                  <select id="nearby_areas_id" name="nearby_areas_id" required>
-                    <option>--Preferencias de desplazamiento--</option>
-                    <option value="1">Solo a mis vecinos</option>
-                    <option value="2">Solo en mi barrio</option>
-                    <option value="3">Solo en mi ciudad</option>
-                    <option value="4">Mi ciudad y proximidades</option>
-                  </select>
+                  <label for="nearby_areas_id">Preferencias de desplazamiento
+                    <select id="nearby_areas_id" class="form-control" name="nearby_areas_id" required>
+                      <option>--Preferencias de desplazamiento--</option>
+                      <option value="1">Solo a mis vecinos</option>
+                      <option value="2">Solo en mi barrio</option>
+                      <option value="3">Solo en mi ciudad</option>
+                      <option value="4">Mi ciudad y proximidades</option>
+                    </select>
+                  </label>
                 </div>
                 <div>
-                  <select id="ayuda-provincia" name="state"  class="ayuda-provincia" required>
-                  </select>
+                  <label for="state">Provincia
+                    <select id="ayuda-provincia" name="state"  class="ayuda-provincia form-control" required>
+                    </select>
+                  </label>
                 </div>
                 <div>
-                  <select id="ayuda-ciudad" name="city"  class="ayuda-ciudad" required>
-                  </select>                        
+                  <label for="city">Población
+                    <select id="ayuda-ciudad" name="city"  class="ayuda-ciudad form-control" required>
+                    </select>                
+                  </label>        
                 </div>
                 <div>
-                  <input id="address" name="address" type="text" placeholder="Dirección (Calle, Número, etc.)">
+                  <label for="address">Dirección
+                    <input id="address" name="address" type="text" class="form-control"  placeholder="Dirección (Calle, Número, etc.)">
+                  </label>
                 </div>
                 <div>
-                  <input id="zip_code" name="zip_code" type="number" placeholder="Código Postal" required>
+                  <label for="zip_code">Código Postal
+                    <input id="zip_code" name="zip_code" type="number" class="form-control"  placeholder="Código Postal" required>
+                  </label>
                 </div>
               </div>
             </form>
@@ -544,7 +571,9 @@
         </div>
       </div>
     </div>
+    <!-- Modal Edit Data -->
 
+    <!-- Modal Enroll Asoc -->
     <div class="modal fade" id="enrollAsoc" tabindex="-1" role="dialog" aria-labelledby="enrollAsoc" aria-hidden="true">
       <div class="modal-dialog  modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -566,9 +595,11 @@
                   <div id="associations-delete"></div>
                 </div>
                 <div>
-                  <select id="asoc_id" name="asoc_id" required>
-                    <option>--Seleccionar Asociación--</option>
-                  </select>
+                  <label for="asco">Seleccionar Asociacíon
+                    <select id="asoc_id" name="asoc_id" required>
+                      <option>--Seleccionar Asociación--</option>
+                    </select>
+                  </label>
                 </div>
                 <div class="mt-1 ml-2 mr-2 text-sm-left check">
                   <label><input type="checkbox" name="check" value="1" required> Acepto que la plataforma atomáticamente le facilite mi 
@@ -585,7 +616,9 @@
         </div>
       </div>
     </div>
+    <!-- Modal Enroll Asoc -->
 
+    <!-- Modal Verify -->
     <div class="modal fade" id="verify" tabindex="-1" role="dialog" aria-labelledby="verify" aria-hidden="true">
       <div class="modal-dialog  modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -630,6 +663,7 @@
         </div>
       </div>
     </div>
+    <!-- Modal Verify Help -->
 
 
     <!-- Fonts Google -->
