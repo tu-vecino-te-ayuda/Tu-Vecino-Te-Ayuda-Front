@@ -298,6 +298,14 @@
     
 }
 
+
+@media (max-width: 450px){
+    .hero-title-orange{
+        font-size: 1.3em;
+    }
+}
+
+
 @media (max-width: 425px)  {
 
     .text-right {
@@ -315,7 +323,7 @@
     }
 
     .hero-title-orange{
-        font-size: 1.5em;
+        font-size: 1.3em;
     }
 
     .hero-title-org{
@@ -527,12 +535,17 @@
     }
 }
 
-
 @media (max-width: 320px)  {
     
     /* Hero */
+ 
+    .top-container{
+        margin-top: 5%;
+        height: 1375px;
+    }
+
     .hero-title-orange{
-        font-size: 1.3em;
+        font-size: 1.2em;
     }
 
     .hero-title-org{
