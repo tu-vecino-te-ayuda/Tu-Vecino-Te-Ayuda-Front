@@ -5,7 +5,8 @@ $( document ).ready(function() {
     $('.loader-container').hide();
 
     // Modal Android PlayStore
-    if(isMobile.Android())$('#modalAndroid').modal('show');
+    if(isAndroid || isWebView) $('#modalAndroid').modal('show');
+    
 
     // Cookies check
     compruebaAceptaCookies();
@@ -17,11 +18,13 @@ $( document ).ready(function() {
 });
 
 
-var isMobile = {
-        Android: function() {
-            return navigator.userAgent.match(/Android/i);
-        }
-    }
+
+// Android Mobile 
+var navU = navigator.userAgent;
+var isAndroid = navU.match(/Android/i)
+var isWebView = navU.indexOf('Android') > -1 && navU.indexOf('Mozilla/5.0') > -1 && navU.indexOf('AppleWebKit') > -1;
+
+    
 
 function compruebaAceptaCookies() {
     if(localStorage.aceptaCookies == 'true'){
