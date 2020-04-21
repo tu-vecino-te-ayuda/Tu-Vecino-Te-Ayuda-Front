@@ -109,6 +109,17 @@
 }
 
 @media (max-width: 992px)  {
+    
+    .top-container {
+        height: 1350px;
+    }
+
+    .hero-img{
+        padding-top: 2%;
+        width: 50%;
+        margin: auto;
+    }
+
     .user-form-img img {
         padding-top: 3%;
     }
