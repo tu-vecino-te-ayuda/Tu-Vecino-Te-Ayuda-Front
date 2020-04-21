@@ -4,6 +4,9 @@ var loader = "<div class='lds-ellipsis'><div></div><div></div><div></div><div></
 $( document ).ready(function() {
     $('.loader-container').hide();
 
+    // Modal Android PlayStore
+    if(isMobile.Android())$('#modalAndroid').modal('show');
+
     // Cookies check
     compruebaAceptaCookies();
 
@@ -12,6 +15,13 @@ $( document ).ready(function() {
     $('#carouselThanks').carousel(randomSlide);
     $('#carouselThanks').carousel('next');
 });
+
+
+var isMobile = {
+        Android: function() {
+            return navigator.userAgent.match(/Android/i);
+        }
+    }
 
 function compruebaAceptaCookies() {
     if(localStorage.aceptaCookies == 'true'){

@@ -267,7 +267,6 @@ nav.navbar.navbar-expand-lg {
     filter: contrast(1.49);
 }
 
-
 .call-to-btn {
     transition: all 0.3s ease 0s;
 }
@@ -282,6 +281,10 @@ nav.navbar.navbar-expand-lg {
     -moz-box-shadow: 0 5px 10px -5px rgba(0,0,0,.7);
     box-shadow: 0 5px 10px -5px rgba(0,0,0,.7);
     transform: translateY(-7px);
+}
+
+.download-apk a{
+    color: #fcd800;
 }
 
 /* Call to Action */
