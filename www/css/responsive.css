@@ -9,7 +9,12 @@
 
 
 @media (max-width: 1440px)  {
-   
+
+    /** Index  */
+    .top-container{
+        height: 990px;
+    }
+
     /* Navigation */
     .custom-nav-container {
         padding: 1% 5%;
@@ -116,15 +121,15 @@
         display: none;
     }
     
-    .top-container{
-        height: 1100px;
-    }
-
     .private-zone{
         margin-left: 0;
     }
 
     /* Hero */
+    .top-container{
+        height: 1100px;
+    }
+
     .hero-title{
         text-align: center;
     }
@@ -305,6 +310,10 @@
     }
 
     /* Hero */
+    .top-container{
+        height: 1130px;
+    }
+
     .hero-title-orange{
         font-size: 1.5em;
     }
@@ -489,6 +498,10 @@
 
 @media (max-width: 375px)  {
     /* Hero */
+    .top-container{
+        height: 1170px;
+    }
+
     .hero-title {
         font-size: 2em;
         padding-top: 3%;
