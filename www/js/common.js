@@ -5,7 +5,7 @@ $( document ).ready(function() {
     $('.loader-container').hide();
 
     // Modal Android PlayStore
-    if(isAndroid || isWebView) $('#modalAndroid').modal('show');
+    if(isAndroid) $('#modalAndroid').modal('show');
     
 
     // Cookies check
